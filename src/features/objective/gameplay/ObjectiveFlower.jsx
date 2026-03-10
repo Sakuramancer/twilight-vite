@@ -1,6 +1,5 @@
 import classNames from "classnames/bind";
 import { useStore } from "core/store/StoreContext";
-import { objectivesStatic } from "entities/objective/model";
 import { GoalCardContent } from "entities/goal/ui";
 import Timer from "./Timer";
 import ObjectiveCanvas from "./ObjectiveCanvas";
@@ -17,7 +16,6 @@ const ObjectiveFlower = ({ cardIndex, magnifierActive, onSelectCard }) => {
   );
 
   const isActiveFlower = cardId;
-  const card = objectivesStatic[cardId] ?? { stage: "" };
 
   const mainClass = cx({
     main: true,
@@ -30,7 +28,11 @@ const ObjectiveFlower = ({ cardIndex, magnifierActive, onSelectCard }) => {
       <ObjectiveCanvas cardIndex={cardIndex} onSelectCard={onSelectCard} />
       <ObjectiveIcons className={classes.icons} cardIndex={cardIndex} />
       {isActiveFlower && (
-        <GoalCardContent className={classes.content} card={card} date={date} />
+        <GoalCardContent
+          className={classes.content}
+          cardId={cardId}
+          date={date}
+        />
       )}
       {!isActiveFlower && (
         <Timer className={classes.content} dateBefore={dateBefore} />

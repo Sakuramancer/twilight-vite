@@ -10,8 +10,7 @@ const cx = classNames.bind(classes);
 const geometry = { width: 610, height: 530, anchorSize: 300 };
 
 const GoalCard = ({ cardId, onConfirm, colorId }) => {
-  const card = goalsStatic[cardId];
-  const stage = card.stage;
+  const { stage } = goalsStatic[cardId];
 
   const clickHandler = () => {
     onConfirm?.(cardId);
@@ -41,7 +40,7 @@ const GoalCard = ({ cardId, onConfirm, colorId }) => {
       <HexedCanvas className={classes.canvas} geometry={geometry}>
         <HexedCanvas.Hex className={hexClass} onClick={clickHandler} />
       </HexedCanvas>
-      <GoalCardContent className={contentClass} card={card} />
+      <GoalCardContent className={contentClass} cardId={cardId} />
     </div>
   );
 };
