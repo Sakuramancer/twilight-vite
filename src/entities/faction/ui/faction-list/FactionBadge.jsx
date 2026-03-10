@@ -1,12 +1,14 @@
 import classNames from "classnames/bind";
 import { factionsAssets } from "../../assets/factions";
-import { factionsStatic } from "../../model/factions.data";
+import { factionsStatic, getExpansionLabel } from "../../model/factions.data";
 import classes from "./FactionBadge.module.css";
 
 const cx = classNames.bind(classes);
 
 const FactionBadge = ({ factionId, isActivated, onClick }) => {
-  const { name } = factionsStatic[factionId];
+  const { name, expansion } = factionsStatic[factionId];
+  const expansionLabel = getExpansionLabel(expansion);
+
   const { portrait, icon } = factionsAssets[factionId];
   const { src: portraitSrc, alt: portraitAlt } = portrait;
   const { src: iconSrc, alt: iconAlt } = icon;
@@ -35,6 +37,7 @@ const FactionBadge = ({ factionId, isActivated, onClick }) => {
       <div className={labelClass}>
         <img className={classes.icon} src={iconSrc} alt={iconAlt} />
         <div className={classes.name}>{name.value}</div>
+        <div className={classes.expansion}>{expansionLabel}</div>
       </div>
     </div>
   );

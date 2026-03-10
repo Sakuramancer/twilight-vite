@@ -76,3 +76,12 @@
   text-transform: uppercase;
   line-height: 0.9;
 }
+
+.expansion {
+  position: absolute;
+  bottom: 7px;
+  right: 5px;
+  font-size: 0.5em;
+  color: white;
+  text-transform: uppercase;
+}
