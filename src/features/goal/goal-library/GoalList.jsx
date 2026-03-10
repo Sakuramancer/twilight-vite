@@ -1,14 +1,15 @@
 import { GoalCard } from "entities/goal/ui";
-import { objectivesStatic, sortByRankAndTitle } from "entities/objective/model";
-import classes from "./ObjectiveList.module.css";
+import { sortByRankAndTitle } from "entities/objective/model";
+import { goalsStatic } from "entities/goal/model";
+import classes from "./GoalList.module.css";
 
-const ObjectiveList = ({ filters, onConfirm }) => {
+const GoalList = ({ filters, onConfirm }) => {
   const filterFunc = (card) =>
     filters[card.phase] && filters[card.stage] && filters[card.expansion];
 
   return (
     <div className={classes.main}>
-      {Object.values(objectivesStatic)
+      {Object.values(goalsStatic)
         .filter(filterFunc)
         .sort(sortByRankAndTitle)
         .map((card) => (
@@ -18,4 +19,4 @@ const ObjectiveList = ({ filters, onConfirm }) => {
   );
 };
 
-export default ObjectiveList;
+export default GoalList;

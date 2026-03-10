@@ -3,7 +3,7 @@ import FilterSection from "core/ui/FilterSection";
 import ScrollToTop from "core/ui/ScrollToTop";
 import { useOverlayContext } from "core/ui/OverlayContext";
 import Overlay from "core/ui/Overlay";
-import ObjectiveList from "../objective-library/ObjectiveList";
+import GoalList from "../../goal/goal-library/GoalList";
 import classes from "./ObjectivesScreen.module.css";
 
 const ObjectivesScreen = ({
@@ -24,7 +24,7 @@ const ObjectivesScreen = ({
     >
       <div className={classes.main}>
         <FilterSection filters={filters} handler={handler} data={data} />
-        <ObjectiveList
+        <GoalList
           filters={filters}
           onConfirm={onConfirm}
           {...overlayProps}

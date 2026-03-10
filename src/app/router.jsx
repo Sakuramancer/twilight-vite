@@ -4,7 +4,7 @@ import GamePage from "./pages/GamePage/GamePage";
 import ErrorPage from "./pages/ErrorPage";
 import HomePage from "./pages/HomePage/HomePage";
 import NewGamePage from "./pages/NewGamePage";
-import ObjectivesPage from "./pages/ObjectivesPage";
+import GoalsPage from "./pages/GoalsPage";
 import RelicsPage from "./pages/RelicsPage";
 
 export const router = createBrowserRouter([
@@ -18,8 +18,8 @@ export const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: "objectives",
-        element: <ObjectivesPage />,
+        path: "goals",
+        element: <GoalsPage />,
       },
       {
         path: "relics",

@@ -2,11 +2,11 @@ import { useObjectivesFilter } from "core/hooks/useFilter";
 import { useOverlayContext } from "core/ui/OverlayContext";
 import FilterSection from "core/ui/FilterSection";
 import ScrollToTop from "core/ui/ScrollToTop";
-import ObjectiveList from "./ObjectiveList";
+import GoalList from "./GoalList";
 import LinkButton from "core/ui/LinkButton";
-import classes from "./ObjectiveLibrary.module.css";
+import classes from "./GoalLibrary.module.css";
 
-const ObjectiveLibrary = () => {
+const GoalLibrary = () => {
   const [filters, handler, data] = useObjectivesFilter();
   const overlayProps = useOverlayContext();
 
@@ -16,10 +16,10 @@ const ObjectiveLibrary = () => {
         <LinkButton to="/">⇐ Назад</LinkButton>
       </div>
       <FilterSection filters={filters} handler={handler} data={data} />
-      <ObjectiveList filters={filters} {...overlayProps} />
+      <GoalList filters={filters} {...overlayProps} />
       <ScrollToTop />
     </div>
   );
 };
 
-export { ObjectiveLibrary };
+export { GoalLibrary };

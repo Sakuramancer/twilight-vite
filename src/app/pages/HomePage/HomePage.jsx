@@ -13,7 +13,7 @@ const HomePage = () => {
           Продолжить игру
         </LinkButton>
         <LinkButton to="/newGame">Новая игра</LinkButton>
-        <LinkButton to="/objectives">Карты целей</LinkButton>
+        <LinkButton to="/goals">Карты целей</LinkButton>
         <LinkButton to="/relics">Карты реликвий</LinkButton>
         <div className={classes.warning}>
           Сайт работает в&nbsp;тестовом режиме и&nbsp;предназначен
