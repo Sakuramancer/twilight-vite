@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import classNames from "classnames/bind";
 import ReactDOM from "react-dom";
 import Backdrop from "./Backdrop";
@@ -19,13 +19,13 @@ const Overlay = ({
 }) => {
   const [removing, setRemoving] = useState(false);
 
-  const discardHandler = () => {
+  const discardHandler = useCallback(() => {
     setTimeout(() => {
       setRemoving(false);
       onDiscard?.();
     }, 300);
     setRemoving(true);
-  };
+  }, [onDiscard]);
 
   const confirmHandler = (value) => {
     setTimeout(() => {
@@ -34,6 +34,18 @@ const Overlay = ({
     }, 300);
     setRemoving(true);
   };
+
+  useEffect(() => {
+    function handleKeyDown(event) {
+      if (event.key === "Escape") {
+        discardHandler();
+      }
+    }
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [discardHandler]);
 
   const containerClass = cx(className, {
     container: true,
