@@ -1,9 +1,8 @@
 .container {
   padding: 0 8px;
-  height: 324px;
+  height: 325px;
   width: 260px;
   overflow-y: auto;
   overflow-x: hidden;
-  scrollbar-color: #222 #888;
   scrollbar-width: thin;
 }

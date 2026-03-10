@@ -1,7 +1,6 @@
 .container {
   --block-margin: 40px;
   --inline-margin: 10%;
-  scrollbar-color: #222 #888;
 }
 
 .main {

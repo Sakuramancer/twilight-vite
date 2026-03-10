@@ -46,6 +46,5 @@
   padding: 10px;
   text-align: center;
   overflow-y: auto;
-  scrollbar-color: #222 #888;
   scrollbar-width: thin;
 }
