@@ -1,0 +1,30 @@
+.layout {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  --pointColumnContent-row-height: 52px;
+}
+
+.header {
+  display: flex;
+  height: 38px;
+  justify-content: space-between;
+  margin-block: 0 4px;
+  border-bottom: 1px solid hsl(39, 60%, 70%);
+}
+
+.title {
+  align-self: center;
+  text-align: left;
+  padding: 0px 10px;
+  color: whitesmoke;
+  text-transform: uppercase;
+
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.actions {
+  padding-inline-end: 2px;
+}

@@ -1,0 +1,28 @@
+.hex {
+  stroke-width: 4px;
+}
+
+.hex-interactive {
+  cursor: pointer;
+  pointer-events: fill;
+}
+
+.hex-notStriped {
+  stroke: #f7f2c8;
+  fill: var(--color);
+}
+
+.hex-striped {
+  stroke: #807a4d;
+  fill: var(--stripesUrl);
+}
+
+.noPlayer {
+  position: absolute;
+  top: 13px;
+  left: 19px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 1.4em;
+  color: #f7f2c8;
+  pointer-events: none;
+}

@@ -1,0 +1,1 @@
+export { AddRelicDialog } from "./AddRelicDialog";

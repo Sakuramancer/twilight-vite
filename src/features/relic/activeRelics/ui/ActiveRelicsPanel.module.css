@@ -1,0 +1,32 @@
+.container {
+  --block-margin: 40px;
+  --inline-margin: 10%;
+  scrollbar-color: #222 #888;
+}
+
+.main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 5px 0;
+  text-align: center;
+}
+
+.header {
+  width: 40%;
+  margin-inline: auto;
+  margin-block: 0 8px;
+  padding-bottom: 2px;
+  border-bottom: 2px solid rgb(44, 178, 210);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: white;
+
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.table {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}

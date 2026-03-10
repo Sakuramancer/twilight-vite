@@ -1,0 +1,16 @@
+.scrollable {
+  padding: 0 8px;
+  height: 280px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-color: #222 #888;
+  scrollbar-width: thin;
+}
+
+.buttons {
+  position: relative;
+  position: relative;
+  bottom: -10px;
+  left: 0;
+  text-align: right;
+}

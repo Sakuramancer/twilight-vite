@@ -1,0 +1,23 @@
+.coloredCanvas {
+  pointer-events: none;
+
+  & path:hover {
+    stroke: whitesmoke;
+    stroke-width: 0.5px;
+  }
+}
+
+.colorWheel {
+  pointer-events: fill;
+  cursor: pointer;
+}
+
+.selected {
+  fill: var(--color);
+  stroke: whitesmoke;
+  stroke-width: 0.5px;
+}
+
+.check {
+  fill: var(--textColor, whitesmoke);
+}

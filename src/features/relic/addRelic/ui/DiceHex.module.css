@@ -1,0 +1,23 @@
+.hex {
+  stroke-width: 4px;
+}
+
+.hex-interactive {
+  cursor: pointer;
+  pointer-events: fill;
+}
+
+.hex-notMuted {
+  stroke: #f7f2c8;
+}
+
+.hex-muted {
+  stroke: #807a4d;
+}
+
+.dice {
+  pointer-events: none;
+  fill: #f7f2c8;
+  stroke: #f7f2c8;
+  stroke-width: 2px;
+}

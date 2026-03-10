@@ -1,0 +1,662 @@
+{
+  "antiIntellectualRevolution": {
+    "id": "antiIntellectualRevolution",
+    "title": {
+      "src": "Anti-Intellectual Revolution",
+      "value": "Анти-технологическая революция"
+    },
+    "type": "law",
+    "description": {
+      "src": [
+        "***For:*** After a player researches a technology, they must destroy 1 of their non-fighter ships.",
+        "***Against:*** At the start of the next strategy phase, each player chooses and exhausts 1 planet for each technology they own."
+      ],
+      "value": [
+        "**ЗА:** после того, как игрок исследовал технологию, он должен уничтожить 1 свой корабль (кроме истребителей).",
+        "**ПРОТИВ:** в начале следующей фазы стратегии каждый игрок переворачивает 1 карту планеты за каждую технологию, которой владеет."
+      ]
+    },
+    "expansion": "main"
+  },
+  "classifiedDocumentLeaks": {
+    "id": "classifiedDocumentLeaks",
+    "title": {
+      "src": "Classified Document Leaks",
+      "value": "Утечка секретной информации"
+    },
+    "type": "law",
+    "description": {
+      "src": [
+        "When this agenda is revealed, if there are no scored secret objectives, discard this card and reveal another agenda from the top of the deck.",
+        "**Elect Scored Secret Objective**",
+        "The elected secret objective becomes a public objective; place it near the other public objectives in the common play area."
+      ],
+      "value": []
+    },
+    "expansion": "main"
+  },
+  "committeeFormation": {
+    "id": "committeeFormation",
+    "title": {
+      "src": "Committee Formation",
+      "value": "Формирование комитета"
+    },
+    "type": "law",
+    "description": {
+      "src": [],
+      "value": []
+    },
+    "expansion": "main"
+  },
+  "conventionsOfWar": {
+    "id": "conventionsOfWar",
+    "title": {
+      "src": "Conventions of War",
+      "value": "Правила ведения войны"
+    },
+    "type": "law",
+    "description": {
+      "src": [],
+      "value": []
+    },
+    "expansion": "main"
+  },
+  "enforcedTravelBan": {
+    "id": "enforcedTravelBan",
+    "title": {
+      "src": "Enforced Travel Ban",
+      "value": "Ограничение на передвижение"
+    },
+    "type": "law",
+    "description": {
+      "src": [],
+      "value": []
+    },
+    "expansion": "main"
+  },
+  "executiveSanctions": {
+    "id": "executiveSanctions",
+    "title": {
+      "src": "Executive Sanctions",
+      "value": "Ограничение полномочий"
+    },
+    "type": "law",
+    "description": {
+      "src": [],
+      "value": []
+    },
+    "expansion": "main"
+  },
+  "fleetRegulations": {
+    "id": "fleetRegulations",
+    "title": {
+      "src": "Fleet Regulations",
+      "value": "Регулирование флота"
+    },
+    "type": "law",
+    "description": {
+      "src": [],
+      "value": []
+    },
+    "expansion": "main"
+  },
+  "homelandDefenseAct": {
+    "id": "homelandDefenseAct",
+    "title": {
+      "src": "Homeland Defense Act",
+      "value": "Закон об обороне"
+    },
+    "type": "law",
+    "description": {
+      "src": [],
+      "value": []
+    },
+    "expansion": "main"
+  },
+  "imperialArbiter": {
+    "id": "imperialArbiter",
+    "title": {
+      "src": "Imperial Arbiter",
+      "value": "Имперский арбитр"
+    },
+    "type": "law",
+    "description": {
+      "src": [],
+      "value": []
+    },
+    "expansion": "main"
+  },
+  "ministerOfCommerce": {
+    "id": "ministerOfCommerce",
+    "title": {
+      "src": "Minister of Commerce",
+      "value": "Министр торговли"
+    },
+    "type": "law",
+    "description": {
+      "src": [],
+      "value": []
+    },
+    "expansion": "main"
+  },
+  "ministerOfExploration": {
+    "id": "ministerOfExploration",
+    "title": {
+      "src": "Minister of Exploration",
+      "value": "Министр открытий"
+    },
+    "type": "law",
+    "description": {
+      "src": [],
+      "value": []
+    },
+    "expansion": "main"
+  },
+  "ministerOfIndustry": {
+    "id": "ministerOfIndustry",
+    "title": {
+      "src": "Minister of Industry",
+      "value": "Министр промышленности"
+    },
+    "type": "law",
+    "description": {
+      "src": [],
+      "value": []
+    },
+    "expansion": "main"
+  },
+  "ministerOfPeace": {
+    "id": "ministerOfPeace",
+    "title": {
+      "src": "Minister of Peace",
+      "value": "Министр мира"
+    },
+    "type": "law",
+    "description": {
+      "src": [],
+      "value": []
+    },
+    "expansion": "main"
+  },
+  "ministerOfPolicy": {
+    "id": "ministerOfPolicy",
+    "title": {
+      "src": "Minister of Policy",
+      "value": "Министр политики"
+    },
+    "type": "law",
+    "description": {
+      "src": [],
+      "value": []
+    },
+    "expansion": "main"
+  },
+  "ministerOfSciences": {
+    "id": "ministerOfSciences",
+    "title": {
+      "src": "Minister of Sciences",
+      "value": "Министр науки"
+    },
+    "type": "law",
+    "description": {
+      "src": [],
+      "value": []
+    },
+    "expansion": "main"
+  },
+  "ministerOfWar": {
+    "id": "ministerOfWar",
+    "title": {
+      "src": "Minister of War",
+      "value": "Министр войны"
+    },
+    "type": "law",
+    "description": {
+      "src": [],
+      "value": []
+    },
+    "expansion": "main"
+  },
+  "prophecyOfIxth": {
+    "id": "prophecyOfIxth",
+    "title": {
+      "src": "Prophecy of Ixth",
+      "value": "Пророчество Икстов"
+    },
+    "type": "law",
+    "description": {
+      "src": [],
+      "value": []
+    },
+    "expansion": "main"
+  },
+  "publicizeWeaponSchematics": {
+    "id": "publicizeWeaponSchematics",
+    "title": {
+      "src": "Publicize Weapon Schematics",
+      "value": "Раскрытие военных чертежей"
+    },
+    "type": "law",
+    "description": {
+      "src": [],
+      "value": []
+    },
+    "expansion": "main"
+  },
+  "regulatedConscription": {
+    "id": "regulatedConscription",
+    "title": {
+      "src": "Regulated Conscription",
+      "value": "Плановый призыв"
+    },
+    "type": "law",
+    "description": {
+      "src": [],
+      "value": []
+    },
+    "expansion": "main"
+  },
+  "sharedResearch": {
+    "id": "sharedResearch",
+    "title": {
+      "src": "Shared Research",
+      "value": "Совместные исследования"
+    },
+    "type": "law",
+    "description": {
+      "src": [],
+      "value": []
+    },
+    "expansion": "main"
+  },
+  "wormholeReconstruction": {
+    "id": "wormholeReconstruction",
+    "title": {
+      "src": "Wormhole Reconstruction",
+      "value": "Перестройка червоточин"
+    },
+    "type": "law",
+    "description": {
+      "src": [],
+      "value": []
+    },
+    "expansion": "main"
+  },
+  "archivedSecret": {
+    "id": "archivedSecret",
+    "title": {
+      "src": "Archived Secret",
+      "value": "Секретные архивы"
+    },
+    "type": "directive",
+    "description": {
+      "src": [],
+      "value": []
+    },
+    "expansion": "main"
+  },
+  "armsReduction": {
+    "id": "armsReduction",
+    "title": {
+      "src": "Arms Reduction",
+      "value": "Договор о разоружении"
+    },
+    "type": "directive",
+    "description": {
+      "src": [],
+      "value": []
+    },
+    "expansion": "main"
+  },
+  "colonialRedistribution": {
+    "id": "colonialRedistribution",
+    "title": {
+      "src": "Colonial Redistribution",
+      "value": "Передел колоний"
+    },
+    "type": "directive",
+    "description": {
+      "src": [],
+      "value": []
+    },
+    "expansion": "main"
+  },
+  "compensatedDisarmament": {
+    "id": "compensatedDisarmament",
+    "title": {
+      "src": "Compensated Disarmament",
+      "value": "Оплачиваемое разоружение"
+    },
+    "type": "directive",
+    "description": {
+      "src": [],
+      "value": []
+    },
+    "expansion": "main"
+  },
+  "economicEquality": {
+    "id": "economicEquality",
+    "title": {
+      "src": "Economic Equality",
+      "value": "Экономическое равенство"
+    },
+    "type": "directive",
+    "description": {
+      "src": [],
+      "value": []
+    },
+    "expansion": "main"
+  },
+  "incentiveProgram": {
+    "id": "incentiveProgram",
+    "title": {
+      "src": "Incentive Program",
+      "value": "Программа поощрений"
+    },
+    "type": "directive",
+    "description": {
+      "src": [],
+      "value": []
+    },
+    "expansion": "main"
+  },
+  "ixthianArtifact": {
+    "id": "ixthianArtifact",
+    "title": {
+      "src": "Ixthian Artifact",
+      "value": "Артефакт Икстов"
+    },
+    "type": "directive",
+    "description": {
+      "src": [],
+      "value": []
+    },
+    "expansion": "main"
+  },
+  "judicialAbolishment": {
+    "id": "judicialAbolishment",
+    "title": {
+      "src": "Judicial Abolishment",
+      "value": "Неконституционный закон"
+    },
+    "type": "directive",
+    "description": {
+      "src": [],
+      "value": []
+    },
+    "expansion": "main"
+  },
+  "miscountDisclosed": {
+    "id": "miscountDisclosed",
+    "title": {
+      "src": "Miscount Disclosed",
+      "value": "Пересчет голосов"
+    },
+    "type": "directive",
+    "description": {
+      "src": [],
+      "value": []
+    },
+    "expansion": "main"
+  },
+  "mutiny": {
+    "id": "mutiny",
+    "title": {
+      "src": "Mutiny",
+      "value": "Бунт"
+    },
+    "type": "directive",
+    "description": {
+      "src": [],
+      "value": []
+    },
+    "expansion": "main"
+  },
+  "newConstitution": {
+    "id": "newConstitution",
+    "title": {
+      "src": "New Constitution",
+      "value": "Новая конституция"
+    },
+    "type": "directive",
+    "description": {
+      "src": [],
+      "value": []
+    },
+    "expansion": "main"
+  },
+  "publicExecution": {
+    "id": "publicExecution",
+    "title": {
+      "src": "Public Execution",
+      "value": "Публичная казнь"
+    },
+    "type": "directive",
+    "description": {
+      "src": [],
+      "value": []
+    },
+    "expansion": "main"
+  },
+  "seedOfAnEmpire": {
+    "id": "seedOfAnEmpire",
+    "title": {
+      "src": "Seed of an Empire",
+      "value": "Ростки империи"
+    },
+    "type": "directive",
+    "description": {
+      "src": [],
+      "value": []
+    },
+    "expansion": "main"
+  },
+  "swordsToPlowshares": {
+    "id": "swordsToPlowshares",
+    "title": {
+      "src": "Swords to Plowshares",
+      "value": "Мечи на орала"
+    },
+    "type": "directive",
+    "description": {
+      "src": [],
+      "value": []
+    },
+    "expansion": "main"
+  },
+  "unconventionalMeasures": {
+    "id": "unconventionalMeasures",
+    "title": {
+      "src": "Unconventional Measures",
+      "value": "Нетрадиционные меры"
+    },
+    "type": "directive",
+    "description": {
+      "src": [],
+      "value": []
+    },
+    "expansion": "main"
+  },
+  "wormholeResearch": {
+    "id": "wormholeResearch",
+    "title": {
+      "src": "Wormhole Research",
+      "value": "Исследование червоточин"
+    },
+    "type": "directive",
+    "description": {
+      "src": [],
+      "value": []
+    },
+    "expansion": "main"
+  },
+  "articlesOfWar": {
+    "id": "articlesOfWar",
+    "title": {
+      "src": "Articles of War",
+      "value": "Военный устав"
+    },
+    "type": "law",
+    "description": {
+      "src": [],
+      "value": []
+    },
+    "expansion": "pok"
+  },
+  "checksAndBalances": {
+    "id": "checksAndBalances",
+    "title": {
+      "src": "Checks and Balances",
+      "value": "Сдержки и противовесы"
+    },
+    "type": "law",
+    "description": {
+      "src": [],
+      "value": []
+    },
+    "expansion": "pok"
+  },
+  "nexusSovereignty": {
+    "id": "nexusSovereignty",
+    "title": {
+      "src": "Nexus Sovereignty",
+      "value": "Власть над ядром"
+    },
+    "type": "law",
+    "description": {
+      "src": [],
+      "value": []
+    },
+    "expansion": "pok"
+  },
+  "politicalCensure": {
+    "id": "politicalCensure",
+    "title": {
+      "src": "Political Censure",
+      "value": "Политический ценз"
+    },
+    "type": "law",
+    "description": {
+      "src": [],
+      "value": []
+    },
+    "expansion": "pok"
+  },
+  "representativeGovernment": {
+    "id": "representativeGovernment",
+    "title": {
+      "src": "Representative Government",
+      "value": "Галактический Сенат"
+    },
+    "type": "law",
+    "description": {
+      "src": [],
+      "value": []
+    },
+    "expansion": "pok"
+  },
+  "searchWarrant": {
+    "id": "searchWarrant",
+    "title": {
+      "src": "Search Warrant",
+      "value": "Ордер на обыск"
+    },
+    "type": "law",
+    "description": {
+      "src": [],
+      "value": []
+    },
+    "expansion": "pok"
+  },
+  "armedForcesStandardization": {
+    "id": "armedForcesStandardization",
+    "title": {
+      "src": "Armed Forces Standardization",
+      "value": "Стандартизация вооруженных сил"
+    },
+    "type": "directive",
+    "description": {
+      "src": [],
+      "value": []
+    },
+    "expansion": "pok"
+  },
+  "clandestineOperations": {
+    "id": "clandestineOperations",
+    "title": {
+      "src": "Clandestine Operations",
+      "value": "Тайные операции"
+    },
+    "type": "directive",
+    "description": {
+      "src": [],
+      "value": []
+    },
+    "expansion": "pok"
+  },
+  "covertLegislation": {
+    "id": "covertLegislation",
+    "title": {
+      "src": "Covert Legislation",
+      "value": "Тайный законопроект"
+    },
+    "type": "directive",
+    "description": {
+      "src": [],
+      "value": []
+    },
+    "expansion": "pok"
+  },
+  "galacticCrisisPact": {
+    "id": "galacticCrisisPact",
+    "title": {
+      "src": "Galactic Crisis Pact",
+      "value": "Пакт о галактическом кризисе"
+    },
+    "type": "directive",
+    "description": {
+      "src": [],
+      "value": []
+    },
+    "expansion": "pok"
+  },
+  "ministerOfAntiques": {
+    "id": "ministerOfAntiques",
+    "title": {
+      "src": "Minister of Antiques",
+      "value": "Министр древностей"
+    },
+    "type": "directive",
+    "description": {
+      "src": [],
+      "value": []
+    },
+    "expansion": "pok"
+  },
+  "rearmamentAgreement": {
+    "id": "rearmamentAgreement",
+    "title": {
+      "src": "Rearmament Agreement",
+      "value": "Соглашение о перевооружении"
+    },
+    "type": "directive",
+    "description": {
+      "src": [],
+      "value": []
+    },
+    "expansion": "pok"
+  },
+  "researchGrantReallocation": {
+    "id": "researchGrantReallocation",
+    "title": {
+      "src": "Research Grant Reallocation",
+      "value": "Перераспределение гранта"
+    },
+    "type": "directive",
+    "description": {
+      "src": [],
+      "value": []
+    },
+    "expansion": "pok"
+  }
+}

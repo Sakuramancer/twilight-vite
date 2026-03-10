@@ -1,0 +1,51 @@
+.container {
+  --block-margin: 40px;
+  --inline-margin: 5%;
+}
+
+.main {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 5px 0;
+  text-align: center;
+  height: 100%;
+}
+
+.header {
+  width: 40%;
+  margin-inline: auto;
+  margin-block: 0 8px;
+  padding-bottom: 2px;
+  border-bottom: 2px solid rgb(44, 178, 210);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: white;
+
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: 95%;
+  padding: 10px;
+}
+
+.manager {
+  max-width: 1250px;
+  height: 95%;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+  overflow-y: auto;
+  scrollbar-color: #222 #888;
+  scrollbar-width: thin;
+}

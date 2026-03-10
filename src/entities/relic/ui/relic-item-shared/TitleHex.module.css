@@ -1,0 +1,55 @@
+.extendedHex {
+  stroke-width: 6px;
+  fill: #333;
+}
+
+.extendedHex-interactive {
+  cursor: pointer;
+}
+
+.extendedHex-notMuted {
+  stroke: #f7f2c8;
+}
+
+.extendedHex-muted {
+  stroke: #807a4d;
+}
+
+.extendedHex-redpainted {
+  fill: rgb(160, 64, 64);
+}
+
+.title {
+  position: absolute;
+  top: 0;
+  left: 45px;
+  width: calc(100% - 94px);
+  height: 52px;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 0.9em;
+  line-height: 0.9;
+  letter-spacing: -0.8px;
+  text-transform: uppercase;
+}
+
+.title-alignLeft {
+  justify-content: left;
+  text-align: left;
+}
+
+.title-centered {
+  justify-content: center;
+  text-align: center;
+}
+
+.title-notMuted {
+  color: #f7f2c8;
+}
+
+.title-muted {
+  color: #807a4d;
+}

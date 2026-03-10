@@ -1,0 +1,32 @@
+import { useHexedCanvasContext } from "./HexedCanvasContext";
+
+const verticies = 6;
+const angleMultiplier = (2 * Math.PI) / verticies;
+
+const HexPath = ({
+  className,
+  anchorPoint,
+  anchorSize,
+  sitOnEdge = true,
+  ...props
+}) => {
+  const context = useHexedCanvasContext();
+  if (!anchorPoint) {
+    anchorPoint = { x: 0.5 * context.width, y: 0.5 * context.height };
+  }
+  if (!anchorSize) {
+    anchorSize = context.anchorSize;
+  }
+
+  const onEdgeAngle = sitOnEdge ? 0 : Math.PI / verticies;
+  const path = [...Array(verticies).keys()]
+    .map(
+      (x) =>
+        `${anchorPoint.x + anchorSize * Math.cos(angleMultiplier * x + onEdgeAngle)},
+          ${anchorPoint.y + anchorSize * Math.sin(angleMultiplier * x + onEdgeAngle)}`,
+    )
+    .join(" ");
+  return <path className={className} d={`M${path}z`} {...props} />;
+};
+
+export default HexPath;

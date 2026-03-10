@@ -1,0 +1,67 @@
+.main {
+  position: relative;
+  display: grid;
+  grid-template-rows: minmax(400px, 1fr) minmax(630px, 1fr);
+
+  height: 100vh;
+  max-height: 100vh;
+  padding: 10px;
+  overflow-y: hidden;
+}
+
+.menu {
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+}
+
+.magnifier {
+  position: absolute;
+  bottom: 60px;
+  left: 10px;
+}
+
+.pointCounter {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+
+  width: 400px;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.pointTable {
+  position: absolute;
+  left: 420px;
+}
+
+.mecatol {
+  position: absolute;
+  top: -20px;
+  right: 20px;
+}
+
+.gains {
+  position: absolute;
+  top: 310px;
+  right: 25px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.relicsEye {
+  position: absolute;
+  top: 340px;
+  right: 360px;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.objectives {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+}

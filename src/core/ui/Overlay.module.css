@@ -1,0 +1,49 @@
+.container {
+  position: absolute;
+  top: var(--block-margin);
+  left: var(--inline-margin);
+  z-index: 21;
+  width: calc(100% - 2 * var(--inline-margin) - 10px);
+  height: calc(100vh - 2 * var(--block-margin));
+  background: var(--modal-background);
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  box-shadow: 0 0px 30px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.overflow-auto {
+  overflow: auto;
+  scrollbar-color: #222 #888;
+  scrollbar-width: thin;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.enter {
+  animation: overlayEnter 0.3s ease-in-out forwards;
+}
+
+.exit {
+  animation: overlayExit 0.3s ease-in-out forwards;
+}
+
+@keyframes overlayEnter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes overlayExit {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

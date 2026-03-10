@@ -1,0 +1,25 @@
+.canvas {
+  height: 125%;
+  pointer-events: none;
+}
+
+.hex {
+  stroke: whitesmoke;
+  stroke-width: 5px;
+  cursor: pointer;
+  pointer-events: fill;
+}
+
+.active {
+  fill: hsl(115, 97%, 35%);
+  &:hover {
+    fill: hsl(115, 97%, 45%);
+  }
+}
+
+.inactive {
+  fill: hsl(240, 33%, 38%);
+  &:hover {
+    fill: hsl(240, 33%, 48%);
+  }
+}

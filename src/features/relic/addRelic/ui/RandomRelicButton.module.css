@@ -1,0 +1,29 @@
+.button {
+  position: relative;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.buttonFrame {
+  fill: #333;
+  stroke: #f7f2c8;
+  stroke-width: 6px;
+  cursor: pointer;
+}
+
+.dice {
+  fill: #f7f2c8;
+  pointer-events: none;
+}
+
+.content {
+  position: absolute;
+  top: 13px;
+  left: 6px;
+  width: 200px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  color: #f7f2c8;
+  pointer-events: none;
+}

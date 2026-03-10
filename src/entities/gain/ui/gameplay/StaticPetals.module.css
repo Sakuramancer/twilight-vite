@@ -1,0 +1,12 @@
+.petal {
+  fill: color-mix(
+    in srgb,
+    var(--hoverColor) calc(var(--groupHovered, 0) * 100%),
+    var(--color)
+  );
+  stroke: whitesmoke;
+  stroke-width: 2px;
+  filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.3));
+  pointer-events: fill;
+  cursor: pointer;
+}

@@ -1,0 +1,50 @@
+.hex {
+  cursor: pointer;
+  pointer-events: fill;
+  stroke-width: 8px;
+}
+
+.mount {
+  fill: none;
+  stroke: #aaaaaa;
+  stroke-width: 12px;
+}
+
+.hex-striped {
+  fill: var(--stripesUrl);
+  stroke: whitesmoke;
+  &:hover {
+    fill: var(--stripesHoverUrl);
+  }
+}
+
+.hex-cleared {
+  fill: rgba(255, 255, 255, 0.01);
+  stroke: var(--color);
+  &:hover {
+    stroke: var(--hoverColor);
+  }
+}
+
+.hex-filled {
+  fill: var(--color);
+  filter: drop-shadow(0 0 10px whitesmoke);
+  stroke: whitesmoke;
+  &:hover {
+    fill: var(--hoverColor);
+    stroke: whitesmoke;
+  }
+}
+
+.hex-lowBrightness,
+.plus-lowBrightness {
+  filter: brightness(0.6);
+}
+
+.plus-cleared {
+  fill: whitesmoke;
+}
+
+.plus-filled {
+  fill: var(--textColor);
+}

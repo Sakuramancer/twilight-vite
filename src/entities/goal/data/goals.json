@@ -1,0 +1,1127 @@
+{
+  "amass_wealth": {
+    "id": "amass_wealth",
+    "title": {
+      "src": "Amass Wealth",
+      "value": "Накопите богатство"
+    },
+    "description": {
+      "src": "Spend 3 influence, 3 resources and 3 trade goods.",
+      "value": "Потратьте 3\u00A0влияния, 3\u00A0ресурса и 3\u00A0товара."
+    },
+    "phase": "status",
+    "stage": "stage1",
+    "expansion": "pok"
+  },
+  "build_defenses": {
+    "id": "build_defenses",
+    "title": {
+      "src": "Build Defenses",
+      "value": "Возведите укрепления"
+    },
+    "description": {
+      "src": "Have 4 or more structures.",
+      "value": "У вас должно быть хотя\u00A0бы 4\u00A0сооружения."
+    },
+    "phase": "status",
+    "stage": "stage1",
+    "expansion": "pok"
+  },
+  "corner_the_market": {
+    "id": "corner_the_market",
+    "title": {
+      "src": "Corner the Market",
+      "value": "Монополизируйте рынок"
+    },
+    "description": {
+      "src": "Control 4 planets that each have the same planet trait.",
+      "value": "Контролируйте одновременно 4\u00A0планеты одного типа."
+    },
+    "phase": "status",
+    "stage": "stage1",
+    "expansion": "main"
+  },
+  "develop_weaponry": {
+    "id": "develop_weaponry",
+    "title": {
+      "src": "Develop Weaponry",
+      "value": "Разработайте оружие"
+    },
+    "description": {
+      "src": "Own 2 unit upgrade technologies.",
+      "value": "У вас должно быть 2\u00A0технологии улучшений."
+    },
+    "phase": "status",
+    "stage": "stage1",
+    "expansion": "main"
+  },
+  "discover_lost_outposts": {
+    "id": "discover_lost_outposts",
+    "title": {
+      "src": "Discover Lost Outposts",
+      "value": "Обнаружьте потерянные аванпосты"
+    },
+    "description": {
+      "src": "Control 2 planets that have attachments.",
+      "value": "Контролируйте 2\u00A0планеты с\u00A0прикреплениями."
+    },
+    "phase": "status",
+    "stage": "stage1",
+    "expansion": "pok"
+  },
+  "diversify_research": {
+    "id": "diversify_research",
+    "title": {
+      "src": "Diversify Research",
+      "value": "Освойте все науки"
+    },
+    "description": {
+      "src": "Own 2 technologies in each of 2 colors.",
+      "value": "У вас должно быть 2\u00A0технологии в\u00A0каждом из\u00A02\u00A0разных цветов."
+    },
+    "phase": "status",
+    "stage": "stage1",
+    "expansion": "main"
+  },
+  "engineer_a_marvel": {
+    "id": "engineer_a_marvel",
+    "title": {
+      "src": "Engineer a Marvel",
+      "value": "Постройте чудо"
+    },
+    "description": {
+      "src": "Have your flagship or a war sun on the game board.",
+      "value": "У вас должен быть на\u00A0игровом поле Флагман или Солнце войны."
+    },
+    "phase": "status",
+    "stage": "stage1",
+    "expansion": "pok"
+  },
+  "erect_a_monument": {
+    "id": "erect_a_monument",
+    "title": {
+      "src": "Erect a Monument",
+      "value": "Возведите памятник"
+    },
+    "description": {
+      "src": "Spend 8 resources.",
+      "value": "Потратьте 8\u00A0очков ресурсов."
+    },
+    "phase": "status",
+    "stage": "stage1",
+    "expansion": "main"
+  },
+  "expand_borders": {
+    "id": "expand_borders",
+    "title": {
+      "src": "Expand Borders",
+      "value": "Расширьте границы"
+    },
+    "description": {
+      "src": "Control 6 planets in non-home systems.",
+      "value": "Контролируйте одновременно 6\u00A0планет вне\u00A0родных систем."
+    },
+    "phase": "status",
+    "stage": "stage1",
+    "expansion": "main"
+  },
+  "explore_deep_space": {
+    "id": "explore_deep_space",
+    "title": {
+      "src": "Explore Deep Space",
+      "value": "Исследуйте глубокий космос"
+    },
+    "description": {
+      "src": "Have units in 3 systems that do not contain planets.",
+      "value": "У вас должны быть отряды в\u00A03\u00A0системах без\u00A0планет."
+    },
+    "phase": "status",
+    "stage": "stage1",
+    "expansion": "pok"
+  },
+  "found_research_outposts": {
+    "id": "found_research_outposts",
+    "title": {
+      "src": "Found Research Outposts",
+      "value": "Создайте исследовательские аванпосты"
+    },
+    "description": {
+      "src": "Control 3 planets that have technology specialties.",
+      "value": "Контролируйте одновременно 3\u00A0планеты с\u00A0технологической специализацией."
+    },
+    "phase": "status",
+    "stage": "stage1",
+    "expansion": "main"
+  },
+  "improve_infrastructure": {
+    "id": "improve_infrastructure",
+    "title": {
+      "src": "Improve Infrastructure",
+      "value": "Улучшите инфраструктуру"
+    },
+    "description": {
+      "src": "Have structures on 3 planets outside of your home system.",
+      "value": "У вас должны быть сооружения на\u00A03\u00A0планетах за\u00A0пределами вашей родной системы."
+    },
+    "phase": "status",
+    "stage": "stage1",
+    "expansion": "pok"
+  },
+  "intimidate_the_council": {
+    "id": "intimidate_the_council",
+    "title": {
+      "src": "Intimidate the Council",
+      "value": "Запугайте Совет"
+    },
+    "description": {
+      "src": "Have 1+ ships in 2 systems that are adjacent to Mecatol Rex's system.",
+      "value": "Имейте хотя бы по\u00A01\u00A0кораблю в\u00A02\u00A0системах, смежных с\u00A0системой Мекатол-Рекса."
+    },
+    "phase": "status",
+    "stage": "stage1",
+    "expansion": "main"
+  },
+  "lead_from_the_front": {
+    "id": "lead_from_the_front",
+    "title": {
+      "src": "Lead From the Front",
+      "value": "Ведите за собой"
+    },
+    "description": {
+      "src": "Spend a total of 3 tokens from your tactic and/or strategy pool.",
+      "value": "Потратьте суммарно 3\u00A0жетона из\u00A0вашего тактического и/или стратегического резерва."
+    },
+    "phase": "status",
+    "stage": "stage1",
+    "expansion": "main"
+  },
+  "make_history": {
+    "id": "make_history",
+    "title": {
+      "src": "Make History",
+      "value": "Вершите историю"
+    },
+    "description": {
+      "src": "Have units in 2 systems that contain legendary planets, Mecatol Rex, or anomalies.",
+      "value": "У вас должны быть отряды в\u00A02\u00A0системах с\u00A0легендарными планетами, Мекатол-Рексом или аномалиями."
+    },
+    "phase": "status",
+    "stage": "stage1",
+    "expansion": "pok"
+  },
+  "negotiate_trade_routes": {
+    "id": "negotiate_trade_routes",
+    "title": {
+      "src": "Negotiate Trade Routes",
+      "value": "Откройте торговые пути"
+    },
+    "description": {
+      "src": "Spend 5 Trade Goods.",
+      "value": "Потратьте 5\u00A0товаров."
+    },
+    "phase": "status",
+    "stage": "stage1",
+    "expansion": "main"
+  },
+  "populate_the_outer_rim": {
+    "id": "populate_the_outer_rim",
+    "title": {
+      "src": "Populate the Outer Rim",
+      "value": "Заселите Дальний Рубеж"
+    },
+    "description": {
+      "src": "Have units in 3 systems on the edge of the game board other than your home system.",
+      "value": "У вас должны быть отряды в\u00A03\u00A0системах (кроме вашей родной) на\u00A0краю игрового поля."
+    },
+    "phase": "status",
+    "stage": "stage1",
+    "expansion": "pok"
+  },
+  "push_boundaries": {
+    "id": "push_boundaries",
+    "title": {
+      "src": "Push Boundaries",
+      "value": "Расширяйте границы"
+    },
+    "description": {
+      "src": "Control more planets than each 2 of your neighbors.",
+      "value": "Контролируйте больше планет, чем каждый из\u00A02\u00A0ваших соседей."
+    },
+    "phase": "status",
+    "stage": "stage1",
+    "expansion": "pok"
+  },
+  "raise_a_fleet": {
+    "id": "raise_a_fleet",
+    "title": {
+      "src": "Raise a Fleet",
+      "value": "Постройте флот"
+    },
+    "description": {
+      "src": "Have 5 or more non-fighter ships in 1 system.",
+      "value": "У вас должно быть хотя\u00A0бы 5\u00A0кораблей (кроме истребителей) в\u00A01\u00A0системе."
+    },
+    "phase": "status",
+    "stage": "stage1",
+    "expansion": "pok"
+  },
+  "sway_the_council": {
+    "id": "sway_the_council",
+    "title": {
+      "src": "Sway the Council",
+      "value": "Убедите Совет"
+    },
+    "description": {
+      "src": "Spend 8 influence.",
+      "value": "Потратьте 8\u00A0очков влияния."
+    },
+    "phase": "status",
+    "stage": "stage1",
+    "expansion": "main"
+  },
+  "achieve_supremacy": {
+    "id": "achieve_supremacy",
+    "title": {
+      "src": "Achieve Supremacy",
+      "value": "Добейтесь превосходства"
+    },
+    "description": {
+      "src": "Have your flagship or a war sun in another player's home system or the Mecatol Rex system.",
+      "value": "У вас должен быть Флагман или Солнце Войны в\u00A0родной системе другого игрока или в\u00A0системе Мекатол-Рекс."
+    },
+    "phase": "status",
+    "stage": "stage2",
+    "expansion": "pok"
+  },
+  "become_a_legend": {
+    "id": "become_a_legend",
+    "title": { "src": "Become a Legend", "value": "Станьте легендой" },
+    "description": {
+      "src": "Have units in 4 systems that contain legendary planets, Mecatol Rex, or anomalies.",
+      "value": "У вас должны быть отряды в\u00A04\u00A0системах с\u00A0легендарными планетами, Мекатол-Рексом или аномалиями."
+    },
+    "phase": "status",
+    "stage": "stage2",
+    "expansion": "pok"
+  },
+  "centralize_galactic_trade": {
+    "id": "centralize_galactic_trade",
+    "title": {
+      "src": "Centralize Galactic Trade",
+      "value": "Сосредоточьте галактическую торговлю"
+    },
+    "description": {
+      "src": "Spend 10 trade goods.",
+      "value": "Потратьте 10\u00A0товаров."
+    },
+    "phase": "status",
+    "stage": "stage2",
+    "expansion": "main"
+  },
+  "command_an_armada": {
+    "id": "command_an_armada",
+    "title": {
+      "src": "Command an Armada",
+      "value": "Управляйте армадой"
+    },
+    "description": {
+      "src": "Have 8 or more non-fighter ships in 1 system.",
+      "value": "У вас должно быть хотя\u00A0бы 8\u00A0кораблей (кроме истребителей) в\u00A01\u00A0системе."
+    },
+    "phase": "status",
+    "stage": "stage2",
+    "expansion": "pok"
+  },
+  "conquer_the_weak": {
+    "id": "conquer_the_weak",
+    "title": {
+      "src": "Conquer the Weak",
+      "value": "Подчините слабых"
+    },
+    "description": {
+      "src": "Control 1 planet that is in another player's home system.",
+      "value": "Контролируйте 1\u00A0планету в\u00A0родной системе другого игрока."
+    },
+    "phase": "status",
+    "stage": "stage2",
+    "expansion": "main"
+  },
+  "construct_massive_cities": {
+    "id": "construct_massive_cities",
+    "title": {
+      "src": "Construct Massive Cities",
+      "value": "Стройте большие города"
+    },
+    "description": {
+      "src": "Have 7 or more structures.",
+      "value": "У вас должно быть хотя\u00A0бы 7\u00A0сооружений."
+    },
+    "phase": "status",
+    "stage": "stage2",
+    "expansion": "pok"
+  },
+  "control_the_borderlands": {
+    "id": "control_the_borderlands",
+    "title": {
+      "src": "Control the Borderlands",
+      "value": "Контролируйте пограничье"
+    },
+    "description": {
+      "src": "Have units in 5 systems on the edge of the game board other than your home system.",
+      "value": "У вас должны быть отряды в\u00A05\u00A0системах (кроме вашей родной) на\u00A0краю игрового поля."
+    },
+    "phase": "status",
+    "stage": "stage2",
+    "expansion": "pok"
+  },
+  "form_galactic_brain_trust": {
+    "id": "form_galactic_brain_trust",
+    "title": {
+      "src": "Form Galactic Brain Trust",
+      "value": "Сформируйте галактический мозговой центр"
+    },
+    "description": {
+      "src": "Control 5 planets that have technology specialties.",
+      "value": "Контролируйте одновременно 5\u00A0планет с\u00A0технологической специализацией."
+    },
+    "phase": "status",
+    "stage": "stage2",
+    "expansion": "main"
+  },
+  "found_a_golden_age": {
+    "id": "found_a_golden_age",
+    "title": {
+      "src": "Found a Golden Age",
+      "value": "Начните золотой век"
+    },
+    "description": {
+      "src": "Spend 16 resources.",
+      "value": "Потратьте 16\u00A0очков ресурсов."
+    },
+    "phase": "status",
+    "stage": "stage2",
+    "expansion": "main"
+  },
+  "galvanize_the_people": {
+    "id": "galvanize_the_people",
+    "title": {
+      "src": "Galvanize the People",
+      "value": "Завладейте умами"
+    },
+    "description": {
+      "src": "Spend a total of 6 tokens from your tactic and/or strategy pools.",
+      "value": "Потратьте суммарно 6\u00A0жетонов из\u00A0вашего тактического и/или стратегического резерва."
+    },
+    "phase": "status",
+    "stage": "stage2",
+    "expansion": "main"
+  },
+  "hold_vast_reserves": {
+    "id": "hold_vast_reserves",
+    "title": {
+      "src": "Hold Vast Reserves",
+      "value": "Храните большие запасы"
+    },
+    "description": {
+      "src": "Spend 6 influence, 6 resources, and 6 trade goods.",
+      "value": "Потратьте 6\u00A0влияния, 6\u00A0ресурсов и\u00A06\u00A0товаров."
+    },
+    "phase": "status",
+    "stage": "stage2",
+    "expansion": "pok"
+  },
+  "manipulate_galactic_law": {
+    "id": "manipulate_galactic_law",
+    "title": {
+      "src": "Manipulate Galactic Law",
+      "value": "Найдите дыру в\u00A0законе"
+    },
+    "description": {
+      "src": "Spend 16 influence.",
+      "value": "Потратьте 16\u00A0очков влияния."
+    },
+    "phase": "status",
+    "stage": "stage2",
+    "expansion": "main"
+  },
+  "master_of_sciences": {
+    "id": "master_of_sciences",
+    "title": {
+      "src": "Master of Sciences",
+      "value": "Подчините науку"
+    },
+    "description": {
+      "src": "Own 2 technologies in each of 4 colors.",
+      "value": "У вас должно быть 2\u00A0технологии в\u00A0каждом из\u00A04\u00A0разных цветов."
+    },
+    "phase": "status",
+    "stage": "stage2",
+    "expansion": "main"
+  },
+  "patrol_vast_territories": {
+    "id": "patrol_vast_territories",
+    "title": {
+      "src": "Patrol Vast Territories",
+      "value": "Патрулируйте огромные территории"
+    },
+    "description": {
+      "src": "Have units in 5 systems that do not contain planets.",
+      "value": "У вас должны быть отряды в\u00A05\u00A0системах без\u00A0планет."
+    },
+    "phase": "status",
+    "stage": "stage2",
+    "expansion": "pok"
+  },
+  "protect_the_border": {
+    "id": "protect_the_border",
+    "title": {
+      "src": "Protect the Border",
+      "value": "Защищайте границы"
+    },
+    "description": {
+      "src": "Have structures on 5 planets outside of your home system.",
+      "value": "У вас должны быть сооружения на\u00A05\u00A0планетах за\u00A0пределами вашей родной системы."
+    },
+    "phase": "status",
+    "stage": "stage2",
+    "expansion": "pok"
+  },
+  "reclaim_ancient_monuments": {
+    "id": "reclaim_ancient_monuments",
+    "title": {
+      "src": "Reclaim Ancient Monuments",
+      "value": "Верните древние памятники"
+    },
+    "description": {
+      "src": "Control 3 planets that have attachments.",
+      "value": "Контролируйте 3\u00A0планеты с\u00A0прикреплениями."
+    },
+    "phase": "status",
+    "stage": "stage2",
+    "expansion": "pok"
+  },
+  "revolutionize_warfare": {
+    "id": "revolutionize_warfare",
+    "title": {
+      "src": "Revolutionize Warfare",
+      "value": "Совершите революцию в\u00A0вооружении"
+    },
+    "description": {
+      "src": "Own 3 unit upgrade technologies.",
+      "value": "У вас должно быть 3\u00A0технологии улучшений."
+    },
+    "phase": "status",
+    "stage": "stage2",
+    "expansion": "main"
+  },
+  "rule_distant_lands": {
+    "id": "rule_distant_lands",
+    "title": {
+      "src": "Rule Distant Lands",
+      "value": "Правьте далекими землями"
+    },
+    "description": {
+      "src": "Control 2 planets that are each in or adjacent to a different, other player's home system.",
+      "value": "Контролируйте 2\u00A0планеты, смежные с\u00A0разными родными системами других игроков или находящиеся в\u00A0таких системах."
+    },
+    "phase": "status",
+    "stage": "stage2",
+    "expansion": "pok"
+  },
+  "subdue_the_galaxy": {
+    "id": "subdue_the_galaxy",
+    "title": {
+      "src": "Subdue the Galaxy",
+      "value": "Подчините галактику"
+    },
+    "description": {
+      "src": "Control 11 planets in non-home systems.",
+      "value": "Контролируйте одновременно 11\u00A0планет вне\u00A0родных систем."
+    },
+    "phase": "status",
+    "stage": "stage2",
+    "expansion": "main"
+  },
+  "unify_the_colonies": {
+    "id": "unify_the_colonies",
+    "title": {
+      "src": "Unify the Colonies",
+      "value": "Объедините колонии"
+    },
+    "description": {
+      "src": "Control 6 planets that each have the same planet trait.",
+      "value": "Контролируйте одновременно 6\u00A0планет одного типа."
+    },
+    "phase": "status",
+    "stage": "stage2",
+    "expansion": "main"
+  },
+  "become_a_martyr": {
+    "id": "become_a_martyr",
+    "title": {
+      "src": "Become a Martyr",
+      "value": "Станьте мучеником"
+    },
+    "description": {
+      "src": "Lose control of a planet in a home system.",
+      "value": "Потеряйте контроль над\u00A0планетой в\u00A0родной системе."
+    },
+    "phase": "action",
+    "stage": "secret",
+    "expansion": "pok"
+  },
+  "betray_a_friend": {
+    "id": "betray_a_friend",
+    "title": {
+      "src": "Betray a Friend",
+      "value": "Предайте друга"
+    },
+    "description": {
+      "src": "Win a combat against a player whose promissory note you had in your play area at the start of your tactical action.",
+      "value": "Выиграйте бой против игрока, чья карта обещания лежала перед вами в\u00A0начале вашего тактического действия."
+    },
+    "phase": "action",
+    "stage": "secret",
+    "expansion": "pok"
+  },
+  "brave_the_void": {
+    "id": "brave_the_void",
+    "title": {
+      "src": "Brave the Void",
+      "value": "Не убоитесь бездны"
+    },
+    "description": {
+      "src": "Win a combat in an anomaly.",
+      "value": "Выиграйте бой в\u00A0аномалии."
+    },
+    "phase": "action",
+    "stage": "secret",
+    "expansion": "pok"
+  },
+  "darken_the_skies": {
+    "id": "darken_the_skies",
+    "title": {
+      "src": "Darken the Skies",
+      "value": "Затмите небеса"
+    },
+    "description": {
+      "src": "Win a combat in another player's home system.",
+      "value": "Выиграйте бой в\u00A0родной системе другого игрока."
+    },
+    "phase": "action",
+    "stage": "secret",
+    "expansion": "pok"
+  },
+  "demonstrate_your_power": {
+    "id": "demonstrate_your_power",
+    "title": {
+      "src": "Demonstrate Your Power",
+      "value": "Покажите силу"
+    },
+    "description": {
+      "src": "Have 3 or more non-fighter ships in the active system at the end of a space combat.",
+      "value": "У вас должно быть хотя\u00A0бы 3\u00A0корабля, кроме истребителей, в\u00A0активной системе в\u00A0конце космического боя."
+    },
+    "phase": "action",
+    "stage": "secret",
+    "expansion": "pok"
+  },
+  "destroy_their_greatest_ship": {
+    "id": "destroy_their_greatest_ship",
+    "title": {
+      "src": "Destroy Their Greatest Ship",
+      "value": "Уничтожьте гордость флота"
+    },
+    "description": {
+      "src": "Destroy another player's war sun or flagship.",
+      "value": "Уничтожьте Солнце\u00A0Войны или Флагман другого игрока."
+    },
+    "phase": "action",
+    "stage": "secret",
+    "expansion": "main"
+  },
+  "fight_with_precision_omega": {
+    "id": "fight_with_precision_omega",
+    "title": {
+      "src": "Fight with Precision Ω",
+      "value": "Бейте метко Ω"
+    },
+    "description": {
+      "src": "Destroy the last of a player's fighters in the active system during the antifighter barrage step.",
+      "value": "Уничтожьте последние истребители игрока в\u00A0активной системе во\u00A0время шага \"Заградительный огонь\"."
+    },
+    "phase": "action",
+    "stage": "secret",
+    "expansion": "omega"
+  },
+  "make_an_example_of_their_world_omega": {
+    "id": "make_an_example_of_their_world_omega",
+    "title": {
+      "src": "Make an Example of their World Ω",
+      "value": "Преподайте урок\u00A0Ω"
+    },
+    "description": {
+      "src": "Destroy the last of a player's ground forces on a planet during the bombardment step.",
+      "value": "Уничтожьте последние наземные войска игрока на\u00A0планете во\u00A0время шага \"Бомбардировка\"."
+    },
+    "phase": "action",
+    "stage": "secret",
+    "expansion": "omega"
+  },
+  "prove_endurance": {
+    "id": "prove_endurance",
+    "title": {
+      "src": "Prove Endurance",
+      "value": "Проявите стойкость"
+    },
+    "description": {
+      "src": "Be the last player to pass during a game round.",
+      "value": "Последним пропустите ход в\u00A0раунде игры."
+    },
+    "phase": "action",
+    "stage": "secret",
+    "expansion": "pok"
+  },
+  "spark_a_rebellion": {
+    "id": "spark_a_rebellion",
+    "title": {
+      "src": "Spark A Rebellion",
+      "value": "Поднимите восстание"
+    },
+    "description": {
+      "src": "Win a combat against a player who has the most victory points.",
+      "value": "Выиграйте бой против игрока, у\u00A0которого больше всего победных очков."
+    },
+    "phase": "action",
+    "stage": "secret",
+    "expansion": "main"
+  },
+  "turn_their_fleets_to_dust_omega": {
+    "id": "turn_their_fleets_to_dust_omega",
+    "title": {
+      "src": "Turn Their Fleets to Dust Ω",
+      "value": "Обратите флот в\u00A0пыль Ω"
+    },
+    "description": {
+      "src": "Destroy the last of a player's non-fighter ships in the active system during the space cannon offense step.",
+      "value": "Уничтожьте последние корабли игрока, кроме истребителей, в\u00A0активной системе во\u00A0время шага \"Космическая пушка: атака\"."
+    },
+    "phase": "action",
+    "stage": "secret",
+    "expansion": "omega"
+  },
+  "unveil_flagship": {
+    "id": "unveil_flagship",
+    "title": {
+      "src": "Unveil Flagship",
+      "value": "Покажите флагман в\u00A0деле"
+    },
+    "description": {
+      "src": "Win a space combat in a system that contains your flagship.",
+      "value": "Выиграйте космический бой в\u00A0системе, где находится ваш флагман."
+    },
+    "extra": {
+      "src": "You cannot score this objective if your flagship is destroyed in the combat",
+      "value": "Вы\u00A0не\u00A0можете выполнить эту цель, если ваш флагман был уничтожен в\u00A0этом бою."
+    },
+    "phase": "action",
+    "stage": "secret",
+    "expansion": "main"
+  },
+  "dictate_policy": {
+    "id": "dictate_policy",
+    "title": {
+      "src": "Dictate Policy",
+      "value": "Диктуйте условия"
+    },
+    "description": {
+      "src": "There are 3 or more laws in play.",
+      "value": "В игре должно быть хотя\u00A0бы 3\u00A0закона."
+    },
+    "phase": "agenda",
+    "stage": "secret",
+    "expansion": "pok"
+  },
+  "drive_the_debate": {
+    "id": "drive_the_debate",
+    "title": {
+      "src": "Drive the Debate",
+      "value": "Ведите дебаты"
+    },
+    "description": {
+      "src": "You or a planet you control are elected by an agenda.",
+      "value": "Вы или подконтрольная вам планета выбраны в\u00A0ходе голосования."
+    },
+    "phase": "agenda",
+    "stage": "secret",
+    "expansion": "pok"
+  },
+  "adapt_new_strategies": {
+    "id": "adapt_new_strategies",
+    "title": {
+      "src": "Adapt New Strategies",
+      "value": "Разработайте новые стратегии"
+    },
+    "description": {
+      "src": "Own 2 faction technologies.",
+      "value": "Владейте 2\u00A0фракционными технологиями."
+    },
+    "extra": {
+      "src": "*Valefar Assimilator* technologies do not count toward this objective.",
+      "value": "Технологии \"Ассимилятор Валефара\" не\u00A0учитываются при\u00A0выполнении этой цели."
+    },
+    "phase": "status",
+    "stage": "secret",
+    "expansion": "main"
+  },
+  "become_the_gatekeeper": {
+    "id": "become_the_gatekeeper",
+    "title": {
+      "src": "Become the Gatekeeper",
+      "value": "Станьте привратником"
+    },
+    "description": {
+      "src": "Have 1 or more ships in a system that contains an alpha wormhole and 1 or more ships in a system that contains a beta wormhole.",
+      "value": "У вас должен быть хотя\u00A0бы 1\u00A0корабль в\u00A0системе с\u00A0альфа-червоточиной и\u00A0хотя\u00A0бы 1\u00A0корабль в\u00A0системе с\u00A0бета-червоточиной."
+    },
+    "phase": "status",
+    "stage": "secret",
+    "expansion": "main"
+  },
+  "control_the_region": {
+    "id": "control_the_region",
+    "title": {
+      "src": "Control the Region",
+      "value": "Контролируйте регион"
+    },
+    "description": {
+      "src": "Have 1 or more ships in 6 systems.",
+      "value": "У вас должно быть хотя\u00A0бы по\u00A01\u00A0кораблю в\u00A06\u00A0системах."
+    },
+    "phase": "status",
+    "stage": "secret",
+    "expansion": "main"
+  },
+  "cut_supply_lines": {
+    "id": "cut_supply_lines",
+    "title": {
+      "src": "Cut Supply Lines",
+      "value": "Перекройте каналы поставок"
+    },
+    "description": {
+      "src": "Have 1 or more ships in the same system as another player's space dock.",
+      "value": "У вас должен быть хотя\u00A0бы 1\u00A0корабль в\u00A0системе, где есть база другого игрока."
+    },
+    "phase": "status",
+    "stage": "secret",
+    "expansion": "main"
+  },
+  "defy_space_and_time": {
+    "id": "defy_space_and_time",
+    "title": {
+      "src": "Defy Space and Time",
+      "value": "Подчините время и\u00A0пространство"
+    },
+    "description": {
+      "src": "Have units in the wormhole nexus.",
+      "value": "У вас должны быть отряды в\u00A0Ядре червоточин."
+    },
+    "phase": "status",
+    "stage": "secret",
+    "expansion": "pok"
+  },
+  "destroy_heretical_works": {
+    "id": "destroy_heretical_works",
+    "title": {
+      "src": "Destroy Heretical Works",
+      "value": "Уничтожьте творения ереси"
+    },
+    "description": {
+      "src": "Purge 2 of your relic fragments of any type.",
+      "value": "Изгоните 2\u00A0своих фрагмента реликвии любого типа."
+    },
+    "phase": "status",
+    "stage": "secret",
+    "expansion": "pok"
+  },
+  "establish_a_perimeter": {
+    "id": "establish_a_perimeter",
+    "title": {
+      "src": "Establish a Perimeter",
+      "value": "Укрепите границы"
+    },
+    "description": {
+      "src": "Have 4 PDS units on the game board.",
+      "value": "У вас должно быть 4\u00A0ПСО на\u00A0игровом поле."
+    },
+    "phase": "status",
+    "stage": "secret",
+    "expansion": "main"
+  },
+  "establish_hegemony": {
+    "id": "establish_hegemony",
+    "title": {
+      "src": "Establish Hegemony",
+      "value": "Создайте гегемонию"
+    },
+    "description": {
+      "src": "Control planets that have a combined influence value of at least 12.",
+      "value": "Контролируйте планеты с\u00A0суммарным значением влияния 12\u00A0или\u00A0больше."
+    },
+    "phase": "status",
+    "stage": "secret",
+    "expansion": "pok"
+  },
+  "forge_an_alliance": {
+    "id": "forge_an_alliance",
+    "title": {
+      "src": "Forge an Alliance",
+      "value": "Создайте альянс"
+    },
+    "description": {
+      "src": "Control 4 cultural planets.",
+      "value": "Контролируйте одновременно 4\u00A0культурные планеты."
+    },
+    "phase": "status",
+    "stage": "secret",
+    "expansion": "main"
+  },
+  "form_a_spy_network": {
+    "id": "form_a_spy_network",
+    "title": {
+      "src": "Form a Spy Network",
+      "value": "Сформируйте шпионскую сеть"
+    },
+    "description": {
+      "src": "Discard 5 action cards.",
+      "value": "Сбросьте 5\u00A0карт действий."
+    },
+    "phase": "status",
+    "stage": "secret",
+    "expansion": "main"
+  },
+  "foster_cohesion": {
+    "id": "foster_cohesion",
+    "title": {
+      "src": "Foster Cohesion",
+      "value": "Стремитесь к\u00A0сплоченности"
+    },
+    "description": {
+      "src": "Be neighbors with all other players.",
+      "value": "Станьте соседом для\u00A0всех других игроков."
+    },
+    "phase": "status",
+    "stage": "secret",
+    "expansion": "pok"
+  },
+  "fuel_the_war_machine": {
+    "id": "fuel_the_war_machine",
+    "title": {
+      "src": "Fuel the War Machine",
+      "value": "Разогрейте военную машину"
+    },
+    "description": {
+      "src": "Have 3 space docks on the game board.",
+      "value": "У вас должно быть 3\u00A0базы на\u00A0игровом поле."
+    },
+    "phase": "status",
+    "stage": "secret",
+    "expansion": "main"
+  },
+  "gather_a_mighty_fleet": {
+    "id": "gather_a_mighty_fleet",
+    "title": {
+      "src": "Gather a Mighty Fleet",
+      "value": "Соберите мощный флот"
+    },
+    "description": {
+      "src": "Have 5 dreadnoughts on the board.",
+      "value": "У вас должно быть 5\u00A0дредноутов на\u00A0игровом поле."
+    },
+    "phase": "status",
+    "stage": "secret",
+    "expansion": "main"
+  },
+  "hoard_raw_materials": {
+    "id": "hoard_raw_materials",
+    "title": {
+      "src": "Hoard Raw Materials",
+      "value": "Скопите запасы сырья"
+    },
+    "description": {
+      "src": "Control planets that have a resource influence value of at least 12.",
+      "value": "Контролируйте планеты с\u00A0суммарным значением ресурсов 12\u00A0или\u00A0больше."
+    },
+    "phase": "status",
+    "stage": "secret",
+    "expansion": "pok"
+  },
+  "learn_the_secrets_of_the_cosmos": {
+    "id": "learn_the_secrets_of_the_cosmos",
+    "title": {
+      "src": "Learn the Secrets of the Cosmos",
+      "value": "Познайте тайны космоса"
+    },
+    "description": {
+      "src": "Have 1 or more ships in 3 systems that are each adjacent to an anomaly.",
+      "value": "У вас должно быть хотя\u00A0бы по\u00A01\u00A0кораблю в\u00A03\u00A0системах, смежных с\u00A0аномалиями."
+    },
+    "phase": "status",
+    "stage": "secret",
+    "expansion": "main"
+  },
+  "master_of_the_laws_of_physics": {
+    "id": "master_of_the_laws_of_physics",
+    "title": {
+      "src": "Master of the Laws of Physics",
+      "value": "Изучите законы физики"
+    },
+    "description": {
+      "src": "Own 4 technologies of the same color.",
+      "value": "У вас должно быть 4\u00A0технологии одного цвета."
+    },
+    "phase": "status",
+    "stage": "secret",
+    "expansion": "main"
+  },
+  "mechanize_the_military": {
+    "id": "mechanize_the_military",
+    "title": {
+      "src": "Mechanize the Military",
+      "value": "Механизируйте пехоту"
+    },
+    "description": {
+      "src": "Have 1 mech on each of 4 planets.",
+      "value": "У вас должно быть по\u00A01\u00A0меху на\u00A04\u00A0планетах."
+    },
+    "phase": "status",
+    "stage": "secret",
+    "expansion": "pok"
+  },
+  "mine_rare_minerals": {
+    "id": "mine_rare_minerals",
+    "title": {
+      "src": "Mine Rare Minerals",
+      "value": "Добывайте редкие металлы"
+    },
+    "description": {
+      "src": "Control 4 hazardous planets.",
+      "value": "Контролируйте одновременно 4\u00A0опасные планеты."
+    },
+    "phase": "status",
+    "stage": "secret",
+    "expansion": "main"
+  },
+  "monopolize_production": {
+    "id": "monopolize_production",
+    "title": {
+      "src": "Monopolize Production",
+      "value": "Монополизируйте производство"
+    },
+    "description": {
+      "src": "Control 4 industrial planets.",
+      "value": "Контролируйте одновременно 4\u00A0промышленные планеты."
+    },
+    "phase": "status",
+    "stage": "secret",
+    "expansion": "main"
+  },
+  "occupy_the_fringe": {
+    "id": "occupy_the_fringe",
+    "title": {
+      "src": "Occupy the Fringe",
+      "value": "Оккупируйте окраину"
+    },
+    "description": {
+      "src": "Have 9 or more ground forces on a planet that does not contain 1 of your space docks.",
+      "value": "У вас должно быть хотя\u00A0бы 9\u00A0наземных войск на\u00A0планете без\u00A0вашей базы."
+    },
+    "phase": "status",
+    "stage": "secret",
+    "expansion": "pok"
+  },
+  "occupy_the_seat_of_the_empire": {
+    "id": "occupy_the_seat_of_the_empire",
+    "title": {
+      "src": "Occupy the Seat of the Empire",
+      "value": "Захватите сердце империи"
+    },
+    "description": {
+      "src": "Control Mecatol Rex and have 3 or more ships in its system.",
+      "value": "Вы должны контролировать Мекатол-Рекс, и\u00A0у\u00A0вас должно быть 3\u00A0корабля в\u00A0его\u00A0системе или больше."
+    },
+    "phase": "status",
+    "stage": "secret",
+    "expansion": "main"
+  },
+  "produce_en_masse": {
+    "id": "produce_en_masse",
+    "title": {
+      "src": "Produce en Masse",
+      "value": "Наладьте массовое производство"
+    },
+    "description": {
+      "src": "Have units with a combined production of at least 8 in a single system.",
+      "value": "У вас должны быть отряды в\u00A0одной системе с\u00A0суммарным значением \"ПРОИЗВОДСТВО\u00A08\" или\u00A0больше."
+    },
+    "phase": "status",
+    "stage": "secret",
+    "expansion": "pok"
+  },
+  "seize_an_icon": {
+    "id": "seize_an_icon",
+    "title": {
+      "src": "Seize an Icon",
+      "value": "Захватите символ"
+    },
+    "description": {
+      "src": "Control a legendary planet.",
+      "value": "Контролируйте легендарную планету."
+    },
+    "phase": "status",
+    "stage": "secret",
+    "expansion": "pok"
+  },
+  "stake_your_claim": {
+    "id": "stake_your_claim",
+    "title": {
+      "src": "Stake Your Claim",
+      "value": "Заявите права"
+    },
+    "description": {
+      "src": "Control a planet in a system that contains a planet controlled by another player.",
+      "value": "Контролируйте планету в\u00A0системе с\u00A0планетой, подконтрольной другому игроку."
+    },
+    "phase": "status",
+    "stage": "secret",
+    "expansion": "pok"
+  },
+  "strengthen_bonds": {
+    "id": "strengthen_bonds",
+    "title": {
+      "src": "Strengthen Bonds",
+      "value": "Укрепите связи"
+    },
+    "description": {
+      "src": "Have another player's promissory note in your play area.",
+      "value": "Перед вами должна лежать карта обещания другого игрока."
+    },
+    "phase": "status",
+    "stage": "secret",
+    "expansion": "pok"
+  },
+  "threaten_enemies": {
+    "id": "threaten_enemies",
+    "title": {
+      "src": "Threaten Enemies",
+      "value": "Угрожайте врагам"
+    },
+    "description": {
+      "src": "Have 1 or more ships in a system that is adjacent to another player's home system.",
+      "value": "У вас должен быть хотя\u00A0бы 1\u00A0корабль в\u00A0системе, смежной с\u00A0родной системой другого игрока."
+    },
+    "phase": "status",
+    "stage": "secret",
+    "expansion": "main"
+  }
+}

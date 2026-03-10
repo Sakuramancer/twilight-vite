@@ -1,0 +1,292 @@
+{
+  "_unknown": {
+    "id": "_unknown",
+    "name": {
+      "src": "Unknown Faction",
+      "value": "Неизвесная фракция"
+    },
+    "available": false,
+    "expansion": "main"
+  },
+  "arborec": {
+    "id": "arborec",
+    "name": {
+      "src": "The Arborec",
+      "value": "Арборек"
+    },
+    "available": true,
+    "expansion": "main"
+  },
+  "argent": {
+    "id": "argent",
+    "name": {
+      "src": "The Argent Flight",
+      "value": "Серебряная Стая"
+    },
+    "available": true,
+    "expansion": "pok"
+  },
+  "barony": {
+    "id": "barony",
+    "name": {
+      "src": "The Barony of Letnev",
+      "value": "Баронат Летнев"
+    },
+    "available": true,
+    "expansion": "main"
+  },
+  "cabal": {
+    "id": "cabal",
+    "name": {
+      "src": "The Vuil'Raith Cabal",
+      "value": "Кабал Вуил'райт"
+    },
+    "available": true,
+    "expansion": "pok"
+  },
+  "empyrean": {
+    "id": "empyrean",
+    "name": {
+      "src": "The Empyrean",
+      "value": "Возвышенные"
+    },
+    "available": true,
+    "expansion": "pok"
+  },
+  "ghosts": {
+    "id": "ghosts",
+    "name": {
+      "src": "The Ghosts of Creuss",
+      "value": "Призраки Креусса"
+    },
+    "available": true,
+    "expansion": "main"
+  },
+  "hacan": {
+    "id": "hacan",
+    "name": {
+      "src": "The Emirates of Hacan",
+      "value": "Хаканские Эмираты"
+    },
+    "available": true,
+    "expansion": "main"
+  },
+  "jolnar": {
+    "id": "jolnar",
+    "name": {
+      "src": "The Universities of Jol-Nar",
+      "value": "Жол-Нарские Университеты"
+    },
+    "available": true,
+    "expansion": "main"
+  },
+  "keleres": {
+    "id": "keleres",
+    "name": {
+      "src": "The Council Keleres",
+      "value": "Келеры Совета"
+    },
+    "available": true,
+    "expansion": "codex"
+  },
+  "l1z1x": {
+    "id": "l1z1x",
+    "name": {
+      "src": "The L1Z1X Mindset",
+      "value": "Психосеть Л1З1КС"
+    },
+    "available": true,
+    "expansion": "main"
+  },
+  "mahact": {
+    "id": "mahact",
+    "name": {
+      "src": "The Mahact Gene-Sorcerers",
+      "value": "Генные чародеи Мэхакт"
+    },
+    "available": true,
+    "expansion": "pok"
+  },
+  "mentak": {
+    "id": "mentak",
+    "name": {
+      "src": "The Mentak Coalition",
+      "value": "Коалиция Ментака"
+    },
+    "available": true,
+    "expansion": "main"
+  },
+  "muaat": {
+    "id": "muaat",
+    "name": {
+      "src": "The Embers of Muaat",
+      "value": "Тлеющие с\u00A0Муаата"
+    },
+    "available": true,
+    "expansion": "main"
+  },
+  "naalu": {
+    "id": "naalu",
+    "name": {
+      "src": "The Naalu Collective",
+      "value": "Клубок Наалу"
+    },
+    "available": true,
+    "expansion": "main"
+  },
+  "naazrokha": {
+    "id": "naazrokha",
+    "name": {
+      "src": "The Naaz-Rokha Alliance",
+      "value": "Альянс Нааз\u2011Роха"
+    },
+    "available": true,
+    "expansion": "pok"
+  },
+  "nekro": {
+    "id": "nekro",
+    "name": {
+      "src": "The Nekro Virus",
+      "value": "Некровирус"
+    },
+    "available": true,
+    "expansion": "main"
+  },
+  "nomad": {
+    "id": "nomad",
+    "name": {
+      "src": "The Nomad",
+      "value": "Кочевник"
+    },
+    "available": true,
+    "expansion": "pok"
+  },
+  "saar": {
+    "id": "saar",
+    "name": {
+      "src": "The Clan of Saar",
+      "value": "Клан Сааров"
+    },
+    "available": true,
+    "expansion": "main"
+  },
+  "sardakk": {
+    "id": "sardakk",
+    "name": {
+      "src": "Sardakk N'orr",
+      "value": "Сардак Н'орр"
+    },
+    "available": true,
+    "expansion": "main"
+  },
+  "sol": {
+    "id": "sol",
+    "name": {
+      "src": "The Federation of Sol",
+      "value": "Федерация Сол"
+    },
+    "available": true,
+    "expansion": "main"
+  },
+  "titans": {
+    "id": "titans",
+    "name": {
+      "src": "The Titans of Ul",
+      "value": "Титаны Ула"
+    },
+    "available": true,
+    "expansion": "pok"
+  },
+  "winnu": {
+    "id": "winnu",
+    "name": {
+      "src": "The Winnu",
+      "value": "Винну"
+    },
+    "available": true,
+    "expansion": "main"
+  },
+  "xxcha": {
+    "id": "xxcha",
+    "name": {
+      "src": "The Xxcha Kingdom",
+      "value": "Королевство Ззча"
+    },
+    "available": true,
+    "expansion": "main"
+  },
+  "yin": {
+    "id": "yin",
+    "name": {
+      "src": "The Yin Brotherhood",
+      "value": "Братство Инь"
+    },
+    "available": true,
+    "expansion": "main"
+  },
+  "yssaril": {
+    "id": "yssaril",
+    "name": {
+      "src": "The Yssaril Tribes",
+      "value": "Племена Иссарилов"
+    },
+    "available": true,
+    "expansion": "main"
+  },
+  "bastion": {
+    "id": "bastion",
+    "name": {
+      "src": "Last Bastion",
+      "value": "Последний Оплот"
+    },
+    "available": true,
+    "expansion": "te"
+  },
+  "crimson": {
+    "id": "crimson",
+    "name": {
+      "src": "The Crimson Rebellion",
+      "value": "Багровое Восстание"
+    },
+    "available": true,
+    "expansion": "te"
+  },
+  "dws": {
+    "id": "dws",
+    "name": {
+      "src": "The Deepwrought Scholarate",
+      "value": "Школа Витой Бездны"
+    },
+    "available": true,
+    "expansion": "te"
+  },
+  "firmament": {
+    "id": "firmament",
+    "name": {
+      "src": "The Firmament",
+      "value": "Небесная Твердь"
+    },
+    "available": true,
+    "switchTo": "obsidian",
+    "expansion": "te"
+  },
+  "obsidian": {
+    "id": "obsidian",
+    "name": {
+      "src": "The Obsidian",
+      "value": "Обсидиан"
+    },
+    "available": false,
+    "switchTo": "firmament",
+    "expansion": "te"
+  },
+  "ralnel": {
+    "id": "ralnel",
+    "name": {
+      "src": "The Ral Nel Consortium",
+      "value": "Консорциум Рал Нел"
+    },
+    "available": true,
+    "expansion": "te"
+  }
+}
