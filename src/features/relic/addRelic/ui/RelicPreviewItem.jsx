@@ -61,6 +61,7 @@ const RelicPreviewItem = ({ relicId, playerIndex, colorId }) => {
           ...TitleHex,
           props: {
             title: title.value,
+            titleVisible: true,
             centered: false,
             muted: false,
             redpainted: false,
@@ -71,7 +72,8 @@ const RelicPreviewItem = ({ relicId, playerIndex, colorId }) => {
           props: {
             colorId,
             striped: false,
-            visible: playerIndex === -1,
+            content: "?",
+            contentVisible: playerIndex === -1,
           },
         }}
         PointSlot={

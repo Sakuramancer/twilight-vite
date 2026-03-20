@@ -3,7 +3,6 @@ import { getExpansionLabel, relicSelectors } from "../../model";
 import {
   cardGeometry,
   FrameHex,
-  PlayerHex,
   PointHex,
   RelicView,
   TitleHex,
@@ -24,6 +23,7 @@ const LibraryCardItem = ({ relicId }) => {
           ...TitleHex,
           props: {
             title: title.value,
+            titleVisible: true,
             centered: true,
             muted: false,
             redpainted: false,

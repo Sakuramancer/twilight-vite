@@ -34,6 +34,7 @@ const RelicSelectorItem = ({
           ...TitleHex,
           props: {
             title: title.value,
+            titleVisible: true,
             centered: false,
             muted,
             redpainted: false,

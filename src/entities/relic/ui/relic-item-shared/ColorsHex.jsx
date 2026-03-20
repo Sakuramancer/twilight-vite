@@ -1,11 +1,11 @@
 import classNames from "classnames/bind";
 import HexedCanvas from "core/canvas/HexedCanvas";
 import { useHexedCanvasContext } from "core/canvas/HexedCanvasContext";
-import classes from "./PlayerHex.module.css";
+import classes from "./ColorsHex.module.css";
 
 const cx = classNames.bind(classes);
 
-const Canvas = ({ anchorPoint, anchorSize, colorId, striped, onClick }) => {
+const Canvas = ({ anchorPoint, anchorSize, colors, onClick }) => {
   const context = useHexedCanvasContext();
   if (!anchorPoint) {
     anchorPoint = context.anchorPoint ?? {
@@ -19,27 +19,20 @@ const Canvas = ({ anchorPoint, anchorSize, colorId, striped, onClick }) => {
 
   const hexClass = cx({
     hex: true,
-    "hex-interactive": onClick,
-    "hex-striped": striped,
-    "hex-notStriped": !striped,
   });
 
   return (
     <>
-      <HexedCanvas.StripesPattern colorId={colorId} />
-      <HexedCanvas.Hex
+      <HexedCanvas.ColorLine
         className={hexClass}
         anchorPoint={{ x: anchorSize, y: anchorPoint.y }}
         anchorSize={0.6 * anchorSize}
+        colors={colors}
         onClick={onClick}
       />
     </>
   );
 };
 
-const Content = ({ content, contentVisible }) => {
-  return <>{contentVisible && <div className={classes.noPlayer}>{content}</div>}</>;
-};
-
-const PlayerHex = { Canvas, Content };
-export { PlayerHex };
+const ColorsHex = { Canvas };
+export { ColorsHex };

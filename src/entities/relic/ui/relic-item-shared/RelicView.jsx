@@ -9,12 +9,14 @@ const RelicView = ({
   TitleSlot,
   PlayerSlot,
   PointSlot,
+  ColorsSlot,
 }) => {
   const slots = {
     frame: resolveSlot(FrameSlot),
     title: resolveSlot(TitleSlot),
     player: resolveSlot(PlayerSlot),
     point: resolveSlot(PointSlot),
+    colors: resolveSlot(ColorsSlot),
   };
   return (
     <>
@@ -24,6 +26,7 @@ const RelicView = ({
           {<slots.title.Canvas {...slots.title.props} />}
           {<slots.player.Canvas {...slots.player.props} />}
           {<slots.point.Canvas {...slots.point.props} />}
+          {<slots.colors.Canvas {...slots.colors.props} />}
         </g>
       </HexedCanvas>
       {<slots.frame.Content {...slots.frame.props} />}

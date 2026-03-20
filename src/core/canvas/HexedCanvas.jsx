@@ -5,6 +5,7 @@ import PetalPath from "./PetalPath";
 import FlowerPath from "./FlowerPath";
 import LeafPath from "./LeafPath";
 import ColorWheel from "./ColorWheel";
+import ColorLine from "./ColorLine";
 import ColorHexes from "./ColorHexes";
 import PlusPath from "./PlusPath";
 import CheckPath from "./CheckPath";
@@ -42,6 +43,7 @@ HexedCanvas.Petal = PetalPath;
 HexedCanvas.Flower = FlowerPath;
 HexedCanvas.Leaf = LeafPath;
 HexedCanvas.ColorWheel = ColorWheel;
+HexedCanvas.ColorLine = ColorLine;
 
 HexedCanvas.ColorHexes = ColorHexes;
 

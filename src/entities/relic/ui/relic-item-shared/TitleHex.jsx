@@ -35,7 +35,7 @@ const Canvas = ({ anchorPoint, anchorSize, muted, redpainted, onClick }) => {
   );
 };
 
-const Content = ({ title, centered, muted }) => {
+const Content = ({ title, titleVisible, centered, muted }) => {
   const titleClass = cx({
     title: true,
     "title-centered": centered,
@@ -44,7 +44,7 @@ const Content = ({ title, centered, muted }) => {
     "title-notMuted": !muted,
   });
 
-  return <div className={titleClass}>{title}</div>;
+  return <>{titleVisible && <div className={titleClass}>{title}</div>}</>;
 };
 
 const TitleHex = { Canvas, Content };

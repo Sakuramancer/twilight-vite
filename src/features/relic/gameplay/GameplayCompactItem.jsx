@@ -5,12 +5,13 @@ import { relicSelectors } from "entities/relic/model";
 import { getRelicCommands } from "entities/relic/ports";
 import {
   compactGeometry,
+  ColorsHex,
   PlayerHex,
   PointHex,
   RelicView,
   TitleHex,
 } from "entities/relic/ui";
-import colors from "core/data/colors.module.css";
+import colorsStatic from "core/data/colors.module.css";
 import classes from "./GameplayCompactItem.module.css";
 
 const cx = classNames.bind(classes);
@@ -21,12 +22,18 @@ const GameplayCompactItem = ({ relicId }) => {
     state: relicState,
     static: relicStatic,
   } = useStore(relicSelectors.makeRelic(relicId));
+  const colors = useStore((s) => s.colors);
 
   const { title, havePoint } = relicStatic;
   const { purged, playerIndex, pointTaken } = relicState;
 
   const commands = getRelicCommands();
   const [clickCount, setClickCount] = useState(0);
+  const [showColors, setShowColors] = useState(false);
+
+  const striped = (!showColors && purged) || (showColors && !purged);
+  const content = showColors && purged ? "⇑" : "?";
+  const contentVisible = playerIndex === -1 || (showColors && purged);
 
   const titleClickHandler = () => {
     if (clickCount === 0) {
@@ -44,13 +51,23 @@ const GameplayCompactItem = ({ relicId }) => {
     commands.toggleRelicPointTaken(relicId);
   };
 
+  const colorsClickHandler = (playerIndex) => {
+    commands.assignRelicToPlayer(relicId, playerIndex);
+    setShowColors(false);
+  };
+
   const playerClickHandler = () => {
-    commands.toggleRelicPurged(relicId);
+    if (showColors) {
+      commands.toggleRelicPurged(relicId);
+      setShowColors(false);
+    } else {
+      setShowColors(true);
+    }
   };
 
   const mainClass = cx({
     main: true,
-    [colors[colorId]]: true,
+    [colorsStatic[colorId]]: true,
   });
 
   return (
@@ -61,6 +78,7 @@ const GameplayCompactItem = ({ relicId }) => {
           ...TitleHex,
           props: {
             title: title.value,
+            titleVisible: !showColors,
             centered: false,
             muted: purged,
             redpainted: clickCount > 0,
@@ -71,13 +89,25 @@ const GameplayCompactItem = ({ relicId }) => {
           ...PlayerHex,
           props: {
             colorId,
-            striped: purged,
+            striped,
             onClick: playerClickHandler,
-            visible: playerIndex === -1,
+            content,
+            contentVisible,
           },
         }}
+        ColorsSlot={
+          showColors
+            ? {
+                ...ColorsHex,
+                props: {
+                  colors,
+                  onClick: colorsClickHandler,
+                },
+              }
+            : {}
+        }
         PointSlot={
-          havePoint
+          havePoint && !showColors
             ? {
                 ...PointHex,
                 props: {
