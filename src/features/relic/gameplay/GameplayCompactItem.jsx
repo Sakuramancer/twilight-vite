@@ -35,17 +35,19 @@ const GameplayCompactItem = ({ relicId }) => {
   const content = showColors && purged ? "⇑" : "?";
   const contentVisible = playerIndex === -1 || (showColors && purged);
 
-  const titleClickHandler = () => {
-    if (clickCount === 0) {
-      setClickCount(1);
-      setTimeout(() => {
+  const titleClickHandler = showColors
+    ? undefined
+    : () => {
+        if (clickCount === 0) {
+          setClickCount(1);
+          setTimeout(() => {
+            setClickCount(0);
+          }, 1000);
+          return;
+        }
         setClickCount(0);
-      }, 1000);
-      return;
-    }
-    setClickCount(0);
-    commands.resetRelic(relicId);
-  };
+        commands.resetRelic(relicId);
+      };
 
   const pointClickHandler = () => {
     commands.toggleRelicPointTaken(relicId);
