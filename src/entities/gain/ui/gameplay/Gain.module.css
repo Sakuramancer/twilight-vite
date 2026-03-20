@@ -1,8 +1,9 @@
 .group {
-  isolation: isolate;
+  position: relative;
   cursor: pointer;
   -webkit-user-select: none;
   user-select: none;
+  z-index: 101;
 }
 
 .idleGroup {
@@ -54,7 +55,7 @@
   width: 150%;
   top: -29px;
   left: -25%;
-  z-index: 101;
+  z-index: 102;
   pointer-events: none;
 }
 
