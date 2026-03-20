@@ -1,7 +1,9 @@
 import { PLAYER_COUNT } from "../config/defaults";
 import PetalPath from "./PetalPath";
 
-const FlowerPath = ({ petalClasses, petalClickHandlers, ...props }) => {
+const FlowerPath = ({ petalClasses, onPetalClick, ...props }) => {
+  const getOnClick = (index) =>
+    onPetalClick ? () => onPetalClick(index) : undefined;
   return (
     <>
       {Array.from({ length: PLAYER_COUNT }, (_, index) => {
@@ -11,7 +13,7 @@ const FlowerPath = ({ petalClasses, petalClickHandlers, ...props }) => {
             className={petalClasses[index]}
             id={index}
             playerIndex={index}
-            onClick={petalClickHandlers?.[index]}
+            onClick={getOnClick(index)}
             {...props}
           />
         );

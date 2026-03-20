@@ -1,15 +1,17 @@
 .coloredCanvas {
   pointer-events: none;
+}
 
-  & path:hover {
+.colorWheelHex {
+  pointer-events: fill;
+  cursor: pointer;
+  fill: var(--color);
+
+  &:hover {
+    fill: var(--hoverColor);
     stroke: whitesmoke;
     stroke-width: 0.5px;
   }
-}
-
-.colorWheel {
-  pointer-events: fill;
-  cursor: pointer;
 }
 
 .selected {

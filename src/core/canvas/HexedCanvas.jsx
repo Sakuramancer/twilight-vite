@@ -12,7 +12,6 @@ import MagnifierPath from "./MagnifierPath";
 import BurgerPath from "./BurgerPath";
 import EyePath from "./EyePath";
 import StripesPattern from "./StripesPattern";
-import PetalHexes from "./PetalHexes";
 import FramePath from "./FramePath";
 import DicePath from "./DicePath";
 import { HexedCanvasContext } from "./HexedCanvasContext";
@@ -45,7 +44,6 @@ HexedCanvas.Leaf = LeafPath;
 HexedCanvas.ColorWheel = ColorWheel;
 
 HexedCanvas.ColorHexes = ColorHexes;
-HexedCanvas.PetalHexes = PetalHexes;
 
 HexedCanvas.Plus = PlusPath;
 HexedCanvas.Check = CheckPath;

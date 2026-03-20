@@ -1,6 +1,9 @@
+import classNames from "classnames/bind";
 import HexPath from "./HexPath";
 import { useHexedCanvasContext } from "./HexedCanvasContext";
-import { colorsStatic } from "../data/colors.data";
+import colors from "../data/colors.module.css";
+
+const colorx = classNames.bind(colors);
 
 const sqrt3 = Math.sqrt(3);
 const dataPoints = [
@@ -14,16 +17,21 @@ const dataPoints = [
 
 const coef = 1.08 * sqrt3;
 
-const ColorWheel = ({ className, colors, onClick, ...props }) => {
+const ColorWheel = ({ className, colors, sizeCoef = 1, onClick, ...props }) => {
   const { width, height, anchorSize } = useHexedCanvasContext();
   const center = { x: 0.5 * width, y: 0.5 * height };
+
+  const getPetalClass = (index) =>
+    colorx(className, {
+      [colors[index].colorId]: true,
+    });
 
   return (
     <>
       {dataPoints.map(({ x, y }, index) => {
         return (
           <HexPath
-            className={className}
+            className={getPetalClass(index)}
             {...props}
             id={index}
             key={index}
@@ -31,8 +39,7 @@ const ColorWheel = ({ className, colors, onClick, ...props }) => {
               x: center.x + anchorSize * coef * x,
               y: center.y + anchorSize * coef * y,
             }}
-            anchorSize={anchorSize}
-            fill={colorsStatic[colors[index].colorId].color}
+            anchorSize={sizeCoef * anchorSize}
             onClick={() => onClick(index)}
           />
         );

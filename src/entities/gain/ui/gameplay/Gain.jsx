@@ -21,7 +21,7 @@ const Gain = ({ className, gainId }) => {
   const { src, alt } = gainsAssets[gainId];
   const [showColorSelection, setShowColorSelection] = useState(false);
 
-  const clickHandler = () => {
+  const clickHandler = (_) => {
     if (showColorSelection) {
       commands.resetGain(gainId);
     }

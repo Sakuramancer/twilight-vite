@@ -1,8 +1,21 @@
-.petal {
-  fill: var(--color);
+.canvas {
+  pointer-events: none;
+}
+
+.colorWheelHex {
   pointer-events: fill;
   cursor: pointer;
+  stroke: whitesmoke;
+  stroke-width: 5px;
+  fill: var(--color);
+
   &:hover {
     fill: var(--hoverColor);
   }
+}
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
 }

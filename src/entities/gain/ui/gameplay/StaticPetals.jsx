@@ -7,14 +7,13 @@ const geometry = { width: 600, height: 520, anchorSize: 200 };
 
 const StaticPetals = ({ className, onClick }) => {
   const petalClasses = petalList.map((_) => classes.petal);
-  const petalClickHandlers = petalList.map((_) => onClick);
 
   return (
     <div className={className}>
       <HexedCanvas className={classes.canvas} geometry={geometry}>
         <HexedCanvas.Flower
           petalClasses={petalClasses}
-          petalClickHandlers={petalClickHandlers}
+          onPetalClick={onClick}
         />
       </HexedCanvas>
     </div>

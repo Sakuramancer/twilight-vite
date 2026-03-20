@@ -32,8 +32,9 @@ const RelicPlayerSelector = ({
     <div className={mainClass}>
       <HexedCanvas className={classes.coloredCanvas} geometry={geometry}>
         <HexedCanvas.ColorWheel
-          className={classes.colorWheel}
+          className={classes.colorWheelHex}
           colors={colorsStatic}
+          sizeCoef={0.95}
           onClick={colorPickHandler}
         />
         {isSelected && (

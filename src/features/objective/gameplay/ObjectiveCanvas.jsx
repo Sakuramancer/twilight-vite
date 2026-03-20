@@ -36,10 +36,8 @@ const ObjectiveCanvas = ({ className, cardIndex, onSelectCard }) => {
         onSelectCard(cardIndex);
       };
 
-  const petalClickHandlers = isActiveFlower
-    ? petalColors.map(
-        (_, index) => () => commands.togglePointsForPlayer(cardIndex, index),
-      )
+  const petalClickHandler = isActiveFlower
+    ?  (index) => commands.togglePointsForPlayer(cardIndex, index)
     : undefined;
 
   const hexClass = cx({
@@ -71,7 +69,7 @@ const ObjectiveCanvas = ({ className, cardIndex, onSelectCard }) => {
       <HexedCanvas className={classes.canvas} geometry={hexWithPetals}>
         <HexedCanvas.Flower
           petalClasses={petalClasses}
-          petalClickHandlers={petalClickHandlers}
+          onPetalClick={petalClickHandler}
         />
         <HexedCanvas.Hex className={hexClass} onClick={hexClickHandler} />
         {!isActiveFlower && <HexedCanvas.Plus className={plusClass} />}
