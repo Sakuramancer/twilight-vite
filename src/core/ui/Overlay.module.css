@@ -2,7 +2,7 @@
   position: absolute;
   top: var(--block-margin);
   left: var(--inline-margin);
-  z-index: 21;
+  z-index: 101;
   width: calc(100% - 2 * var(--inline-margin) - 10px);
   height: calc(100vh - 2 * var(--block-margin));
   background: var(--modal-background);
