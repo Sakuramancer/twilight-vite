@@ -38,7 +38,7 @@ const Canvas = ({ anchorPoint, anchorSize, colorId, striped, onClick }) => {
 };
 
 const Content = ({ content, contentVisible }) => {
-  return <>{contentVisible && <div className={classes.noPlayer}>{content}</div>}</>;
+  return <>{contentVisible && <div className={classes.content}>{content}</div>}</>;
 };
 
 const PlayerHex = { Canvas, Content };
