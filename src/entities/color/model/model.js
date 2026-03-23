@@ -1,4 +1,4 @@
-import { validatePlayerIndex } from "core/config";
+import { validatePlayerIndex } from "core/player";
 import { validateColor } from "./validate";
 import { createDefaultColors } from "./defaults";
 

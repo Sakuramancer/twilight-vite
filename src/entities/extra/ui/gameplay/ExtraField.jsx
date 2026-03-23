@@ -1,7 +1,7 @@
-import { useStore } from "core/store/StoreContext";
-import PlayerNumberField from "core/ui/PlayerNumberField";
+import { useStore } from "core/store";
+import { PlayerNumberField } from "core/ui";
 import { extraSelectors } from "../../model/selectors";
-import { getExtraCommands } from "../../ports/extraCommands.port";
+import { getExtraCommands } from "../../ports/commands.port";
 
 const ExtraField = ({ className, playerIndex }) => {
   const commands = getExtraCommands();

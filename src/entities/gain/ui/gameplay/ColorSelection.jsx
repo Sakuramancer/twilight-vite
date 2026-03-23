@@ -1,5 +1,5 @@
-import HexedCanvas from "core/canvas/HexedCanvas";
-import { useStore } from "core/store/StoreContext";
+import { HexedCanvas } from "core/canvas";
+import { useStore } from "core/store";
 import classes from "./ColorSelection.module.css";
 
 const geometry = { width: 600, height: 580, anchorSize: 110 };

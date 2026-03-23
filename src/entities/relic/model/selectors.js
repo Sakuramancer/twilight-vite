@@ -1,8 +1,7 @@
-import { createCachedFactorySelector } from "core/createCachedSelector";
-import { createMemoSelector } from "core/createMemoSelector";
-import { relicsStatic } from "./relics.data";
-import { sortStaticByTitle, sortForGameplay } from "./sort";
+import { createCachedFactorySelector, createMemoSelector } from "core/utils";
+import { relicsStatic } from "./data";
 import { normalizeRelic } from "./normalize";
+import { sortStaticByTitle, sortForGameplay } from "./sort";
 
 const isActive = (relic) => relic.state.playerIndex > -1;
 

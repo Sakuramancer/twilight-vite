@@ -1,6 +1,6 @@
 export * from "./commands";
+export * from "./data";
 export * from "./defaults";
-export * from "./factions.data";
 export * from "./model";
 export * from "./normalize";
 export * from "./selectors";

@@ -1,1 +1,1 @@
-export * from "./colorCommands.port";
+export * from "./commands.port";

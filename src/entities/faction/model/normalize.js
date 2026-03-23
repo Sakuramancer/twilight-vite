@@ -1,4 +1,4 @@
-import { PLAYER_COUNT } from "core/config";
+import { PLAYER_COUNT } from "core/player";
 import { createDefaultFaction } from "./defaults";
 import { validateFaction } from "./validate";
 

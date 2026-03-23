@@ -1,4 +1,4 @@
-import { gainsStatic } from "../../model/gains.data";
+import { gainsStatic } from "../../model/data";
 import Gain from "./Gain";
 import classes from "./Gains.module.css";
 

@@ -1,6 +1,6 @@
-import { validatePlayerIndex } from "core/config";
+import { validatePlayerIndex } from "core/player";
 import { createDefaultGains, RESET_VALUE } from "./defaults";
-import { gainsStatic } from "./gains.data";
+import { gainsStatic } from "./data";
 
 export const normalizeGain = (value) => {
   return Number.isInteger(value) && validatePlayerIndex(value)

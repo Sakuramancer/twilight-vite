@@ -1,5 +1,5 @@
 import { OBJECTIVE_COUNT } from "./defaults";
-import { objectivesStatic } from "./objectives.data";
+import { objectivesStatic } from "./data";
 
 export const validateCardId = (cardId) =>
   Object.keys(objectivesStatic).includes(cardId);

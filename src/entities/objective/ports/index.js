@@ -1,1 +1,1 @@
-export * from "./objectiveCommands.port";
+export * from "./commands.port";

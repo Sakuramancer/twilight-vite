@@ -1,1 +1,0 @@
-export { ActiveRelicsPanel } from "./ActiveRelicsPanel";

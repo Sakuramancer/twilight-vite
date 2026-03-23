@@ -1,1 +1,1 @@
-export * from "./score.selectors";
+export * from "./selectors";

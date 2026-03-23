@@ -1,7 +1,7 @@
-import { useStore } from "core/store/StoreContext";
+import { useStore } from "core/store";
+import { PlayerNumberField } from "core/ui";
 import { mecatolSelectors } from "../../model/selectors";
-import { getMecatolCommands } from "../../ports/mecatolCommands.port";
-import PlayerNumberField from "core/ui/PlayerNumberField";
+import { getMecatolCommands } from "../../ports/commands.port";
 
 const MecatolField = ({ className, playerIndex }) => {
   const commands = getMecatolCommands();

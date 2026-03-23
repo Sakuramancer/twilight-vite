@@ -1,0 +1,63 @@
+.extendedHex {
+  stroke-width: 6px;
+  fill: var(--agenda-background-color);
+}
+
+.extendedHex-interactive {
+  cursor: pointer;
+}
+
+.extendedHex-law-notMuted {
+  stroke: var(--law-primary-color);
+}
+
+.extendedHex-directive-notMuted {
+  stroke: var(--directive-primary-color);
+}
+
+.extendedHex-muted {
+  stroke: var(--agenda-muted-color);
+}
+
+.extendedHex-redpainted {
+  fill: var(--redpainted-color);
+}
+
+.title {
+  position: absolute;
+  top: 0;
+  left: 40px;
+  width: calc(100% - 84px);
+  height: 52px;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+
+  font-family: var(--secondary-font-family);
+  font-size: 0.9em;
+  line-height: 0.9;
+  letter-spacing: -0.8px;
+  text-transform: uppercase;
+}
+
+.title-alignLeft {
+  justify-content: left;
+  text-align: left;
+}
+
+.title-centered {
+  justify-content: center;
+  text-align: center;
+}
+
+.title-law-notMuted {
+  color: var(--law-primary-color);
+}
+
+.title-directive-notMuted {
+  color: var(--directive-primary-color);
+}
+
+.title-muted {
+  color: var(--agenda-muted-color);
+}

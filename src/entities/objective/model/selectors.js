@@ -1,6 +1,5 @@
-import { createCachedFactorySelector } from "core/createCachedSelector";
-import { createMemoSelector } from "core/createMemoSelector";
-import { objectivesStatic } from "./objectives.data";
+import { createCachedFactorySelector, createMemoSelector } from "core/utils";
+import { objectivesStatic } from "./data";
 
 const makePointsForPlayer = createCachedFactorySelector((playerIndex) =>
   createMemoSelector([(s) => s.objectives], (objectives) =>

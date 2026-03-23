@@ -8,12 +8,12 @@
 }
 
 .hex-notStriped {
-  stroke: #f7f2c8;
+  stroke: var(--relic-primary-color);
   fill: var(--color);
 }
 
 .hex-striped {
-  stroke: #807a4d;
+  stroke: var(--relic-muted-color);
   fill: var(--stripesUrl);
 }
 
@@ -23,8 +23,8 @@
   left: 9.8%;
   transform: translateX(-50%);
 
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: var(--secondary-font-family);
   font-size: 1.4em;
-  color: var(--textColor, #f7f2c8);
+  color: var(--textColor, var(--relic-primary-color));
   pointer-events: none;
 }

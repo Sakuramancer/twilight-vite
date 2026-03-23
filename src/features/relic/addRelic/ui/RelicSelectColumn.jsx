@@ -1,11 +1,11 @@
 import classNames from "classnames/bind";
-import { useStore } from "core/store/StoreContext";
+import { useStore } from "core/store";
+import { plural } from "core/utils";
 import { RelicPreviewItem } from "./RelicPreviewItem";
 import RelicPlayerSelector from "./RelicPlayerSelector";
 import RandomRelicButton from "./RandomRelicButton";
-import buttons from "core/ui/buttons.module.css";
+import buttons from "core/styles/buttons.module.css";
 import classes from "./RelicSelectColumn.module.css";
-import { plural } from "core/utils/plural";
 
 const cx = classNames.bind(classes);
 

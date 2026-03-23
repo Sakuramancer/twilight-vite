@@ -1,1 +1,1 @@
-export * from "./mecatolCommands.port";
+export * from "./commands.port";

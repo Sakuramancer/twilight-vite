@@ -18,4 +18,4 @@ const HexLayoutItem = ({ className, children }) => {
 
 HexLayout.Item = HexLayoutItem;
 
-export default HexLayout;
+export { HexLayout };

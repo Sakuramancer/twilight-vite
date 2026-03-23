@@ -1,4 +1,4 @@
-import { localStorageAdapter } from "core/store/storage/localStorageAdapter";
+import { localStorageAdapter } from "core/store";
 import { normalizeExtra } from "./normalize";
 
 export const extraSlice = {

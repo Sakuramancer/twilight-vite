@@ -1,7 +1,8 @@
 import { useState } from "react";
 import classNames from "classnames/bind";
-import { useStore } from "core/store/StoreContext";
-import HexedCanvas from "core/canvas/HexedCanvas";
+import { useTimer } from "core/hooks";
+import { useStore } from "core/store";
+import { HexedCanvas } from "core/canvas";
 import { getExpansionLabel, relicSelectors } from "entities/relic/model";
 import {
   FrameHex,
@@ -25,7 +26,7 @@ const defaultStatic = {
 
 const RelicPreviewItem = ({ relicId, playerIndex, colorId }) => {
   const [stableRelicId, setStableRelicId] = useState(-1);
-  const [exitState, setExitState] = useState(false);
+  const { isActive: exitState, startTimer } = useTimer(200);
   const { static: relicStatic } = useStore(
     relicSelectors.makeRelic(stableRelicId),
   );
@@ -33,12 +34,8 @@ const RelicPreviewItem = ({ relicId, playerIndex, colorId }) => {
   if (stableRelicId !== relicId) {
     if (stableRelicId === -1) {
       setStableRelicId(relicId);
-    } else if (exitState !== true) {
-      setTimeout(() => {
-        setExitState(false);
-        setStableRelicId(relicId);
-      }, 200);
-      setExitState(true);
+    } else if (!exitState) {
+      startTimer(() => setStableRelicId(relicId));
     }
   }
 

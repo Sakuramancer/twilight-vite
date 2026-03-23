@@ -1,4 +1,4 @@
-import { PLAYER_COUNT } from "core/config";
+import { PLAYER_COUNT } from "core/player";
 import { createDefaultObjective, OBJECTIVE_COUNT } from "./defaults";
 
 export const normalizePoints = (points) => {

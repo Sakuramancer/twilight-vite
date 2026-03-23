@@ -1,6 +1,6 @@
 .hex {
   pointer-events: fill;
-  stroke: #f7f2c8;
+  stroke: var(--relic-primary-color);
   stroke-width: 6px;
 }
 
@@ -13,15 +13,15 @@
 }
 
 .hex-notColored {
-  fill: #333;
+  fill: var(--relic-background-color);
 }
 
 .point {
   position: absolute;
   top: 11px;
   right: 11%;
-    transform: translateX(50%);
-  font-family: "Roboto Condensed", sans-serif;
+  transform: translateX(50%);
+  font-family: var(--secondary-font-family);
   font-size: 1.5em;
   pointer-events: none;
 }
@@ -31,5 +31,5 @@
 }
 
 .point-notColored {
-  color: #f7f2c8;
+  color: var(--relic-primary-color);
 }

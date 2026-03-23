@@ -1,1 +1,1 @@
-export * from "./agendaCommands.port";
+export * from "./commands.port";

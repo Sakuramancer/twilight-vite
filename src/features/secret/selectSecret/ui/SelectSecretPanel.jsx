@@ -1,11 +1,8 @@
-import Overlay from "core/ui/Overlay";
-import { GoalCard } from "entities/goal/ui/";
-import { secretSelectors } from "entities/secret/model";
+import { Overlay } from "core/ui";
+import { SelectSecretContent } from "./SelectSecretContent";
 import classes from "./SelectSecretPanel.module.css";
 
 const SelectSecretPanel = ({ onDiscard, onConfirm }) => {
-  const sortedIds = secretSelectors.sortedIds;
-
   return (
     <Overlay
       className={classes.container}
@@ -14,11 +11,7 @@ const SelectSecretPanel = ({ onDiscard, onConfirm }) => {
       onConfirm={onConfirm}
       withScroll={true}
     >
-      <div className={classes.main}>
-        {sortedIds.map((cardId) => (
-          <GoalCard key={cardId} cardId={cardId} onConfirm={onConfirm} />
-        ))}
-      </div>
+      <SelectSecretContent />
     </Overlay>
   );
 };

@@ -1,8 +1,8 @@
 import classNames from "classnames/bind";
-import HexedCanvas from "core/canvas/HexedCanvas";
-import colors from "core/data/colors.module.css";
-import { goalsStatic } from "../model/goal.data";
+import { HexedCanvas } from "core/canvas";
+import { goalsStatic } from "core/goal/model";
 import { GoalCardContent } from "./GoalCardContent";
+import colors from "core/data/colors.module.css";
 import classes from "./GoalCard.module.css";
 
 const cx = classNames.bind(classes);

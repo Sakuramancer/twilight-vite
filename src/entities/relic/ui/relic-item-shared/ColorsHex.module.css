@@ -1,8 +1,9 @@
 .hex {
   cursor: pointer;
   fill: var(--color);
-  stroke: whitesmoke;
+  stroke: var(--relic-primary-color);
   stroke-width: 5px;
+
   &:hover {
     fill: var(--hoverColor);
   }

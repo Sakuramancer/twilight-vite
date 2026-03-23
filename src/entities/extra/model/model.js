@@ -1,4 +1,4 @@
-import { validatePlayerIndex } from "core/config";
+import { validatePlayerIndex } from "core/player";
 import { createDefaultPoints } from "./defaults";
 
 export const update = (extra, playerIndex, value) => {

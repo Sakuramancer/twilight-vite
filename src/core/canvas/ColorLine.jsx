@@ -1,7 +1,7 @@
 import classNames from "classnames/bind";
 import HexPath from "./HexPath";
 import { useHexedCanvasContext } from "./HexedCanvasContext";
-import { PLAYER_COUNT } from "../config/defaults";
+import { PLAYER_COUNT } from "../player/defaults";
 import colorsStatic from "../data/colors.module.css";
 
 const colorx = classNames.bind(colorsStatic);

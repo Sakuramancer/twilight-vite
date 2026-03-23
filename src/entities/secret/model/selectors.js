@@ -1,6 +1,5 @@
-import { createCachedFactorySelector } from "core/createCachedSelector";
-import { createMemoSelector } from "core/createMemoSelector";
-import { secretsStatic } from "./secrets.data";
+import { createCachedFactorySelector, createMemoSelector } from "core/utils";
+import { secretsStatic } from "./data";
 import { sortByTitle } from "./sort";
 
 const sortedIds = Object.values(secretsStatic)

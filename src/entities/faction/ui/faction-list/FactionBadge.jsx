@@ -1,6 +1,6 @@
 import classNames from "classnames/bind";
 import { factionsAssets } from "../../assets/factions";
-import { factionsStatic, getExpansionLabel } from "../../model/factions.data";
+import { factionsStatic, getExpansionLabel } from "../../model/data";
 import classes from "./FactionBadge.module.css";
 
 const cx = classNames.bind(classes);

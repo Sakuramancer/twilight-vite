@@ -1,4 +1,4 @@
-import { PLAYER_COUNT } from "../config/defaults";
+import { PLAYER_COUNT } from "../player/defaults";
 import PetalPath from "./PetalPath";
 
 const FlowerPath = ({ petalClasses, onPetalClick, ...props }) => {

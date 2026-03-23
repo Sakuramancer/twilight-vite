@@ -1,5 +1,5 @@
-import { useStore } from "core/store/StoreContext";
-import HexedCanvas from "core/canvas/HexedCanvas";
+import { useStore } from "core/store";
+import { HexedCanvas } from "core/canvas";
 import { getExpansionLabel, relicSelectors } from "entities/relic/model";
 import {
   FrameHex,

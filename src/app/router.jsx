@@ -1,11 +1,14 @@
 import { createBrowserRouter } from "react-router-dom";
-import Background from "core/ui/Background";
-import GamePage from "./pages/GamePage/GamePage";
-import ErrorPage from "./pages/ErrorPage";
-import HomePage from "./pages/HomePage/HomePage";
-import NewGamePage from "./pages/NewGamePage";
-import GoalsPage from "./pages/GoalsPage";
-import RelicsPage from "./pages/RelicsPage";
+import { Background } from "core/ui";
+import {
+  AgendasPage,
+  ErrorPage,
+  HomePage,
+  GamePage,
+  GoalsPage,
+  NewGamePage,
+  RelicsPage,
+} from "./pages";
 
 export const router = createBrowserRouter([
   {
@@ -24,6 +27,10 @@ export const router = createBrowserRouter([
       {
         path: "relics",
         element: <RelicsPage />,
+      },
+      {
+        path: "agendas",
+        element: <AgendasPage />,
       },
       {
         path: "newGame",

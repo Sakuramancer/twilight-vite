@@ -1,4 +1,4 @@
-import HexedCanvas from "core/canvas/HexedCanvas";
+import { HexedCanvas } from "core/canvas";
 import classes from "./RandomRelicButton.module.css";
 
 const anchorSize = 95;

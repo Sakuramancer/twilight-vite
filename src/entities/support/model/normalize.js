@@ -1,4 +1,4 @@
-import { PLAYER_COUNT, validatePlayerIndex } from "core/config";
+import { PLAYER_COUNT, validatePlayerIndex } from "core/player";
 import { RESET_VALUE } from "./defaults";
 
 export const normalizeSupports = (persisted) => {

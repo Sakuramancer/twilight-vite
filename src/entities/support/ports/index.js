@@ -1,1 +1,1 @@
-export * from "./supportCommands.port";
+export * from "./commands.port";

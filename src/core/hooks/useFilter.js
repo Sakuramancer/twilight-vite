@@ -26,6 +26,16 @@ const data = {
       { name: "te", label: "Thunder's Edge" },
     ],
   ],
+  agendas: [
+    [
+      { name: "law", label: "Законы" },
+      { name: "directive", label: "Распоряжения" },
+    ],
+    [
+      { name: "main", label: "Базовая игра" },
+      { name: "pok", label: "Пророчество королей" },
+    ],
+  ],
 };
 
 const defFilters = {
@@ -45,6 +55,12 @@ const defFilters = {
     codex2: true,
     codex4: true,
     te: true,
+  },
+  agendas: {
+    law: true,
+    directive: true,
+    main: true,
+    pok: true,
   },
 };
 
@@ -71,3 +87,6 @@ export const useObjectivesFilter = (initialFilters) =>
 
 export const useRelicsFilter = (initialFilters) =>
   useFilter({ type: "relics", initialFilters });
+
+export const useAgendasFilter = (initialFilters) =>
+  useFilter({ type: "agendas", initialFilters });

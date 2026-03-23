@@ -1,9 +1,9 @@
-import { useDocumentTitle } from "core/hooks/useDocumentTitle";
-import { GoalLibrary } from "features/goal/goal-library";
+import { useDocumentTitle } from "core/hooks";
+import { GoalLibrary } from "widgets/goal-library";
 
 const GoalsPage = () => {
   useDocumentTitle("Карты целей | Сумерки");
   return <GoalLibrary />;
 };
 
-export default GoalsPage;
+export { GoalsPage };

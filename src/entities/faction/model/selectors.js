@@ -1,6 +1,5 @@
-import { createCachedFactorySelector } from "core/createCachedSelector";
-import { createMemoSelector } from "core/createMemoSelector";
-import { factionsStatic } from "./factions.data";
+import { createCachedFactorySelector, createMemoSelector } from "core/utils";
+import { factionsStatic } from "./data";
 import { sortByExpansionAndName } from "./sort";
 
 const sortedIds = Object.values(factionsStatic)

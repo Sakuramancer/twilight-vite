@@ -1,5 +1,5 @@
-import { PLAYER_COUNT } from "core/config";
-import HexLayout from "core/ui/HexLayout";
+import { PLAYER_COUNT } from "core/player";
+import { HexLayout } from "core/ui";
 import Clock from "./Clock";
 import PointCounterItem from "./PointCounterItem";
 import classes from "./PointCounter.module.css";

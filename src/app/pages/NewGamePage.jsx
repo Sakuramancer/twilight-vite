@@ -1,9 +1,9 @@
-import { useDocumentTitle } from "core/hooks/useDocumentTitle";
-import { SettingsView } from "features/gameSettings/ui";
+import { useDocumentTitle } from "core/hooks";
+import { SettingsView } from "widgets/game-settings/ui";
 
 const NewGamePage = () => {
   useDocumentTitle("Новая игра | Сумерки");
   return <SettingsView />;
 };
 
-export default NewGamePage;
+export { NewGamePage };

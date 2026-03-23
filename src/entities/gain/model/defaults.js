@@ -1,4 +1,4 @@
-import { gainsStatic } from "./gains.data";
+import { gainsStatic } from "./data";
 
 export const RESET_VALUE = -1;
 

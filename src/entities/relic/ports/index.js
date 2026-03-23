@@ -1,1 +1,1 @@
-export * from "./relicCommands.port";
+export * from "./commands.port";

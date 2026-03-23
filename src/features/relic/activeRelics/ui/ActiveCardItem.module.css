@@ -1,0 +1,8 @@
+.main {
+  margin: 0;
+  position: relative;
+  display: inline-block;
+  width: 234px;
+  -webkit-user-select: none;
+  user-select: none;
+}

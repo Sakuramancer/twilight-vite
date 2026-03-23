@@ -1,6 +1,6 @@
-import { validatePlayerIndex } from "core/config";
+import { validatePlayerIndex } from "core/player";
 import { validateFaction } from "./validate";
-import { factionsStatic } from "./factions.data";
+import { factionsStatic } from "./data";
 import { createDefaultFactions } from "./defaults";
 
 export const assignToPlayer = (factions, playerIndex, factionId) => {

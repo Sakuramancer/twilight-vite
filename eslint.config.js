@@ -34,6 +34,7 @@ export default defineConfig([
           map: [
             ["entities", "./src/entities"],
             ["features", "./src/features"],
+            ["widgets", "./src/widgets"],
             ["core", "./src/core"],
             ["app", "./src/app"],
           ],
@@ -45,6 +46,7 @@ export default defineConfig([
         { type: "core", pattern: "src/core/**" },
         { type: "entities", pattern: "src/entities/**" },
         { type: "features", pattern: "src/features/**" },
+        { type: "widgets", pattern: "src/widgets/**" },
         { type: "app", pattern: "src/app/**" },
       ],
     },
@@ -60,7 +62,8 @@ export default defineConfig([
           rules: [
             { from: "entities", allow: ["core"] },
             { from: "features", allow: ["core", "entities"] },
-            { from: "app", allow: ["core", "entities", "features"] },
+            { from: "widgets", allow: ["core", "entities", "features"] },
+            { from: "app", allow: ["core", "entities", "features", "widgets"] },
           ],
         },
       ],

@@ -1,4 +1,4 @@
-import { validatePlayerIndex } from "core/config";
+import { validatePlayerIndex } from "core/player";
 import { createDefaultRelic, createDefaultRelics } from "./defaults";
 import { validateRelic } from "./validate";
 

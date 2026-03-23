@@ -1,6 +1,6 @@
 .extendedHex {
   stroke-width: 6px;
-  fill: #333;
+  fill: var(--relic-background-color);
 }
 
 .extendedHex-interactive {
@@ -8,15 +8,15 @@
 }
 
 .extendedHex-notMuted {
-  stroke: #f7f2c8;
+  stroke: var(--relic-primary-color);
 }
 
 .extendedHex-muted {
-  stroke: #807a4d;
+  stroke: var(--relic-muted-color);
 }
 
 .extendedHex-redpainted {
-  fill: rgb(160, 64, 64);
+  fill: var(--redpainted-color);
 }
 
 .title {
@@ -29,7 +29,7 @@
   align-items: center;
   pointer-events: none;
 
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: var(--secondary-font-family);
   font-size: 0.9em;
   line-height: 0.9;
   letter-spacing: -0.8px;
@@ -47,9 +47,9 @@
 }
 
 .title-notMuted {
-  color: #f7f2c8;
+  color: var(--relic-primary-color);
 }
 
 .title-muted {
-  color: #807a4d;
+  color: var(--relic-muted-color);
 }

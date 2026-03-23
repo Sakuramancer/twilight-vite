@@ -1,4 +1,4 @@
-import { validatePlayerIndex } from "core/config";
+import { validatePlayerIndex } from "core/player";
 import { createDefaultGains, RESET_VALUE } from "./defaults";
 import { validateGain } from "./validate";
 

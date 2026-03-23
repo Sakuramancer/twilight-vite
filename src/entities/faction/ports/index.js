@@ -1,1 +1,1 @@
-export * from "./factionCommands.port";
+export * from "./commands.port";

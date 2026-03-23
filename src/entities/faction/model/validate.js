@@ -1,4 +1,4 @@
-import { factionsStatic } from "./factions.data";
+import { factionsStatic } from "./data";
 
 export const validateFaction = (factionId) =>
   Object.keys(factionsStatic).includes(factionId);

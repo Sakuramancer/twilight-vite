@@ -1,4 +1,4 @@
-import { PLAYER_COUNT } from "core/config";
+import { PLAYER_COUNT } from "core/player";
 
 export const OBJECTIVE_COUNT = 10;
 export const DATE_RESET_VALUE = -1;

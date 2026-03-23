@@ -1,1 +1,1 @@
-export * from "./secretCommands.port";
+export * from "./commands.port";

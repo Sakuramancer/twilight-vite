@@ -1,6 +1,6 @@
 .frame {
   stroke-width: 6px;
-  fill: #333;
+  fill: var(--relic-background-color);
 }
 
 .frame-interactive {
@@ -8,11 +8,11 @@
 }
 
 .frame-muted {
-  stroke: #807a4d;
+  stroke: var(--relic-muted-color);
 }
 
 .frame-notMuted {
-  stroke: #f7f2c8;
+  stroke: var(--relic-primary-color);
 }
 
 .container {
@@ -26,11 +26,11 @@
 }
 
 .container-notMuted {
-  color: #f7f2c8;
+  color: var(--relic-primary-color);
 }
 
 .container-muted {
-  color: #807a4d;
+  color: var(--relic-muted-color);
 }
 
 .content {
@@ -42,7 +42,7 @@
 }
 
 .description {
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: var(--secondary-font-family);
   font-size: 0.9em;
   line-height: 1;
 }

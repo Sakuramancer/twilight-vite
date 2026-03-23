@@ -1,4 +1,4 @@
-import { PLAYER_COUNT } from "core/config";
+import { PLAYER_COUNT } from "core/player";
 import ExtraField from "./ExtraField";
 import classes from "./ExtraContent.module.css";
 

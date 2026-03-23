@@ -1,5 +1,5 @@
-import { useStore } from "core/store/StoreContext";
-import SecretFlower from "../secret-flower/SecretFlower";
+import { useStore } from "core/store";
+import SecretFlower from "./SecretFlower";
 
 const SecretContent = ({ setIndexes }) => {
   const secrets = useStore((s) => s.secrets);

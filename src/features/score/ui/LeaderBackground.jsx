@@ -1,17 +1,18 @@
 import { useState } from "react";
 import classNames from "classnames/bind";
-import colorClasses from "core/data/colors.module.css";
-import { useStore } from "core/store/StoreContext";
+import { useTimer } from "core/hooks";
+import { useStore } from "core/store";
 import { factionsAssets } from "entities/faction/assets";
-import { scoreSelectors } from "../model/score.selectors";
+import { scoreSelectors } from "../model/selectors";
+import colorClasses from "core/data/colors.module.css";
 import classes from "./LeaderBackground.module.css";
 
 const cx = classNames.bind(classes);
 
 const LeaderBackground = () => {
   const [stableLeader, setStableLeader] = useState({ index: -1 });
-  const [exitState, setExitState] = useState(false);
   const leader = useStore(scoreSelectors.selectLeader);
+  const { isActive: exitState, startTimer } = useTimer(500);
 
   if (
     stableLeader.index !== leader.index ||
@@ -20,12 +21,8 @@ const LeaderBackground = () => {
   ) {
     if (stableLeader.index === -1) {
       setStableLeader(leader);
-    } else if (exitState !== true) {
-      setTimeout(() => {
-        setExitState(false);
-        setStableLeader(leader);
-      }, 500);
-      setExitState(true);
+    } else if (!exitState) {
+      startTimer(() => setStableLeader(leader));
     }
   }
 

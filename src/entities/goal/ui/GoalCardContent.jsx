@@ -1,7 +1,7 @@
 import classNames from "classnames/bind";
+import { goalsStatic } from "core/goal/model";
 import GoalCardDescription from "./GoalCardDescription";
 import GoalCardTitle from "./GoalCardTitle";
-import { goalsStatic } from "../model";
 import classes from "./GoalCardContent.module.css";
 
 const cx = classNames.bind(classes);

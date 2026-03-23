@@ -1,5 +1,5 @@
-import { PLAYER_COUNT } from "core/config";
-import HexLayout from "core/ui/HexLayout";
+import { PLAYER_COUNT } from "core/player";
+import { HexLayout } from "core/ui";
 import { mecatolImage } from "../../assets";
 import MecatolField from "./MecatolField";
 import classes from "./MecatolMain.module.css";

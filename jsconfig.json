@@ -5,7 +5,8 @@
       "app/*": ["app/*"],
       "core/*": ["core/*"],
       "entities/*": ["entities/*"],
-      "features/*": ["features/*"]
+      "features/*": ["features/*"],
+      "widgets/*": ["widgets/*"]
     }
   },
   "include": ["src"]

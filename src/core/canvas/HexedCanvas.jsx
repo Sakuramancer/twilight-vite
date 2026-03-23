@@ -56,4 +56,4 @@ HexedCanvas.Dice = DicePath;
 
 HexedCanvas.StripesPattern = StripesPattern;
 
-export default HexedCanvas;
+export { HexedCanvas };

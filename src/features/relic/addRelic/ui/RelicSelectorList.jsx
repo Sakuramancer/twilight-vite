@@ -1,4 +1,4 @@
-import { useStore } from "core/store/StoreContext";
+import { useStore } from "core/store";
 import { relicSelectors } from "entities/relic/model";
 import { RelicSelectorItem } from "./RelicSelectorItem";
 

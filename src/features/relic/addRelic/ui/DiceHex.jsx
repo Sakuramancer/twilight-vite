@@ -1,6 +1,5 @@
 import classNames from "classnames/bind";
-import HexedCanvas from "core/canvas/HexedCanvas";
-import { useHexedCanvasContext } from "core/canvas/HexedCanvasContext";
+import { HexedCanvas, useHexedCanvasContext } from "core/canvas";
 import classes from "./DiceHex.module.css";
 
 const cx = classNames.bind(classes);

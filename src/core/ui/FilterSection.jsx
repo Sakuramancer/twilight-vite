@@ -1,4 +1,4 @@
-import Checkbox from "./Checkbox";
+import { Checkbox } from "./components/Checkbox";
 import classes from "./FilterSection.module.css";
 
 const FilterSection = ({ filters, handler, data }) => {
@@ -22,4 +22,4 @@ const FilterSection = ({ filters, handler, data }) => {
   );
 };
 
-export default FilterSection;
+export { FilterSection };

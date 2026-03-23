@@ -1,7 +1,5 @@
-import HexedCanvas from "core/canvas/HexedCanvas";
-import { resolveSlot } from "./resolveSlot";
-
-const NullComponent = () => null;
+import { HexedCanvas } from "core/canvas";
+import { resolveSlot } from "core/utils";
 
 const RelicView = ({
   geometry,

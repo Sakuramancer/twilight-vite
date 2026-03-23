@@ -1,6 +1,5 @@
-import { useStore } from "core/store/StoreContext";
-import Overlay from "core/ui/Overlay";
-import ScrollToTop from "core/ui/ScrollToTop";
+import { useStore } from "core/store";
+import { Overlay } from "core/ui";
 import { GoalCard } from "entities/goal/ui";
 import { secretSelectors } from "entities/secret/model";
 import classes from "./ActiveSecretsPanel.module.css";

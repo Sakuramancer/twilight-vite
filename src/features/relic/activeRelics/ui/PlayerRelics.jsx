@@ -1,6 +1,6 @@
-import { useStore } from "core/store/StoreContext";
+import { useStore } from "core/store";
 import { relicSelectors } from "entities/relic/model";
-import GameplayCardItem from "../../gameplay/GameplayCardItem";
+import ActiveCardItem from "./ActiveCardItem";
 import classes from "./PlayerRelics.module.css";
 
 const PlayerRelics = ({ playerIndex }) => {
@@ -9,7 +9,7 @@ const PlayerRelics = ({ playerIndex }) => {
   return (
     <div className={classes.column}>
       {relicIds.map((relicId) => (
-        <GameplayCardItem key={relicId} relicId={relicId} />
+        <ActiveCardItem key={relicId} relicId={relicId} />
       ))}
     </div>
   );

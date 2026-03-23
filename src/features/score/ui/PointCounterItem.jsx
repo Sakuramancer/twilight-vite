@@ -1,12 +1,12 @@
 import classNames from "classnames/bind";
-import HexedCanvas from "core/canvas/HexedCanvas";
-import colors from "core/data/colors.module.css";
-import { useStore } from "core/store/StoreContext";
-import HexLayout from "core/ui/HexLayout";
+import { HexedCanvas } from "core/canvas";
+import { useStore } from "core/store";
+import { HexLayout } from "core/ui";
 import { factionsAssets } from "entities/faction/assets";
 import { factionsStatic } from "entities/faction/model";
 import { getFactionCommands } from "entities/faction/ports";
-import { scoreSelectors } from "../model/score.selectors";
+import { scoreSelectors } from "../model/selectors";
+import colors from "core/data/colors.module.css";
 import classes from "./PointCounterItem.module.css";
 
 const cx = classNames.bind(classes);

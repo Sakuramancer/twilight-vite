@@ -1,5 +1,5 @@
-import { PLAYER_COUNT } from "core/config";
-import Overlay from "core/ui/Overlay";
+import { PLAYER_COUNT } from "core/player";
+import { Overlay } from "core/ui";
 import PlayerRelics from "./PlayerRelics";
 import classes from "./ActiveRelicsPanel.module.css";
 

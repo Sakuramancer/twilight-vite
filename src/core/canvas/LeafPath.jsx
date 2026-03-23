@@ -1,5 +1,5 @@
 import { useHexedCanvasContext } from "./HexedCanvasContext";
-import { useButtonContext } from "../ui/ButtonContext";
+import { useButtonContext } from "../ui/components/ButtonContext";
 
 const innerMult = 0.12;
 const outerMult = 0.75;

@@ -15,6 +15,7 @@ export default defineConfig({
       core: path.resolve(__dirname, "src/core"),
       entities: path.resolve(__dirname, "src/entities"),
       features: path.resolve(__dirname, "src/features"),
+      widgets: path.resolve(__dirname, "src/widgets"),
     },
   },
 });

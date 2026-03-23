@@ -1,5 +1,5 @@
-import { PLAYER_COUNT } from "core/config";
-import HexedCanvas from "core/canvas/HexedCanvas";
+import { PLAYER_COUNT } from "core/player";
+import { HexedCanvas } from "core/canvas";
 import classes from "./StaticPetals.module.css";
 
 const petalList = [...Array(PLAYER_COUNT).keys()];

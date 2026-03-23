@@ -1,9 +1,9 @@
-import { useDocumentTitle } from "core/hooks/useDocumentTitle";
-import Error from "core/ui/Error";
+import { useDocumentTitle } from "core/hooks";
+import { Error } from "core/ui";
 
 const ErrorPage = () => {
   useDocumentTitle("Ошибка | Сумерки");
   return <Error />;
 };
 
-export default ErrorPage;
+export { ErrorPage };

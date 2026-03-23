@@ -1,5 +1,4 @@
-import { createCachedFactorySelector } from "core/createCachedSelector";
-import { createMemoSelector } from "core/createMemoSelector";
+import { createCachedFactorySelector, createMemoSelector } from "core/utils";
 
 const makeMecatolForPlayer = createCachedFactorySelector((playerIndex) =>
   createMemoSelector(

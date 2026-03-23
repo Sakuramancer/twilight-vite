@@ -1,8 +1,8 @@
 .label {
-  color: #f7f2c8;
+  color: var(--relic-primary-color);
 }
 .deckLabel {
-  color: #f7f2c8;
+  color: var(--relic-primary-color);
   font-size: 0.8rem;
 }
 

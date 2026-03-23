@@ -1,8 +1,8 @@
 import classNames from "classnames/bind";
-import HexLayout from "core/ui/HexLayout";
-import { PLAYER_COUNT } from "core/config";
-import { useStore } from "core/store/StoreContext";
-import HexedCanvas from "core/canvas/HexedCanvas";
+import { useStore } from "core/store";
+import { PLAYER_COUNT } from "core/player";
+import { HexedCanvas } from "core/canvas";
+import { HexLayout } from "core/ui";
 import colors from "core/data/colors.module.css";
 import classes from "./RelicPlayerSelector.module.css";
 

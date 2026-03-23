@@ -8,16 +8,16 @@
 }
 
 .hex-notMuted {
-  stroke: #f7f2c8;
+  stroke: var(--relic-primary-color);
 }
 
 .hex-muted {
-  stroke: #807a4d;
+  stroke: var(--relic-muted-color);
 }
 
 .dice {
   pointer-events: none;
-  fill: #f7f2c8;
-  stroke: #f7f2c8;
+  fill: var(--relic-primary-color);
+  stroke: var(--relic-primary-color);
   stroke-width: 2px;
 }
