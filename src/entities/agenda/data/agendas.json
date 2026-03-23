@@ -6,13 +6,14 @@
       "value": "Анти-технологическая революция"
     },
     "type": "law",
+    "voteType": "binary",
     "description": {
       "src": [
         "***For:*** After a player researches a technology, they must destroy 1 of their non-fighter ships.",
         "***Against:*** At the start of the next strategy phase, each player chooses and exhausts 1 planet for each technology they own."
       ],
       "value": [
-        "**ЗА:** после того, как игрок исследовал технологию, он должен уничтожить 1 свой корабль (кроме истребителей).",
+        "**ЗА:** после того, как игрок исследовал технологию, он\u00A0должен уничтожить 1 свой корабль (кроме истребителей).",
         "**ПРОТИВ:** в начале следующей фазы стратегии каждый игрок переворачивает 1 карту планеты за каждую технологию, которой владеет."
       ]
     },
@@ -25,13 +26,18 @@
       "value": "Утечка секретной информации"
     },
     "type": "law",
+    "voteType": "special",
     "description": {
       "src": [
         "When this agenda is revealed, if there are no scored secret objectives, discard this card and reveal another agenda from the top of the deck.",
         "**Elect Scored Secret Objective**",
         "The elected secret objective becomes a public objective; place it near the other public objectives in the common play area."
       ],
-      "value": []
+      "value": [
+        "Если на момент раскрытия этой карты политики в игре нет действующих законов, сбросьте ее и раскройте новую карту с\u00A0верха колоды политики.",
+        "**ВЫБЕРИТЕ ВЫПОЛНЕННУЮ СЕКРЕТНУЮ ЦЕЛЬ**",
+        "Выбранная секретная цель становится общей целью; выложите ее рядом с\u00A0остальными общими целями в\u00A0общей игровой зоне."
+      ]
     },
     "expansion": "main"
   },
@@ -42,9 +48,17 @@
       "value": "Формирование комитета"
     },
     "type": "law",
+    "voteType": "player",
     "description": {
-      "src": [],
-      "value": []
+      "src": [
+        "The elected player gains this card.",
+        "Before players vote on an agenda that requires a player to be elected, the owner of this card may discard this card to choose a player to be elected. Players do not vote on that agenda."
+      ],
+      "value": [
+        "**ВЫБЕРИТЕ ИГРОКА**",
+        "Выбранный игрок получает эту\u00A0карту.",
+        "Перед началом голосования по\u00A0карте политики, требующей выбрать игрока, владелец этой карты может сбросить ее и выбрать игрока самостоятельно. Игроки не голосуют по этой карте политики."
+      ]
     },
     "expansion": "main"
   },
@@ -55,9 +69,16 @@
       "value": "Правила ведения войны"
     },
     "type": "law",
+    "voteType": "binary",
     "description": {
-      "src": [],
-      "value": []
+      "src": [
+        "***For:*** Players cannot use BOMBARDMENT against units that are on cultural planets.",
+        "***Against:*** Each player that voted \"Against\" discards all of their action cards."
+      ],
+      "value": [
+        "**ЗА:** игроки не могут использовать способность \"БОМБАРДИРОВКА\" против отрядов, находящихся на\u00A0культурных планетах.",
+        "**ПРОТИВ:** каждый игрок, проголосовавший \"против\", сбрасывает все свои карты действий."
+      ]
     },
     "expansion": "main"
   },
@@ -65,12 +86,19 @@
     "id": "enforcedTravelBan",
     "title": {
       "src": "Enforced Travel Ban",
-      "value": "Ограничение на передвижение"
+      "value": "Ограничение на\u00A0передвижение"
     },
     "type": "law",
+    "voteType": "binary",
     "description": {
-      "src": [],
-      "value": []
+      "src": [
+        "***For:*** Alpha and beta wormholes have no effect during movement.",
+        "***Against:*** Destroy each PDS in or adjacent to a system that contains a wormhole."
+      ],
+      "value": [
+        "**ЗА:** при передвижении нельзя использовать альфа- и бета-червоточины.",
+        "**ПРОТИВ:** уничтожьте все ПСО в\u00A0системах с червоточинами и в\u00A0смежных системах."
+      ]
     },
     "expansion": "main"
   },
@@ -81,9 +109,16 @@
       "value": "Ограничение полномочий"
     },
     "type": "law",
+    "voteType": "binary",
     "description": {
-      "src": [],
-      "value": []
+      "src": [
+        "***For:*** Each player can have a maximum of 3 action cards in their hand.",
+        "***Against:*** Each player discards 1 random action card from their hand."
+      ],
+      "value": [
+        "**ЗА:** у каждого игрока на руке может быть не более 3 карт действий.",
+        "**ПРОТИВ:** каждый игрок сбрасывает 1 сучайную карту действия с руки."
+      ]
     },
     "expansion": "main"
   },
@@ -94,9 +129,16 @@
       "value": "Регулирование флота"
     },
     "type": "law",
+    "voteType": "binary",
     "description": {
-      "src": [],
-      "value": []
+      "src": [
+        "***For:*** Each player cannot have more than 4 tokens in their fleet pool.",
+        "***Against:*** Each player places 1 command token from their reinforcements in their fleet pool."
+      ],
+      "value": [
+        "**ЗА:** у каждого игрока не может быть больше 4 жетонов в\u00A0резерве флота.",
+        "**ПРОТИВ:** каждый игрок кладет 1\u00A0жетон приказа из снабжения в\u00A0свой резерв флота."
+      ]
     },
     "expansion": "main"
   },
@@ -107,9 +149,16 @@
       "value": "Закон об обороне"
     },
     "type": "law",
+    "voteType": "binary",
     "description": {
-      "src": [],
-      "value": []
+      "src": [
+        "***For:*** Each player can have any number of PDS units on planets they control.",
+        "***Against:*** Each player destroys 1 of their PDS unit."
+      ],
+      "value": [
+        "**ЗА:** каждый игрок может размещать любое количество ПСО на подконтрольных ему планетах.",
+        "**ПРОТИВ:** каждый игрок уничожает 1 из своих ПСО."
+      ]
     },
     "expansion": "main"
   },
@@ -120,9 +169,17 @@
       "value": "Имперский арбитр"
     },
     "type": "law",
+    "voteType": "player",
     "description": {
-      "src": [],
-      "value": []
+      "src": [
+        "The elected player gains this card.",
+        "At the end of the strategy phase, the owner of this card may discard this card to swap 1 of their strategy cards with 1 of another player's strategy cards."
+      ],
+      "value": [
+        "**ВЫБЕРИТЕ ИГРОКА**",
+        "Выбранный игрок получает эту\u00A0карту.",
+        "В конце фазы стратегии владелец этой карты может сбросить ее, чтобы обменять 1\u00A0из своих карт стратегии на\u00A01\u00A0карту стратегии другого игрока."
+      ]
     },
     "expansion": "main"
   },
@@ -133,9 +190,17 @@
       "value": "Министр торговли"
     },
     "type": "law",
+    "voteType": "player",
     "description": {
-      "src": [],
-      "value": []
+      "src": [
+        "The elected player gains this card.",
+        "After the owner of this card replenishes commodities, they gain 1 trade good for each player that is their neighbor."
+      ],
+      "value": [
+        "**ВЫБЕРИТЕ ИГРОКА**",
+        "Выбранный игрок получает эту\u00A0карту.",
+        "После того как владелец этой карты пополнил продукцию, он\u00A0получает 1 товар за каждого соседнего игрока."
+      ]
     },
     "expansion": "main"
   },
@@ -146,9 +211,17 @@
       "value": "Министр открытий"
     },
     "type": "law",
+    "voteType": "player",
     "description": {
-      "src": [],
-      "value": []
+      "src": [
+        "The elected player gains this card.",
+        "When the owner of this card gains control of a planet, they gain 1 trade good."
+      ],
+      "value": [
+        "**ВЫБЕРИТЕ ИГРОКА**",
+        "Выбранный игрок получает эту\u00A0карту.",
+        "Когда владелец этой карты получает контроль над планетой, он получает 1 товар."
+      ]
     },
     "expansion": "main"
   },
@@ -159,9 +232,17 @@
       "value": "Министр промышленности"
     },
     "type": "law",
+    "voteType": "player",
     "description": {
-      "src": [],
-      "value": []
+      "src": [
+        "The elected player gains this card.",
+        "When the owner of this card places a space dock in a system, their units in that system may use their PRODUCTION abilities."
+      ],
+      "value": [
+        "**ВЫБЕРИТЕ ИГРОКА**",
+        "Выбранный игрок получает эту\u00A0карту.",
+        "Когда владелец этой карты размещает базу в системе, его отряды в этой системе могут использовать свою способность \"ПРОИЗВОДСТВО\"."
+      ]
     },
     "expansion": "main"
   },
@@ -172,9 +253,17 @@
       "value": "Министр мира"
     },
     "type": "law",
+    "voteType": "player",
     "description": {
-      "src": [],
-      "value": []
+      "src": [
+        "The elected player gains this card.",
+        "After a player activates a system that contains 1 or more of a different player's units, the owner of this card may discard this card; immediately end the active player's turn."
+      ],
+      "value": [
+        "**ВЫБЕРИТЕ ИГРОКА**",
+        "Выбранный игрок получает эту\u00A0карту.",
+        "После того как игрок активировал систему, в которой есть хотя бы 1 отряд другого игрока, владелец этой карты может сбросить ее; ход активного игрока немедленно завершается."
+      ]
     },
     "expansion": "main"
   },
@@ -185,9 +274,17 @@
       "value": "Министр политики"
     },
     "type": "law",
+    "voteType": "player",
     "description": {
-      "src": [],
-      "value": []
+      "src": [
+        "The elected player gains this card.",
+        "At the end of the status phase, the owner of this card draws 1 action card."
+      ],
+      "value": [
+        "**ВЫБЕРИТЕ ИГРОКА**",
+        "Выбранный игрок получает эту\u00A0карту.",
+        "В конце фазы статуса владелец этой карты берет 1 карту действия."
+      ]
     },
     "expansion": "main"
   },
@@ -198,9 +295,17 @@
       "value": "Министр науки"
     },
     "type": "law",
+    "voteType": "player",
     "description": {
-      "src": [],
-      "value": []
+      "src": [
+        "The elected player gains this card.",
+        "When the owner of this card resolves the primary or secondary ability of the \"Technology\" strategy card, they do not need to spend resources to research technology."
+      ],
+      "value": [
+        "**ВЫБЕРИТЕ ИГРОКА**",
+        "Выбранный игрок получает эту\u00A0карту.",
+        "Когда владелец этой карты применяет основную или второстепенную способность карты стратегии \"Исследования\", ему не нужно тратить очки ресурсов, чтобы исследовать технологию."
+      ]
     },
     "expansion": "main"
   },
@@ -211,9 +316,17 @@
       "value": "Министр войны"
     },
     "type": "law",
+    "voteType": "player",
     "description": {
-      "src": [],
-      "value": []
+      "src": [
+        "The elected player gains this card.",
+        "The owner of this card may discard this card after performing an action to remove 1 of their command counters from the game board and return it to their reinforcements; then they may perform 1 additional action."
+      ],
+      "value": [
+        "**ВЫБЕРИТЕ ИГРОКА**",
+        "Выбранный игрок получает эту\u00A0карту.",
+        "Совершив действие, владелец этой карты может сбросить ее, чтобы вернуть 1 свой жетон приказа с поля в снабжение; затем он может совершить 1\u00A0дополнительное действие."
+      ]
     },
     "expansion": "main"
   },
@@ -224,9 +337,18 @@
       "value": "Пророчество Икстов"
     },
     "type": "law",
+    "voteType": "player",
     "description": {
-      "src": [],
-      "value": []
+      "src": [
+        "The elected player gains this card.",
+        "The owner of this card applies +1 to the result of their fighter's combat rolls. When the owner of this card uses PRODUCTION, they discard this card unless they produce 2 or more fighters."
+      ],
+      "value": [
+        "**ВЫБЕРИТЕ ИГРОКА**",
+        "Выбранный игрок получает эту\u00A0карту.",
+        "Владелец этой карты добавляет +1 к результатам боевых проверок своих истребителей.",
+        "Когда владелец этой карты испльзует способность \"ПРОИЗВОДСТВО\", он сбрасывает эту карту, если не\u00A0производит при этом хотя бы 2 истребителя."
+      ]
     },
     "expansion": "main"
   },
@@ -237,9 +359,16 @@
       "value": "Раскрытие военных чертежей"
     },
     "type": "law",
+    "voteType": "binary",
     "description": {
-      "src": [],
-      "value": []
+      "src": [
+        "***For:*** If any player owns a war sun technology, all players may ignore all prerequisites on war sun technologies. All war suns lose SUSTAIN DAMAGE.",
+        "***Against:*** Each player that owns a war sun technology discards all of their action cards."
+      ],
+      "value": [
+        "**ЗА:** если хотя бы у 1 игрока есть технологии улучшения Солнце Войны, все игроки могут игнорировать требования этой технологии. Все Солнца Войны теряют способность \"ПОГЛОЩЕНИЕ УРОНА\".",
+        "**ПРОТИВ:** каждый игрок, у\u00A0которого есть технология улучшения Солнце Войны, сбрасывает все свои карты действий."
+      ]
     },
     "expansion": "main"
   },
@@ -250,9 +379,16 @@
       "value": "Плановый призыв"
     },
     "type": "law",
+    "voteType": "binary",
     "description": {
-      "src": [],
-      "value": []
+      "src": [
+        "***For:*** When a player produces units, they produce only 1 fighter and infantry for its cost instead of 2.",
+        "***Against:*** No effect."
+      ],
+      "value": [
+        "**ЗА:** когда игрок производит отряды, он производит только 1\u00A0истребитель или отряд пехоты за обычную цену, а не 2.",
+        "**ПРОТИВ:** ничего не происходит."
+      ]
     },
     "expansion": "main"
   },
@@ -263,9 +399,16 @@
       "value": "Совместные исследования"
     },
     "type": "law",
+    "voteType": "binary",
     "description": {
-      "src": [],
-      "value": []
+      "src": [
+        "***For:*** Each player's units can move through nebulae.",
+        "***Against:*** Each player places a command token from their reinforcements in their home system, if able."
+      ],
+      "value": [
+        "**ЗА:** отряды всех игроков способны передвигаться через туманности.",
+        "**ПРОТИВ:** каждый игрок выкладывает жетон приказа из\u00A0снабжения в свою родную систему (при возможности)."
+      ]
     },
     "expansion": "main"
   },
@@ -276,9 +419,16 @@
       "value": "Перестройка червоточин"
     },
     "type": "law",
+    "voteType": "binary",
     "description": {
-      "src": [],
-      "value": []
+      "src": [
+        "***For:*** All systems that contain either an alpha or beta wormhole are adjacent to each other.",
+        "***Against:*** Each player places a command token from their reinforcements in each system that contains a wormhole and 1 or more of their ships."
+      ],
+      "value": [
+        "**ЗА:** все системы, в которых есть альфа- или бета-червоточина, считаются смежными.",
+        "**ПРОТИВ:** каждый игрок кладет 1\u00A0жетон приказа из своего снабжения в каждую систему, где есть червоточина и хотя бы 1\u00A0его корабль."
+      ]
     },
     "expansion": "main"
   },
@@ -289,9 +439,13 @@
       "value": "Секретные архивы"
     },
     "type": "directive",
+    "voteType": "player",
     "description": {
-      "src": [],
-      "value": []
+      "src": ["Elected player draws 1 secret objective."],
+      "value": [
+        "**ВЫБЕРИТЕ ИГРОКА**",
+        "Выбранный игрок берет 1 карту секретной цели."
+      ]
     },
     "expansion": "main"
   },
@@ -299,12 +453,19 @@
     "id": "armsReduction",
     "title": {
       "src": "Arms Reduction",
-      "value": "Договор о разоружении"
+      "value": "Договор о\u00A0разоружении"
     },
     "type": "directive",
+    "voteType": "binary",
     "description": {
-      "src": [],
-      "value": []
+      "src": [
+        "***For:*** Each player destroys all but 2 of their dreadnaughts and all but 4 of their cruisers.",
+        "***Against:*** At the start of the next strategy phase, each player exhausts each of their planets that have a technology specialty."
+      ],
+      "value": [
+        "**ЗА:** каждый игрок оставляет себе 2 дредноута и 4 крейсера и уничтожает все остальные свои отряды этих типов.",
+        "**ПРОТИВ:** в начале следующей фазы стратегии игроки переворачивают все карты своих планет с технологической специализацией."
+      ]
     },
     "expansion": "main"
   },
@@ -315,9 +476,15 @@
       "value": "Передел колоний"
     },
     "type": "directive",
+    "voteType": "special",
     "description": {
-      "src": [],
-      "value": []
+      "src": [
+        "Destroy each unit on the elected planet. Then, the player who controls that planet chooses 1 player with the fewest victory points; that player may place 1 infantry from their reinforcements on the elected planet."
+      ],
+      "value": [
+        "**ВЫБЕРИТЕ НЕРОДНУЮ ПЛАНЕТУ** (за исключением Мекатол-Рекса)",
+        "Уничтожьте все отряды на\u00A0выбранной планете. Затем игрок, контролирующий эту планету, выбирает игрока с\u00A0наименьшим количеством победных очков; этот игрок может разместить 1 отряд пехоты из своего снабжения на\u00A0выбранной планете."
+      ]
     },
     "expansion": "main"
   },
@@ -328,9 +495,16 @@
       "value": "Оплачиваемое разоружение"
     },
     "type": "directive",
+    "voteType": "special",
     "description": {
-      "src": [],
-      "value": []
+      "src": [
+        "Destroy each ground force on the elected planet; for each unit that was destroyed, the player who controls that planet gains 1 trade good."
+      ],
+      "value": [
+        "**ВЫБЕРИТЕ ПЛАНЕТУ**",
+        "Уничтожьте все наземные войска на выбранной планете.",
+        "Затем игрок, контролирующий эту планету, получает 1 товар за\u00A0каждый уничтоженный отряд."
+      ]
     },
     "expansion": "main"
   },
@@ -341,9 +515,16 @@
       "value": "Экономическое равенство"
     },
     "type": "directive",
+    "voteType": "binary",
     "description": {
-      "src": [],
-      "value": []
+      "src": [
+        "***For:*** Each player returns all of their trade goods to the supply. Then, each player gains 5 trade goods.",
+        "***Against:*** Each player returns all of their trade goods to the supply."
+      ],
+      "value": [
+        "**ЗА:** каждый игрок возвращает все свои товары в общий запас. Затем каждый игрок получает 5\u00A0товаров.",
+        "**ПРОТИВ:** каждый игрок возвращает все свои товары в\u00A0общий запас."
+      ]
     },
     "expansion": "main"
   },
@@ -354,9 +535,16 @@
       "value": "Программа поощрений"
     },
     "type": "directive",
+    "voteType": "binary",
     "description": {
-      "src": [],
-      "value": []
+      "src": [
+        "***For:*** Draw and reveal 1 stage I public objective from the deck and place it near the public objectives.",
+        "***Against:*** Draw and reveal 1 stage II public objective from the deck and place it near the public objectives."
+      ],
+      "value": [
+        "**ЗА:** возьмите и раскройте 1\u00A0карту общей цели этапа I. Выложите ее рядом с картами общих целей.",
+        "**ПРОТИВ:** возьмите и раскройте 1\u00A0карту общей цели этапа II. Выложите ее рядом с картами общих целей."
+      ]
     },
     "expansion": "main"
   },
@@ -367,9 +555,18 @@
       "value": "Артефакт Икстов"
     },
     "type": "directive",
+    "voteType": "binary",
     "description": {
-      "src": [],
-      "value": []
+      "src": [
+        "***For:*** The speaker rolls 1 die. If the result is 6-10, each player may research 2 technologies. If the result is 1-5, destroy all units in Mecatol Rex's system, and each player with units in systems adjacent to Mecatol Rex's system destroys 3 of their units in each of those systems.",
+        "***Against:*** No effect."
+      ],
+      "value": [
+        "**ЗА:** председатель бросает кубик.",
+        "***Если результат 6-10:*** каждый игрок может исследовать 2\u00A0технологии.",
+        "***Если результат 1-5:*** уничтожьте все отряды в системе Мекатол-Рекса; каждый игрок, у которого есть отряды в системах, смежных с ней, уничтожает 3\u00A0своих отряда в каждой такой системе.",
+        "**ПРОТИВ:** ничего не происходит."
+      ]
     },
     "expansion": "main"
   },
@@ -380,9 +577,17 @@
       "value": "Неконституционный закон"
     },
     "type": "directive",
+    "voteType": "special",
     "description": {
-      "src": [],
-      "value": []
+      "src": [
+        "When this agenda is revealed, if there are no laws in play, discard this card and reveal another agenda from the top of the deck.",
+        "Discard the elected law from play."
+      ],
+      "value": [
+        "Если на момент раскрытия этой карты политики в игре нет действующих законов, сбросьте ее и раскройте новую карту с\u00A0верха колоды политики.",
+        "**ВЫБЕРИТЕ ЗАКОН**",
+        "Сбросьте карту выбранного закона."
+      ]
     },
     "expansion": "main"
   },
@@ -393,9 +598,17 @@
       "value": "Пересчет голосов"
     },
     "type": "directive",
+    "voteType": "special",
     "description": {
-      "src": [],
-      "value": []
+      "src": [
+        "When this agenda is revealed, if there are no laws in play, discard this card and reveal another agenda from the top of the deck.",
+        "Vote on the elected law as if it were just revealed from the top of the deck."
+      ],
+      "value": [
+        "Если на момент раскрытия этой карты политики в игре нет действующих законов, сбросьте ее и раскройте новую карту с\u00A0верха колоды политики.",
+        "**ВЫБЕРИТЕ ЗАКОН**",
+        "Проголосуйте по выбранному закону, как если бы он был только что раскрыт с верха колоды политики."
+      ]
     },
     "expansion": "main"
   },
@@ -406,9 +619,16 @@
       "value": "Бунт"
     },
     "type": "directive",
+    "voteType": "binary",
     "description": {
-      "src": [],
-      "value": []
+      "src": [
+        "***For:*** Each player who voted \"For\" gains 1 victory point.",
+        "***Against:*** Each player who voted \"For\" loses 1 victory point."
+      ],
+      "value": [
+        "**ЗА:** каждый игрок, проголосовавший \"за\", получает 1 победное очко.",
+        "**ПРОТИВ:** каждый игрок, проголосовавший \"за\", теряет победное очко."
+      ]
     },
     "expansion": "main"
   },
@@ -419,9 +639,18 @@
       "value": "Новая конституция"
     },
     "type": "directive",
+    "voteType": "binary",
     "description": {
-      "src": [],
-      "value": []
+      "src": [
+        "When this agenda is revealed, if there are no laws in play, discard this card and reveal another agenda from the top of the deck.",
+        "***For:*** Discard all laws in play. At the start of the next strategy phase, each player exhausts each planet in their home system.",
+        "***Against:*** No effect."
+      ],
+      "value": [
+        "Если на момент раскрытия этой карты политики в игре нет действующих законов, сбросьте ее и раскройте новую карту с\u00A0верха колоды политики.",
+        "**ЗА:** сбросьте карты всех действующих законов. В начале следующей фазы стратегии каждый игрок переворачивает все карты планет в своей родной системе.",
+        "**ПРОТИВ:** ничего не происходит."
+      ]
     },
     "expansion": "main"
   },
@@ -432,9 +661,17 @@
       "value": "Публичная казнь"
     },
     "type": "directive",
+    "voteType": "player",
     "description": {
-      "src": [],
-      "value": []
+      "src": [
+        "The elected player discards all of their action cards. If they have the speaker token, they give it to the player on their left. The elected player cannot vote on any agendas during this agenda phase."
+      ],
+      "value": [
+        "**ВЫБЕРИТЕ ИГРОКА**",
+        "Выбранный игрок сбрасывает все свои карты действий.",
+        "Если у него есть жетон председателя, он отдает его игроку слева.",
+        "Выбранный игрок не может голосовать по любым картам во\u00A0время этой фазы политики."
+      ]
     },
     "expansion": "main"
   },
@@ -445,9 +682,16 @@
       "value": "Ростки империи"
     },
     "type": "directive",
+    "voteType": "binary",
     "description": {
-      "src": [],
-      "value": []
+      "src": [
+        "***For:*** The player with most victory points gains 1 victory point.",
+        "***Against:*** The player with the fewest victory points gains 1 victory point."
+      ],
+      "value": [
+        "**ЗА:** игрок, у которого больше всего победных очков, получает 1 победное очко.",
+        "**ПРОТИВ:** игрок, у которого меньше всего победных очков, получает 1 победное очко."
+      ]
     },
     "expansion": "main"
   },
@@ -458,9 +702,16 @@
       "value": "Мечи на орала"
     },
     "type": "directive",
+    "voteType": "binary",
     "description": {
-      "src": [],
-      "value": []
+      "src": [
+        "***For:*** Each player destroys half of their infantry on each planet they control, rounded up. Then, each player gains trade goods equal to the number of their infantry that were destroyed.",
+        "***Against:*** Each player places 1 infantry from their reinforcements on each planet they control."
+      ],
+      "value": [
+        "**ЗА:** каждый игрок уничтожает половину своих отрядов пехоты (с округлением вверх) на каждой подконтрольной ему планете. Затем каждый игрок получает столько товаров, сколько он уничтожил отрядов пехоты.",
+        "**ПРОТИВ:** каждый игрок размещает 1 отряд пехоты из\u00A0снабжения на каждой подконтрольной ему планете."
+      ]
     },
     "expansion": "main"
   },
@@ -471,9 +722,16 @@
       "value": "Нетрадиционные меры"
     },
     "type": "directive",
+    "voteType": "binary",
     "description": {
-      "src": [],
-      "value": []
+      "src": [
+        "***For:*** Each player that voted \"For\" draws 2 action cards.",
+        "***Against:*** Each player that voted \"For\" discards all of their action cards."
+      ],
+      "value": [
+        "**ЗА:** каждый игрок, проголосовавший \"за\", берет по\u00A02 карты действий.",
+        "**ПРОТИВ:** каждый игрок, проголосовавший \"за\", сбрасывает все свои карты действий."
+      ]
     },
     "expansion": "main"
   },
@@ -484,9 +742,16 @@
       "value": "Исследование червоточин"
     },
     "type": "directive",
+    "voteType": "binary",
     "description": {
-      "src": [],
-      "value": []
+      "src": [
+        "***For:*** Each player who has 1 or more ships in a system that contains a wormhole may research 1 technology. Then, destroy all ships in systems that contain an alpha or beta wormhole.",
+        "***Against:*** Each player that voted \"Against\" removes 1 command token from their command sheet and returns it to their reinforcements."
+      ],
+      "value": [
+        "**ЗА:** каждый игрок, у которого есть хотя бы 1 корабль в\u00A0системе с червоточиной, может исследовать 1\u00A0технологию. Затем уничтожьте все корабли в системах с альфа- и бета-червоточинами.",
+        "**ПРОТИВ:** каждый игрок, проголосовавший \"против\", возвращает 1 жетон приказа со\u00A0своего планшета приказов в\u00A0снабжение."
+      ]
     },
     "expansion": "main"
   },
@@ -497,9 +762,16 @@
       "value": "Военный устав"
     },
     "type": "law",
+    "voteType": "binary",
     "description": {
-      "src": [],
-      "value": []
+      "src": [
+        "***For:*** All mechs lose their printed abilities except for SUSTAIN DAMAGE.",
+        "***Against:*** Each player that voted \"For\" gains 3 trade goods."
+      ],
+      "value": [
+        "**ЗА:** все мехи теряют все указанные на их картах способности, кроме \"ПОГЛОЩЕНИЕ УРОНА\".",
+        "**ПРОТИВ:** каждый игрок, проголосовавший \"за\", получает 3 товара."
+      ]
     },
     "expansion": "pok"
   },
@@ -507,12 +779,19 @@
     "id": "checksAndBalances",
     "title": {
       "src": "Checks and Balances",
-      "value": "Сдержки и противовесы"
+      "value": "Сдержки и\u00A0противовесы"
     },
     "type": "law",
+    "voteType": "binary",
     "description": {
-      "src": [],
-      "value": []
+      "src": [
+        "***For:*** When a player chooses a strategy card during the strategy phase, they give that strategy card to another player that does not have 1 (or a player that does not have 2 in a three- or four-player game), if able.",
+        "***Against:*** Each player readies only 3 of their planets at the end of this agenda phase."
+      ],
+      "value": [
+        "**ЗА:** когда любой игрок выбирает карту стратегии в фазе стратегии, он при возможности отдает ее другому игроку, у\u00A0которого еще нет карты стратегии *(или нет двух карт при игре втроем или вчетвером)*.",
+        "**ПРОТИВ:** в конце этой фазы политики каждый игрок подготавливает только 3 свои карты планет."
+      ]
     },
     "expansion": "pok"
   },
@@ -523,9 +802,16 @@
       "value": "Власть над ядром"
     },
     "type": "law",
+    "voteType": "binary",
     "description": {
-      "src": [],
-      "value": []
+      "src": [
+        "***For:*** Alpha and beta wormholes in the wormhole nexus have no effect during movement.",
+        "***Against:*** Place a gamma wormhole token in the Mecatol Rex system."
+      ],
+      "value": [
+        "**ЗА:** альфа- и бета-червоточины в\u00A0Ядре червоточин не имеют эффекта во время передвижения.",
+        "**ПРОТИВ:** положите жетон гамма-червоточины в систему Мекатол-Рекс."
+      ]
     },
     "expansion": "pok"
   },
@@ -536,9 +822,19 @@
       "value": "Политический ценз"
     },
     "type": "law",
+    "voteType": "player",
     "description": {
-      "src": [],
-      "value": []
+      "src": [
+        "The elected player gains this card and 1 victory point.",
+        "The elected player cannot play action cards.",
+        "If the owner of this card loses this card, they lose 1 victory point."
+      ],
+      "value": [
+        "**ВЫБЕРИТЕ ИГРОКА**",
+        "Выбранный игрок получает эту\u00A0карту и 1 победное очко.",
+        "Выбранный игрок не может играть карты действий.",
+        "Если владелец этой карты теряет ее, он теряет 1 победное очко."
+      ]
     },
     "expansion": "pok"
   },
@@ -549,9 +845,16 @@
       "value": "Галактический Сенат"
     },
     "type": "law",
+    "voteType": "binary",
     "description": {
-      "src": [],
-      "value": []
+      "src": [
+        "***For:*** Players cannot exhaust planets to cast votes during the agenda phase; each player may cast 1 vote on each agenda instead. Players cannot cast additional votes.",
+        "***Against:*** At the start of the next strategy phase, each player that voted \"Against\" exhausts all of their cultural planets."
+      ],
+      "value": [
+        "**ЗА:** игроки не могут переворачивать карты планет, чтобы голосовать во время фазы политики; теперь каждый игрок может отдать только 1\u00A0голос по каждой карте политики. Игроки не могут добавлять дополнительные голоса.",
+        "**ПРОТИВ:** в начале следующей фазы стратегии каждый игрок, проголосовавший \"против\", переворачивает все карты своих культурных планет."
+      ]
     },
     "expansion": "pok"
   },
@@ -562,9 +865,17 @@
       "value": "Ордер на обыск"
     },
     "type": "law",
+    "voteType": "player",
     "description": {
-      "src": [],
-      "value": []
+      "src": [
+        "The elected player gains this card and draws 2 secret objectives.",
+        "The owner of this card plays with their secret objectives revealed."
+      ],
+      "value": [
+        "**ВЫБЕРИТЕ ИГРОКА**",
+        "Выбранный игрок получает эту\u00A0карту и берет 2 секретные цели.",
+        "Владелец этой карты держит все\u00A0свои карты секретных целей в открытую."
+      ]
     },
     "expansion": "pok"
   },
@@ -575,9 +886,16 @@
       "value": "Стандартизация вооруженных сил"
     },
     "type": "directive",
+    "voteType": "player",
     "description": {
-      "src": [],
-      "value": []
+      "src": [
+        "The elected player places command tokens from their reinforcements so that they have 3 tokens in their tactic pool, 3 tokens in their fleet pool and 2 tokens in their strategy pool. They return any excess tokens to their reinforcements."
+      ],
+      "value": [
+        "**ВЫБЕРИТЕ ИГРОКА**",
+        "Выбранный игрок перераспределяет жетоны на\u00A0своем планшете приказов, так чтобы в его тактическом резерве было 3 жетона, в\u00A0резерве флота – 3 жетона, а\u00A0в\u00A0стратегическом резерве – 2\u00A0жетона.",
+        "Недостающие жетоны берутся из\u00A0снабжения, лишние – возвращаются в снабжение."
+      ]
     },
     "expansion": "pok"
   },
@@ -588,9 +906,16 @@
       "value": "Тайные операции"
     },
     "type": "directive",
+    "voteType": "binary",
     "description": {
-      "src": [],
-      "value": []
+      "src": [
+        "***For:*** Each player removes 2 command tokens from their command sheet and returns those tokens to their reinforcements.",
+        "***Against:*** Each player removes 1 command token from their fleet pool and returns that token to their reinforcements."
+      ],
+      "value": [
+        "**ЗА:** каждый игрок убирает 2\u00A0жетона приказов со своего планшета приказов и возвращает их в снабжение.",
+        "**ПРОТИВ:** каждый игрок убирает 1 жетон приказа из своего резерва флота и возвращает его в снабжение."
+      ]
     },
     "expansion": "pok"
   },
@@ -601,9 +926,16 @@
       "value": "Тайный законопроект"
     },
     "type": "directive",
+    "voteType": "special",
     "description": {
-      "src": [],
-      "value": []
+      "src": [
+        "When this agenda is revealed, the speaker draws the next card in the agenda deck but does not reveal it to the other players. Instead, the speaker reads the eligible outcomes aloud (for, against, elect player, etc.); the other players vote for these outcomes as if they were outcomes of this agenda, without knowing their effects."
+      ],
+      "value": [
+        "Когда раскрыта эта карта политики, председатель берет следующую карту из колоды политики, но не раскрывает ее остальным игрокам.",
+        "Вместо этого, председатель зачитывает вслух доступные варианты решений (\"За\", \"Против\", \"Выберите игрока\" и\u00A0т.д.).",
+        "Остальные игроки голосуют, не\u00A0зная содержания этих решений."
+      ]
     },
     "expansion": "pok"
   },
@@ -614,9 +946,16 @@
       "value": "Пакт о галактическом кризисе"
     },
     "type": "directive",
+    "voteType": "special",
     "description": {
-      "src": [],
-      "value": []
+      "src": [
+        "Each player may perform the secondary ability of the elected strategy card without spending a command token; command tokens placed by the ability are placed from a player's reinforcements instead."
+      ],
+      "value": [
+        "**ВЫБЕРИТЕ КАРТУ СТРАТЕГИИ**",
+        "Каждый игрок может применить второстепенную способность выбранной карты стратегии, не\u00A0тратя жетон приказа;",
+        "если эта способность требует выложить куда-либо жетоны приказов, они выкладываются из снабжения игроков."
+      ]
     },
     "expansion": "pok"
   },
@@ -627,9 +966,10 @@
       "value": "Министр древностей"
     },
     "type": "directive",
+    "voteType": "player",
     "description": {
-      "src": [],
-      "value": []
+      "src": ["The elected player gains 1 relic."],
+      "value": ["**ВЫБЕРИТЕ ИГРОКА**", "Выбранный игрок получает 1\u00A0реликвию."]
     },
     "expansion": "pok"
   },
@@ -637,12 +977,19 @@
     "id": "rearmamentAgreement",
     "title": {
       "src": "Rearmament Agreement",
-      "value": "Соглашение о перевооружении"
+      "value": "Соглашение о\u00A0перевооружении"
     },
     "type": "directive",
+    "voteType": "binary",
     "description": {
-      "src": [],
-      "value": []
+      "src": [
+        "***For:*** Each player places 1 mech from their reinforcements on a planet they control in their home system.",
+        "***Against:*** Each player replaces each of their mechs with 1 infantry from their reinforcements."
+      ],
+      "value": [
+        "**ЗА:** каждый игрок размещает 1\u00A0меха из своего снабжения не\u00A0подконтрольной ему планете в их родной системе.",
+        "**ПРОТИВ:** каждый игрок заменяет каждого своего меха на отряд пехоты из своего снабжения."
+      ]
     },
     "expansion": "pok"
   },
@@ -653,9 +1000,16 @@
       "value": "Перераспределение гранта"
     },
     "type": "directive",
+    "voteType": "player",
     "description": {
-      "src": [],
-      "value": []
+      "src": [
+        "The elected player gains any 1 technology of their choice. Then, for each prerequisite on that technology, they remove 1 token from their fleet pool and return it to their reinforcements."
+      ],
+      "value": [
+        "**ВЫБЕРИТЕ ИГРОКА**",
+        "Выбранный игрок получает 1\u00A0любую технологию на свой выбор.",
+        "Затем за каждое требование на\u00A0этой карте технологии он\u00A0убирает в снабжение 1 жетон из своего резерва флота."
+      ]
     },
     "expansion": "pok"
   }
