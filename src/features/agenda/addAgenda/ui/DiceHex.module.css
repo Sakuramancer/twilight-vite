@@ -1,0 +1,35 @@
+.hex {
+  stroke-width: 4px;
+}
+
+.hex-interactive {
+  cursor: pointer;
+  pointer-events: fill;
+}
+
+.hex-law-notMuted {
+  stroke: var(--law-primary-color);
+}
+
+.hex-directive-notMuted {
+  stroke: var(--directive-primary-color);
+}
+
+.hex-muted {
+  stroke: var(--agenda-muted-color);
+}
+
+.dice {
+  pointer-events: none;
+  stroke-width: 2px;
+}
+
+.dice-law {
+  fill: var(--law-primary-color);
+  stroke: var(--law-primary-color);
+}
+
+.dice-directive{
+  fill: var(--directive-primary-color);
+  stroke: var(--directive-primary-color);
+}

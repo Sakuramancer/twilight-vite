@@ -6,6 +6,7 @@ import RelicPlayerSelector from "./RelicPlayerSelector";
 import RandomRelicButton from "./RandomRelicButton";
 import buttons from "core/styles/buttons.module.css";
 import classes from "./RelicSelectColumn.module.css";
+import { SearchField } from "core/ui";
 
 const cx = classNames.bind(classes);
 
@@ -20,10 +21,13 @@ const RelicSelectColumn = ({
   randomSize,
   onRandom,
   onConfirm,
+  searchValue,
+  setSearchValue,
 }) => {
   const colorId = useStore(
     (s) => s.colors[playerSelected]?.colorId ?? "_default",
   );
+  const clearSearchHandler = () => setSearchValue("");
 
   const buttonClass = cx({
     button: true,
@@ -34,6 +38,12 @@ const RelicSelectColumn = ({
 
   return (
     <div className={className}>
+      <SearchField
+        aria-label="Поиск реликвий"
+        value={searchValue}
+        onChange={setSearchValue}
+        onClear={clearSearchHandler}
+      />
       <div>
         <RelicPreviewItem
           relicId={relicSelected}

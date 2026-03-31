@@ -31,3 +31,23 @@ export const goalsStatic = Object.fromEntries(
     },
   ]),
 );
+
+export const goalsSearchIndex = Object.fromEntries(
+  Object.entries(goals).map(([id, goal]) => [
+    id,
+    {
+      id,
+      searchText: [
+        goal.title.src,
+        goal.title.value,
+        goal.description.src,
+        goal.description.value,
+        goal.extra?.src,
+        goal.extra?.value,
+      ]
+        .filter((v) => v != null)
+        .join(" ")
+        .toLowerCase(),
+    },
+  ]),
+);

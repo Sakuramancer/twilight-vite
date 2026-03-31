@@ -1,26 +1,35 @@
-import { useObjectivesFilter } from "core/hooks";
-import { FilterSection, useOverlayContext } from "core/ui";
-import { goalsStatic } from "core/goal/model";
+import { useGoalsFilter, useSearch } from "core/hooks";
+import { FilterSection, Header, SearchField, useOverlayContext } from "core/ui";
+import { goalSelectors, goalsSearchIndex } from "core/goal/model";
 import { GoalCard } from "entities/goal/ui";
-import { sortByRankAndTitle } from "entities/objective/model";
 import classes from "./SelectObjectiveContent.module.css";
 
 const SelectObjectiveContent = ({ initialFilters }) => {
-  const [filters, handler, data] = useObjectivesFilter(initialFilters);
+  const [filters, handler, data] = useGoalsFilter(initialFilters);
   const { onConfirm } = useOverlayContext();
-  const filterFunc = (card) =>
-    filters[card.phase] && filters[card.stage] && filters[card.expansion];
+  const goalIds = goalSelectors.allSortedIdsWithFilters(filters);
+  const [inputValue, setInputValue, resultIds] = useSearch(
+    goalsSearchIndex,
+    goalIds,
+  );
+
+  const clearHandler = () => setInputValue("");
 
   return (
     <div className={classes.main}>
-      <FilterSection filters={filters} handler={handler} data={data} />
+      <Header>
+        <FilterSection filters={filters} handler={handler} data={data} />
+        <SearchField
+          aria-label="Поиск целей"
+          value={inputValue}
+          onChange={setInputValue}
+          onClear={clearHandler}
+        />
+      </Header>
       <div className={classes.body}>
-        {Object.values(goalsStatic)
-          .filter(filterFunc)
-          .sort(sortByRankAndTitle)
-          .map((card) => (
-            <GoalCard key={card.id} cardId={card.id} onConfirm={onConfirm} />
-          ))}
+        {resultIds.map((goalId) => (
+          <GoalCard key={goalId} cardId={goalId} onConfirm={onConfirm} />
+        ))}
       </div>
     </div>
   );

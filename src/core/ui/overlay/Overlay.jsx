@@ -30,10 +30,8 @@ const Overlay = ({
   );
 
   useEffect(() => {
-    function handleKeyDown(event) {
-      if (event.key === "Escape") {
-        discardHandler();
-      }
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") discardHandler();
     }
     document.addEventListener("keydown", handleKeyDown);
     return () => {

@@ -1,10 +1,7 @@
-import { relicSelectors } from "entities/relic/model";
 import LibraryCardItem from "./LibraryCardItem";
 import classes from "./RelicsTable.module.css";
 
-const RelicsTable = ({ filters }) => {
-  const relicIds = relicSelectors.allSortedIdsWithFilters(filters);
-
+const RelicsTable = ({ relicIds }) => {
   return (
     <div className={classes.main}>
       {relicIds.map((relicId) => (

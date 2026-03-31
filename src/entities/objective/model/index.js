@@ -5,5 +5,4 @@ export * from "./normalize";
 export * from "./data";
 export * from "./selectors";
 export * from "./slice";
-export * from "./sort";
 export * from "./validate";

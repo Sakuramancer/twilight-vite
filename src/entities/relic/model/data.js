@@ -10,3 +10,21 @@ const labels = {
 };
 
 export const getExpansionLabel = (expansion) => labels[expansion] ?? "";
+
+export const relicsSearchIndex = Object.fromEntries(
+  Object.entries(relics).map(([id, relic]) => [
+    id,
+    {
+      id,
+      searchText: [
+        relic.title.src,
+        relic.title.value,
+        relic.description.src.join(" "),
+        relic.description.value.join(" "),
+      ]
+        .filter((v) => v != null)
+        .join(" ")
+        .toLowerCase(),
+    },
+  ]),
+);

@@ -3,3 +3,4 @@ export * from "./ButtonContext";
 export { Checkbox } from "./Checkbox";
 export { LinkButton } from "./LinkButton";
 export { PlayerNumberField } from "./PlayerNumberField";
+export { SearchField } from "./SearchField";

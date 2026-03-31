@@ -1,0 +1,81 @@
+.main {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  width: 250px;
+
+  border-bottom: 1px solid #aaa;
+  padding: 4px 6px 4px 2px;
+
+  &:focus-within {
+    border-bottom: 2px solid whitesmoke;
+    padding-bottom: 3px;
+  }
+}
+
+.canvas {
+  width: 20px;
+  cursor: text;
+}
+
+.magnifier {
+  stroke: #aaa;
+}
+
+.input {
+  flex: 1;
+
+  border: none;
+  outline: none;
+  background: transparent;
+
+  font-size: 1rem;
+  color: whitesmoke;
+}
+
+.input::placeholder {
+  color: #aaa;
+  opacity: 1;
+}
+
+/* Chrome / Safari */
+.input::-webkit-search-cancel-button {
+  display: none;
+}
+
+/* на всякий случай */
+.input::-webkit-search-decoration {
+  display: none;
+}
+
+.clearButton {
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.clearIcon {
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+
+.clearIcon::before,
+.clearIcon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 2px;
+  background: whitesmoke;
+}
+
+.clearIcon::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.clearIcon::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}

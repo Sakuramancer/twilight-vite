@@ -1,0 +1,29 @@
+.button {
+  position: relative;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.buttonFrame {
+  fill: var(--agenda-background-color);
+  stroke: var(--agenda-primary-color);
+  stroke-width: 6px;
+  cursor: pointer;
+}
+
+.dice {
+  fill: var(--agenda-primary-color);
+  pointer-events: none;
+}
+
+.content {
+  position: absolute;
+  top: 13px;
+  left: 6px;
+  width: 200px;
+  font-family: var(--secondary-font-family);
+  font-size: 0.9em;
+  text-transform: uppercase;
+  color: var(--agenda-primary-color);
+  pointer-events: none;
+}

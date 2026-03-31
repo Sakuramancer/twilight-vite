@@ -1,3 +1,5 @@
+import { createAgendaCommands } from "entities/agenda/model";
+import { setAgendaCommands } from "entities/agenda/ports";
 import { createColorCommands } from "entities/color/model";
 import { setColorCommands } from "entities/color/ports";
 import { createExtraCommands } from "entities/extra/model";
@@ -19,8 +21,8 @@ import { setSupportCommands } from "entities/support/ports";
 import { rootStore } from "./store/rootStore";
 
 export const bootstrap = () => {
-  //const agendaCommands = createAgendasCommands(rootStore);
-  //setAgendaCommands(agendaCommands);
+  const agendaCommands = createAgendaCommands(rootStore);
+  setAgendaCommands(agendaCommands);
 
   const colorCommands = createColorCommands(rootStore);
   setColorCommands(colorCommands);

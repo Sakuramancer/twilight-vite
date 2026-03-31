@@ -9,6 +9,7 @@ import ColorLine from "./ColorLine";
 import ColorHexes from "./ColorHexes";
 import PlusPath from "./PlusPath";
 import CheckPath from "./CheckPath";
+import CrossPath from "./CrossPath";
 import MagnifierPath from "./MagnifierPath";
 import BurgerPath from "./BurgerPath";
 import EyePath from "./EyePath";
@@ -49,6 +50,7 @@ HexedCanvas.ColorHexes = ColorHexes;
 
 HexedCanvas.Plus = PlusPath;
 HexedCanvas.Check = CheckPath;
+HexedCanvas.Cross = CrossPath;
 HexedCanvas.Magnifier = MagnifierPath;
 HexedCanvas.Burger = BurgerPath;
 HexedCanvas.Eye = EyePath;

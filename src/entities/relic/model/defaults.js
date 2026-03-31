@@ -9,4 +9,4 @@ export const createDefaultRelic = () => ({
 export const createDefaultRelics = () => ({});
 
 export const isDefault = ({ playerIndex, purged, pointTaken }) =>
-  playerIndex === RESET_VALUE && purged === false && pointTaken === false;
+  playerIndex === RESET_VALUE && !purged && !pointTaken;

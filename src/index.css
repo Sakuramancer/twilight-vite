@@ -37,6 +37,9 @@ code {
 }
 
 :root {
+  --ui-blue: hsl(240, 33%, 38%);
+  --ui-blue-hover: hsl(240, 33%, 48%);
+
   --modal-background: hsla(222, 20%, 12%, 0.85);
   --modal-scroller-background: hsl(240, 33%, 38%);
 
@@ -47,8 +50,9 @@ code {
   --relic-muted-color: #807a4d;
   --relic-background-color: #333333;
 
+  --agenda-primary-color: #8cc1f2;
   --law-primary-color: #8cc1f2;
   --directive-primary-color: #c8e1f9;
   --agenda-muted-color: #4d6780;
-  --agenda-background-color: #222222;
+  --agenda-background-color: #333333;
 }

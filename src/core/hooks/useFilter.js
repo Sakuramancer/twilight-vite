@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const data = {
-  objectives: [
+  goals: [
     [
       { name: "stage1", label: "Цели I этапа" },
       { name: "stage2", label: "Цели II этапа" },
@@ -39,7 +39,7 @@ const data = {
 };
 
 const defFilters = {
-  objectives: {
+  goals: {
     status: true,
     action: true,
     agenda: true,
@@ -82,8 +82,8 @@ const useFilter = ({ type, initialFilters }) => {
   return [filters, handler, data[type]];
 };
 
-export const useObjectivesFilter = (initialFilters) =>
-  useFilter({ type: "objectives", initialFilters });
+export const useGoalsFilter = (initialFilters) =>
+  useFilter({ type: "goals", initialFilters });
 
 export const useRelicsFilter = (initialFilters) =>
   useFilter({ type: "relics", initialFilters });

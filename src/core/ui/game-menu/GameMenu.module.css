@@ -23,9 +23,9 @@
 }
 
 .hex-inactive {
-  fill: hsl(240, 33%, 38%);
+  fill: var(--ui-blue);
   &:hover {
-    fill: hsl(240, 33%, 48%);
+    fill: var(--ui-blue-hover);
   }
 }
 
