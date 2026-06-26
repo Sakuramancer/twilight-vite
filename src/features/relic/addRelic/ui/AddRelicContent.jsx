@@ -1,10 +1,13 @@
 import { useCallback, useState } from "react";
-import { useSearch } from "core/hooks";
-import { PLAYER_COUNT } from "core/player";
-import { useStore } from "core/store";
-import { useOverlayContext } from "core/ui";
-import { relicSelectors, relicsSearchIndex } from "entities/relic/model";
-import { getRelicCommands } from "entities/relic/ports";
+import { PLAYER_COUNT } from "shared/config";
+import { useSearch } from "shared/lib";
+import { useStore } from "shared/store";
+import { useOverlayContext } from "shared/ui";
+import {
+  relicSelectors,
+  relicsSearchIndex,
+  getRelicCommands,
+} from "entities/relic";
 import RelicSelectColumn from "./RelicSelectColumn";
 import RelicSelectorList from "./RelicSelectorList";
 import classes from "./AddRelicContent.module.css";

@@ -1,4 +1,4 @@
-import { Overlay } from "core/ui";
+import { Overlay } from "shared/ui";
 import { SelectSecretContent } from "./SelectSecretContent";
 import classes from "./SelectSecretPanel.module.css";
 

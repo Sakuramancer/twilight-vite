@@ -1,10 +1,10 @@
-import { HexedCanvas } from "core/canvas";
-import colors from "core/data/colors.module.css";
+import { colorClasses } from "shared/config";
+import { HexedCanvas } from "shared/ui";
 import classes from "./ReceivedHex.module.css";
 
 const ReceivedHex = ({ colorId, onClick, anchorPoint, anchorSize }) => {
   return (
-    <g className={colors[colorId]}>
+    <g className={colorClasses[colorId]}>
       <HexedCanvas.Hex
         className={classes.hex}
         anchorPoint={anchorPoint}

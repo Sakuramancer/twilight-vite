@@ -1,4 +1,4 @@
-import { PLAYER_COUNT } from "core/player";
+import { PLAYER_COUNT } from "shared/config";
 
 export const SECRET_COUNT = 4;
 

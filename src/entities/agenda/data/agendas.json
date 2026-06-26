@@ -26,7 +26,7 @@
       "value": "Утечка секретной информации"
     },
     "type": "law",
-    "voteType": "special",
+    "voteType": "secret",
     "description": {
       "src": [
         "When this agenda is revealed, if there are no scored secret objectives, discard this card and reveal another agenda from the top of the deck.",
@@ -34,7 +34,7 @@
         "The elected secret objective becomes a public objective; place it near the other public objectives in the common play area."
       ],
       "value": [
-        "Если на момент раскрытия этой карты политики в игре нет действующих законов, сбросьте ее и раскройте новую карту с\u00A0верха колоды политики.",
+        "Если на момент раскрытия этой карты политики в игре нет выполненных секретных целей, сбросьте ее и раскройте новую карту с\u00A0верха колоды политики.",
         "**ВЫБЕРИТЕ ВЫПОЛНЕННУЮ СЕКРЕТНУЮ ЦЕЛЬ**",
         "Выбранная секретная цель становится общей целью; выложите ее рядом с\u00A0остальными общими целями в\u00A0общей игровой зоне."
       ]
@@ -476,7 +476,7 @@
       "value": "Передел колоний"
     },
     "type": "directive",
-    "voteType": "special",
+    "voteType": "planet",
     "description": {
       "src": [
         "Destroy each unit on the elected planet. Then, the player who controls that planet chooses 1 player with the fewest victory points; that player may place 1 infantry from their reinforcements on the elected planet."
@@ -495,7 +495,7 @@
       "value": "Оплачиваемое разоружение"
     },
     "type": "directive",
-    "voteType": "special",
+    "voteType": "planet",
     "description": {
       "src": [
         "Destroy each ground force on the elected planet; for each unit that was destroyed, the player who controls that planet gains 1 trade good."
@@ -577,7 +577,7 @@
       "value": "Неконституционный закон"
     },
     "type": "directive",
-    "voteType": "special",
+    "voteType": "law",
     "description": {
       "src": [
         "When this agenda is revealed, if there are no laws in play, discard this card and reveal another agenda from the top of the deck.",
@@ -598,7 +598,7 @@
       "value": "Пересчет голосов"
     },
     "type": "directive",
-    "voteType": "special",
+    "voteType": "law",
     "description": {
       "src": [
         "When this agenda is revealed, if there are no laws in play, discard this card and reveal another agenda from the top of the deck.",
@@ -620,6 +620,7 @@
     },
     "type": "directive",
     "voteType": "binary",
+    "pointType": "colorLine",
     "description": {
       "src": [
         "***For:*** Each player who voted \"For\" gains 1 victory point.",
@@ -683,6 +684,7 @@
     },
     "type": "directive",
     "voteType": "binary",
+    "pointType": "separate",
     "description": {
       "src": [
         "***For:*** The player with most victory points gains 1 victory point.",
@@ -823,6 +825,7 @@
     },
     "type": "law",
     "voteType": "player",
+    "pointType": "elected",
     "description": {
       "src": [
         "The elected player gains this card and 1 victory point.",
@@ -926,7 +929,7 @@
       "value": "Тайный законопроект"
     },
     "type": "directive",
-    "voteType": "special",
+    "voteType": "blind",
     "description": {
       "src": [
         "When this agenda is revealed, the speaker draws the next card in the agenda deck but does not reveal it to the other players. Instead, the speaker reads the eligible outcomes aloud (for, against, elect player, etc.); the other players vote for these outcomes as if they were outcomes of this agenda, without knowing their effects."
@@ -946,7 +949,7 @@
       "value": "Пакт о галактическом кризисе"
     },
     "type": "directive",
-    "voteType": "special",
+    "voteType": "strategy",
     "description": {
       "src": [
         "Each player may perform the secondary ability of the elected strategy card without spending a command token; command tokens placed by the ability are placed from a player's reinforcements instead."
@@ -969,7 +972,10 @@
     "voteType": "player",
     "description": {
       "src": ["The elected player gains 1 relic."],
-      "value": ["**ВЫБЕРИТЕ ИГРОКА**", "Выбранный игрок получает 1\u00A0реликвию."]
+      "value": [
+        "**ВЫБЕРИТЕ ИГРОКА**",
+        "Выбранный игрок получает 1\u00A0реликвию."
+      ]
     },
     "expansion": "pok"
   },

@@ -1,0 +1,50 @@
+.hex {
+  pointer-events: fill;
+  stroke-width: 6px;
+}
+
+.hex-interactive {
+  cursor: pointer;
+}
+
+.hex-law {
+  stroke: var(--law-primary-color);
+}
+
+.hex-directive {
+  stroke: var(--directive-primary-color);
+}
+
+.hex-colored-muted {
+  fill: var(--stripesUrl);
+}
+
+.hex-colored-notMuted {
+  fill: var(--color);
+}
+
+.hex-notColored {
+  fill: var(--agenda-background-color);
+}
+
+.point {
+  position: absolute;
+  top: 14px;
+  right: 10%;
+  transform: translateX(50%);
+  font-family: var(--secondary-font-family);
+  font-size: 1.2em;
+  pointer-events: none;
+}
+
+.point-colored {
+  color: var(--textColor);
+}
+
+.point-notColored-law {
+  color: var(--law-primary-color);
+}
+
+.point-notColored-directive {
+  color: var(--directive-primary-color);
+}

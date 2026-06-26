@@ -1,4 +1,4 @@
-import { localStorageAdapter } from "core/store";
+import { localStorageAdapter } from "shared/store";
 import { normalizeGains } from "./normalize";
 
 export const gainSlice = {

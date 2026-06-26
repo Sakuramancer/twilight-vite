@@ -26,7 +26,7 @@
 .title {
   position: absolute;
   top: 0;
-  left: 40px;
+  left: 45px;
   width: calc(100% - 84px);
   height: 52px;
   display: flex;

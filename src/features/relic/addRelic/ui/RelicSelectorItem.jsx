@@ -1,13 +1,14 @@
-import { useStore } from "core/store";
-import { HexedCanvas } from "core/canvas";
-import { getExpansionLabel, relicSelectors } from "entities/relic/model";
+import { useStore } from "shared/store";
+import { HexedCanvas } from "shared/ui";
 import {
+  getExpansionLabel,
+  relicSelectors,
   FrameHex,
   PointHex,
   RelicView,
   TitleHex,
   cardGeometry,
-} from "entities/relic/ui";
+} from "entities/relic";
 import { DiceHex } from "./DiceHex";
 import classes from "./RelicSelectorItem.module.css";
 
@@ -17,9 +18,9 @@ const RelicSelectorItem = ({
   toggleAvailableForRandom,
   setRelicSelected,
 }) => {
-  const { static: relicStatic } = useStore(relicSelectors.makeRelic(relicId));
+  const { meta } = useStore(relicSelectors.makeRelic(relicId));
 
-  const { title, description, havePoint, expansion } = relicStatic;
+  const { title, description, havePoint, expansion } = meta;
   const label = getExpansionLabel(expansion);
 
   const onDiceClick = () => toggleAvailableForRandom(relicId);

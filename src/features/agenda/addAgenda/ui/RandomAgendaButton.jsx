@@ -1,4 +1,4 @@
-import { HexedCanvas } from "core/canvas";
+import { HexedCanvas } from "shared/ui";
 import classes from "./RandomAgendaButton.module.css";
 
 const anchorSize = 95;

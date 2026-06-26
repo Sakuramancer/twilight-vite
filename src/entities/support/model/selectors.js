@@ -1,4 +1,4 @@
-import { createCachedFactorySelector, createMemoSelector } from "core/utils";
+import { createCachedFactorySelector, createMemoSelector } from "shared/lib";
 
 const makePointsForPlayer = createCachedFactorySelector((playerIndex) =>
   createMemoSelector([(s) => s.supports], (supports) =>
@@ -10,28 +10,16 @@ const makePointsForPlayer = createCachedFactorySelector((playerIndex) =>
   ),
 );
 
-const makeSupportersOfColoredPlayer = createCachedFactorySelector(
-  (playerIndex) =>
-    createMemoSelector(
-      [(s) => s.supports, (s) => s.colors],
-      (supports, colors) => ({
-        colorId: colors[playerIndex].colorId,
-        receiverIndex: supports[playerIndex],
-        supporters: supports.reduce(
-          (acc, whoSupported, supporterIndex) =>
-            whoSupported === playerIndex
-              ? [
-                  ...acc,
-                  { colorId: colors[supporterIndex].colorId, supporterIndex },
-                ]
-              : acc,
-          [],
-        ),
-      }),
-    ),
+const makeSupportersOfPlayer = createCachedFactorySelector((playerIndex) =>
+  createMemoSelector([(s) => s.supports], (supports) => ({
+    receiverIndex: supports[playerIndex],
+    supporters: supports
+      .map((whoSupported, i) => (whoSupported === playerIndex ? i : -1))
+      .filter((i) => i !== -1),
+  })),
 );
 
 export const supportSelectors = {
   makePointsForPlayer,
-  makeSupportersOfColoredPlayer,
+  makeSupportersOfPlayer,
 };

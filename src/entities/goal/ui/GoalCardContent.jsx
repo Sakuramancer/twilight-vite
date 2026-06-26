@@ -1,5 +1,5 @@
 import classNames from "classnames/bind";
-import { goalsStatic } from "core/goal/model";
+import { goalsMeta } from "../model/data";
 import GoalCardDescription from "./GoalCardDescription";
 import GoalCardTitle from "./GoalCardTitle";
 import classes from "./GoalCardContent.module.css";
@@ -7,7 +7,7 @@ import classes from "./GoalCardContent.module.css";
 const cx = classNames.bind(classes);
 
 const GoalCardContent = ({ className, cardId, date = -1 }) => {
-  const card = goalsStatic[cardId];
+  const card = goalsMeta[cardId];
   const { phase, stage, expansion } = card.content;
 
   const dateObj = new Date(date);

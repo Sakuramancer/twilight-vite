@@ -1,6 +1,7 @@
 import classNames from "classnames/bind";
-import { useStore } from "core/store";
-import { GoalCardContent } from "entities/goal/ui";
+import { useStore } from "shared/store";
+import { GoalCardContent } from "entities/goal";
+import { objectiveSelectors } from "entities/objective";
 import ObjectiveCanvas from "./ObjectiveCanvas";
 import ObjectiveIcons from "./ObjectiveIcons";
 import Timer from "./Timer";
@@ -9,10 +10,12 @@ import petals from "./petals.module.css";
 
 const cx = classNames.bind(classes);
 
-const ObjectiveFlower = ({ cardIndex, magnifierActive, onSelectCard }) => {
-  const { cardId, date } = useStore((s) => s.objectives[cardIndex]);
-  const dateBefore = useStore((s) =>
-    cardIndex > 0 ? s.objectives[cardIndex - 1]?.date : -1,
+const ObjectiveFlower = ({ cardIndex, onSelectCard }) => {
+  const { cardId, date } = useStore(
+    objectiveSelectors.makeObjectiveByIndex(cardIndex),
+  );
+  const dateBefore = useStore(
+    objectiveSelectors.makeDateBeforeObjective(cardIndex),
   );
 
   const isActiveFlower = cardId;
@@ -20,7 +23,6 @@ const ObjectiveFlower = ({ cardIndex, magnifierActive, onSelectCard }) => {
   const mainClass = cx({
     main: true,
     [petals.onHover]: isActiveFlower,
-    magnified: isActiveFlower && magnifierActive,
   });
 
   return (

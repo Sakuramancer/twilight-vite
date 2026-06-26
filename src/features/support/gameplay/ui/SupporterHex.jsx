@@ -1,11 +1,17 @@
 import classNames from "classnames/bind";
-import { HexedCanvas } from "core/canvas";
+import { HexedCanvas } from "shared/ui";
 import classes from "./SupporterHex.module.css";
 
 const cx = classNames.bind(classes);
 
-const SupporterHex = ({ selectors, onClick, anchorPoint, anchorSize }) => {
-  const { isSupportUsed, isActivated, isAnotherActivated } = selectors;
+const SupporterHex = ({
+  anchorPoint,
+  anchorSize,
+  isSupportUsed,
+  isActivated,
+  isAnotherActivated,
+  onClick,
+}) => {
 
   const hexClass = cx({
     hex: true,

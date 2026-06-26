@@ -1,0 +1,16 @@
+.main {
+  position: relative;
+  text-align: center;
+}
+
+.background {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+
+  background-color: black;
+  background-image: url("../assets/pexels-kaip-1341279.jpg");
+  background-size: cover;
+  background-position: 0%;
+  background-repeat: no-repeat;
+}

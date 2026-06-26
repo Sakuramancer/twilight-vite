@@ -1,4 +1,4 @@
-import { localStorageAdapter } from "core/store";
+import { localStorageAdapter } from "shared/store";
 import { normalizeRelics } from "./normalize";
 
 export const relicSlice = {

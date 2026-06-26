@@ -1,37 +1,23 @@
-import { createAgendaCommands } from "entities/agenda/model";
-import { setAgendaCommands } from "entities/agenda/ports";
-import { createColorCommands } from "entities/color/model";
-import { setColorCommands } from "entities/color/ports";
-import { createExtraCommands } from "entities/extra/model";
-import { setExtraCommands } from "entities/extra/ports";
-import { createFactionCommands } from "entities/faction/model";
-import { setFactionCommands } from "entities/faction/ports";
-import { createGainCommands } from "entities/gain/model";
-import { setGainCommands } from "entities/gain/ports";
-import { createMecatolCommands } from "entities/mecatol/model";
-import { setMecatolCommands } from "entities/mecatol/ports";
-import { createObjectiveCommands } from "entities/objective/model";
-import { setObjectiveCommands } from "entities/objective/ports";
-import { createRelicCommands } from "entities/relic/model";
-import { setRelicCommands } from "entities/relic/ports";
-import { createSecretCommands } from "entities/secret/model";
-import { setSecretCommands } from "entities/secret/ports";
-import { createSupportCommands } from "entities/support/model";
-import { setSupportCommands } from "entities/support/ports";
-import { rootStore } from "./store/rootStore";
+import { createAgendaCommands, setAgendaCommands } from "entities/agenda";
+import { createExtraCommands, setExtraCommands } from "entities/extra";
+import { createGainCommands, setGainCommands } from "entities/gain";
+import { createMecatolCommands, setMecatolCommands } from "entities/mecatol";
+import {
+  createObjectiveCommands,
+  setObjectiveCommands,
+} from "entities/objective";
+import { createPlayerCommands, setPlayerCommands } from "entities/player";
+import { createRelicCommands, setRelicCommands } from "entities/relic";
+import { createSecretCommands, setSecretCommands } from "entities/secret";
+import { createSupportCommands, setSupportCommands } from "entities/support";
+import { rootStore } from "./store";
 
 export const bootstrap = () => {
   const agendaCommands = createAgendaCommands(rootStore);
   setAgendaCommands(agendaCommands);
 
-  const colorCommands = createColorCommands(rootStore);
-  setColorCommands(colorCommands);
-
   const extraCommands = createExtraCommands(rootStore);
   setExtraCommands(extraCommands);
-
-  const factionCommands = createFactionCommands(rootStore);
-  setFactionCommands(factionCommands);
 
   const gainCommands = createGainCommands(rootStore);
   setGainCommands(gainCommands);
@@ -41,6 +27,9 @@ export const bootstrap = () => {
 
   const objectiveCommands = createObjectiveCommands(rootStore);
   setObjectiveCommands(objectiveCommands);
+
+  const playerCommands = createPlayerCommands(rootStore);
+  setPlayerCommands(playerCommands);
 
   const relicCommands = createRelicCommands(rootStore);
   setRelicCommands(relicCommands);

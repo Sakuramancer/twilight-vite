@@ -1,12 +1,11 @@
 import classNames from "classnames/bind";
-import { useStore } from "core/store";
-import { PLAYER_COUNT } from "core/player";
-import { HexedCanvas } from "core/canvas";
-import { HexLayout } from "core/ui";
-import colors from "core/data/colors.module.css";
+import { colorClasses, PLAYER_COUNT } from "shared/config";
+import { useStore } from "shared/store";
+import { HexedCanvas, HexLayout } from "shared/ui";
+import { playerSelectors } from "entities/player";
 import classes from "./RelicPlayerSelector.module.css";
 
-const colorx = classNames.bind(colors);
+const colorx = classNames.bind(colorClasses);
 
 const anchorSize = 10;
 const geometry = { width: 80, height: 60, anchorSize };
@@ -16,7 +15,7 @@ const RelicPlayerSelector = ({
   setPlayerSelected,
   colorId,
 }) => {
-  const colorsStatic = useStore((s) => s.colors);
+  const players = useStore(playerSelectors.selectPlayers);
 
   const isSelected = playerSelected > -1;
 
@@ -33,7 +32,7 @@ const RelicPlayerSelector = ({
       <HexedCanvas className={classes.coloredCanvas} geometry={geometry}>
         <HexedCanvas.ColorWheel
           className={classes.colorWheelHex}
-          colors={colorsStatic}
+          colors={players}
           sizeCoef={0.95}
           onClick={colorPickHandler}
         />

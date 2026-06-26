@@ -1,20 +1,21 @@
 import { useState } from "react";
 import classNames from "classnames/bind";
-import { useTimer } from "core/hooks";
-import { useStore } from "core/store";
-import { HexedCanvas } from "core/canvas";
-import { getExpansionLabel, agendaSelectors } from "entities/agenda/model";
+import { useTimer } from "shared/lib";
+import { useStore } from "shared/store";
+import { HexedCanvas } from "shared/ui";
 import {
+  getExpansionLabel,
+  agendaSelectors,
   FrameHex,
   AgendaView,
   TitleHex,
   cardGeometry,
-} from "entities/agenda/ui";
+} from "entities/agenda";
 import classes from "./AgendaPreviewItem.module.css";
 
 const cx = classNames.bind(classes);
 
-const defaultStatic = {
+const emptyPreviewMeta = {
   title: { value: "" },
   type: "law",
   description: { value: ["ВЫБЕРИТЕ ПОЛИТИКУ"] },
@@ -24,9 +25,7 @@ const defaultStatic = {
 const AgendaPreviewItem = ({ agendaId }) => {
   const [stableAgendaId, setStableAgendaId] = useState(-1);
   const { isActive: exitState, startTimer } = useTimer(200);
-  const { static: agendaStatic } = useStore(
-    agendaSelectors.makeAgenda(stableAgendaId),
-  );
+  const { meta } = useStore(agendaSelectors.makeAgenda(stableAgendaId));
 
   if (stableAgendaId !== agendaId) {
     if (stableAgendaId === -1) {
@@ -36,7 +35,7 @@ const AgendaPreviewItem = ({ agendaId }) => {
     }
   }
 
-  const { title, type, description, expansion } = agendaStatic ?? defaultStatic;
+  const { title, type, description, expansion } = meta ?? emptyPreviewMeta;
   const label = getExpansionLabel(expansion);
 
   const mainClass = cx({

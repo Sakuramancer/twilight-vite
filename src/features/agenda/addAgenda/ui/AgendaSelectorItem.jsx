@@ -1,12 +1,13 @@
-import { useStore } from "core/store";
-import { HexedCanvas } from "core/canvas";
-import { getExpansionLabel, agendaSelectors } from "entities/agenda/model";
+import { useStore } from "shared/store";
+import { HexedCanvas } from "shared/ui";
 import {
+  getExpansionLabel,
+  agendaSelectors,
   AgendaView,
   FrameHex,
   TitleHex,
   cardGeometry,
-} from "entities/agenda/ui";
+} from "entities/agenda";
 import { DiceHex } from "./DiceHex";
 import classes from "./AgendaSelectorItem.module.css";
 
@@ -16,11 +17,9 @@ const AgendaSelectorItem = ({
   toggleAvailableForRandom,
   setAgendaSelected,
 }) => {
-  const { static: agendaStatic } = useStore(
-    agendaSelectors.makeAgenda(agendaId),
-  );
+  const { meta } = useStore(agendaSelectors.makeAgenda(agendaId));
 
-  const { title, type, description, expansion } = agendaStatic;
+  const { title, type, description, expansion } = meta;
   const label = getExpansionLabel(expansion);
 
   const onDiceClick = () => toggleAvailableForRandom(agendaId);

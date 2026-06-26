@@ -1,5 +1,5 @@
-import { useStore } from "core/store";
-import { relicSelectors } from "entities/relic/model";
+import { useStore } from "shared/store";
+import { relicSelectors } from "entities/relic";
 import ActiveCardItem from "./ActiveCardItem";
 import classes from "./PlayerRelics.module.css";
 

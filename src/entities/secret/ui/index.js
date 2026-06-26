@@ -1,2 +1,1 @@
-export { SecretActions } from "./gameplay/SecretActions";
-export { SecretContent } from "./gameplay/SecretContent";
+export * from "./gameplay";

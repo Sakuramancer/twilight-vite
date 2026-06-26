@@ -1,6 +1,6 @@
 import agendas from "../data/agendas.json";
 
-export const agendasStatic = agendas;
+export const agendasMeta = agendas;
 
 const labels = {
   pok: "A",

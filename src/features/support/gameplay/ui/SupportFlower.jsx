@@ -1,12 +1,12 @@
 import classNames from "classnames/bind";
-import { HexedCanvas } from "core/canvas";
-import { useStore } from "core/store";
-import { supportSelectors } from "entities/support/model";
-import { getSupportCommands } from "entities/support/ports";
+import { colorClasses } from "shared/config";
+import { useStore } from "shared/store";
+import { HexedCanvas } from "shared/ui";
+import { getSupportCommands } from "entities/support";
+import { selectors } from "../model/selectors";
 import SupporterHex from "./SupporterHex";
 import ReceivedHex from "./ReceivedHex";
 import { geometry } from "./SupportFlower.geometry";
-import colors from "core/data/colors.module.css";
 import classes from "./SupportFlower.module.css";
 
 const cx = classNames.bind(classes);
@@ -19,13 +19,12 @@ const SupportFlower = ({
 }) => {
   const commands = getSupportCommands();
   const { colorId, receiverIndex, supporters } = useStore(
-    supportSelectors.makeSupportersOfColoredPlayer(playerIndex),
+    selectors.makeSupporters(playerIndex),
   );
 
   const isSupportUsed = receiverIndex > -1;
   const isActivated = activatedPlayer === playerIndex;
   const isAnotherActivated = !isActivated && activatedPlayer > -1;
-  const selectors = { isSupportUsed, isActivated, isAnotherActivated };
 
   const leafClickHandler = () => onSelectReceiver(playerIndex);
 
@@ -39,19 +38,23 @@ const SupportFlower = ({
 
   const mainClass = cx({
     main: true,
-    [colors[colorId]]: true,
+    [colorClasses[colorId]]: true,
   });
 
   return (
     <div className={mainClass}>
       <HexedCanvas className={classes.canvas} geometry={geometry.hexBase}>
         <HexedCanvas.StripesPattern colorId={colorId} />
-        <SupporterHex
-          selectors={selectors}
-          onClick={supporterHexClickHandler}
-          anchorPoint={geometry.supporterCenter}
-        />
-        {activatedPlayer > -1 && activatedPlayer !== playerIndex && (
+        {!isAnotherActivated && (
+          <SupporterHex
+            anchorPoint={geometry.supporterCenter}
+            isSupportUsed={isSupportUsed}
+            isActivated={isActivated}
+            isAnotherActivated={isAnotherActivated}
+            onClick={supporterHexClickHandler}
+          />
+        )}
+        {isAnotherActivated && (
           <HexedCanvas.Leaf
             className={classes.leaf}
             anchorPoint={geometry.leafCenter}
@@ -62,13 +65,13 @@ const SupportFlower = ({
         {supporters.map(({ colorId, supporterIndex }, index) => (
           <ReceivedHex
             key={index}
-            colorId={colorId}
-            onClick={receiverHexClickHandler(supporterIndex)}
             anchorPoint={{
               x: geometry.centerX + index * geometry.delta,
               y: geometry.centerY,
             }}
             anchorSize={geometry.anchorSize}
+            colorId={colorId}
+            onClick={receiverHexClickHandler(supporterIndex)}
           />
         ))}
       </HexedCanvas>

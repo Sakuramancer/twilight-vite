@@ -1,5 +1,5 @@
 import classNames from "classnames/bind";
-import { HexedCanvas, buttonGeometry } from "core/canvas";
+import { HexedCanvas, buttonGeometry } from "shared/ui";
 import classes from "./MagnifierButton.module.css";
 
 const cx = classNames.bind(classes);

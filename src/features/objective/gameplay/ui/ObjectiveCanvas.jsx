@@ -1,22 +1,28 @@
 import classNames from "classnames/bind";
-import { useTimer } from "core/hooks";
-import { HexedCanvas, hexWithPetals } from "core/canvas";
-import { useStore } from "core/store";
-import { getObjectiveCommands } from "entities/objective/ports";
-import { objectivesStatic } from "entities/objective/model";
-import colors from "core/data/colors.module.css";
-import classes from "./ObjectiveCanvas.module.css";
+import { colorClasses } from "shared/config";
+import { useTimer } from "shared/lib";
+import { useStore } from "shared/store";
+import { HexedCanvas, hexWithPetals } from "shared/ui";
+import {
+  getObjectiveCommands,
+  objectiveSelectors,
+  objectivesMeta,
+} from "entities/objective";
+import { playerSelectors } from "entities/player";
 import petals from "./petals.module.css";
+import classes from "./ObjectiveCanvas.module.css";
 
 const cx = classNames.bind(classes);
 
 const ObjectiveCanvas = ({ className, cardIndex, onSelectCard }) => {
   const { isActive: redpainted, startTimer, stopTimer } = useTimer(1000);
-  const petalColors = useStore((s) => s.colors);
-  const { cardId, points } = useStore((s) => s.objectives[cardIndex]);
+  const players = useStore(playerSelectors.selectPlayers);
+  const { cardId, points } = useStore(
+    objectiveSelectors.makeObjectiveByIndex(cardIndex),
+  );
 
   const isActiveFlower = cardId;
-  const stage = objectivesStatic[cardId]?.stage;
+  const stage = objectivesMeta[cardId]?.stage;
 
   const commands = getObjectiveCommands();
   const hexClickHandler = isActiveFlower
@@ -44,13 +50,13 @@ const ObjectiveCanvas = ({ className, cardIndex, onSelectCard }) => {
     "hex-beforeDelete": isActiveFlower && redpainted,
   });
 
-  const petalClasses = petalColors.map((color, index) =>
+  const petalClasses = players.map((player, index) =>
     cx({
       flower: true,
       activePetal: isActiveFlower,
       checkedPetal: isActiveFlower && points[index],
       uncheckedPetal: !isActiveFlower || !points[index],
-      [colors[color.colorId]]: true,
+      [colorClasses[player.colorId]]: true,
       [petals[`petalIndex${index}`]]: true,
     }),
   );

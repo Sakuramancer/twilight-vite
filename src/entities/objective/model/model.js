@@ -1,4 +1,4 @@
-import { validatePlayerIndex } from "core/player";
+import { validatePlayerIndex } from "shared/config";
 import {
   createDefaultPoints,
   createDefaultObjective,

@@ -1,9 +1,8 @@
 import classNames from "classnames/bind";
-import { SearchField } from "core/ui";
-import { plural } from "core/utils";
+import { plural } from "shared/lib";
+import { SearchField, buttons } from "shared/ui";
 import { AgendaPreviewItem } from "./AgendaPreviewItem";
 import RandomAgendaButton from "./RandomAgendaButton";
-import buttons from "core/styles/buttons.module.css";
 import classes from "./AgendaSelectColumn.module.css";
 
 const cx = classNames.bind(classes);

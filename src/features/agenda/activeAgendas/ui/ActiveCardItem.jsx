@@ -1,65 +1,56 @@
 import classNames from "classnames/bind";
-import { useTimer } from "core/hooks";
-import { useStore } from "core/store";
-import { getExpansionLabel, agendaSelectors } from "entities/agenda/model";
-import { getAgendaCommands } from "entities/agenda/ports";
+import { colorClasses } from "shared/config";
+import { useStore } from "shared/store";
 import {
+  agendaSelectors,
+  buildAgendaSlots,
+  getAgendaCommands,
+  getExpansionLabel,
   cardGeometry,
   FrameHex,
   AgendaView,
   TitleHex,
-} from "entities/agenda/ui";
+  useAgendaInteractions,
+} from "entities/agenda";
+import { playerSelectors } from "entities/player";
 import classes from "./ActiveCardItem.module.css";
 
 const cx = classNames.bind(classes);
 
 const ActiveCardItem = ({ agendaId }) => {
-  const {
-    state: agendaState,
-    static: agendaStatic,
-  } = useStore(agendaSelectors.makeAgenda(agendaId));
+  const agenda = useStore(agendaSelectors.makeAgenda(agendaId));
+  const players = useStore(playerSelectors.selectPlayers);
 
-  const { title, type, description, expansion } = agendaStatic;
-  const { purged } = agendaState;
+  const { state, meta } = agenda;
+  const { type, description, expansion } = meta;
+  const { purged } = state;
   const label = getExpansionLabel(expansion);
 
   const commands = getAgendaCommands();
 
-  const {
-    isActive: redpainted,
-    startTimer: showRedpainted,
-    stopTimer: hideRedpainted,
-  } = useTimer(1000);
+  const { ui, actions } = useAgendaInteractions(agendaId, commands);
 
-  const titleClickHandler = () => {
-        if (!redpainted) {
-          showRedpainted();
-          return;
-        }
-        hideRedpainted();
-        commands.resetAgenda(agendaId);
-      };
+  const slots = buildAgendaSlots({
+    agenda,
+    players,
+    ui,
+    actions,
+  });
+
+  const { voting } = agenda.state;
+  const { playerVoted } = agenda.derived;
+  const colorId = playerVoted ? players[voting].colorId : "_default";
 
   const mainClass = cx({
     main: true,
+    [colorClasses[colorId]]: playerVoted,
   });
 
   return (
     <div className={mainClass}>
       <AgendaView
         geometry={cardGeometry}
-        TitleSlot={{
-          ...TitleHex,
-          props: {
-            title: title.value,
-            titleVisible: true,
-            type,
-            centered: false,
-            muted: purged,
-            redpainted,
-            onClick: titleClickHandler,
-          },
-        }}
+        {...slots}
         FrameSlot={{
           ...FrameHex,
           props: {

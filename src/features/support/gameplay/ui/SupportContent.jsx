@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { PLAYER_COUNT } from "core/player";
-import { getSupportCommands } from "entities/support/ports";
+import { PLAYER_COUNT } from "shared/config";
+import { getSupportCommands } from "entities/support";
 import SupportFlower from "./SupportFlower";
 
 const SupportContent = () => {

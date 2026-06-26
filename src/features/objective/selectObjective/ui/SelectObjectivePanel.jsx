@@ -1,4 +1,4 @@
-import { FilterSection, Overlay } from "core/ui";
+import { FilterSection, Overlay } from "shared/ui";
 import SelectObjectiveContent from "./SelectObjectiveContent";
 import classes from "./SelectObjectivePanel.module.css";
 

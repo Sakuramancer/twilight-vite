@@ -1,19 +1,20 @@
 import classNames from "classnames/bind";
-import { useStore } from "core/store";
-import { HexLayout } from "core/ui";
-import { factionsAssets } from "entities/faction/assets";
+import { useStore } from "shared/store";
+import { HexLayout } from "shared/ui";
+import { objectiveSelectors } from "entities/objective";
+import { factionsAssets, playerSelectors } from "entities/player";
 import classes from "./ObjectiveIcons.module.css";
 import petals from "./petals.module.css";
 
 const cx = classNames.bind(classes);
 
 const ObjectiveIcons = ({ className, cardIndex }) => {
-  const factions = useStore((s) => s.factions);
+  const players = useStore(playerSelectors.selectPlayers);
   const { cardId: isActiveFlower, points } = useStore(
-    (s) => s.objectives[cardIndex],
+    objectiveSelectors.makeObjectiveByIndex(cardIndex),
   );
 
-  const imageClasses = factions.map((_, index) =>
+  const imageClasses = players.map((_, index) =>
     cx({
       image: true,
       checkedPetal: isActiveFlower && points[index],
@@ -24,7 +25,7 @@ const ObjectiveIcons = ({ className, cardIndex }) => {
   return (
     <div className={className}>
       <HexLayout className={classes.grid}>
-        {factions
+        {players
           .map(({ factionId }) => factionsAssets[factionId].icon)
           .map(({ src, alt }, index) => (
             <HexLayout.Item key={index}>

@@ -1,4 +1,4 @@
-import { localStorageAdapter } from "core/store";
+import { localStorageAdapter } from "shared/store";
 import { normalizeObjectives } from "./normalize";
 
 export const objectiveSlice = {

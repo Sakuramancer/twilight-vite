@@ -1,5 +1,24 @@
-import { createCachedFactorySelector, createMemoSelector } from "core/utils";
-import { objectivesStatic } from "./data";
+import { createCachedFactorySelector, createMemoSelector } from "shared/lib";
+import { objectivesMeta } from "./data";
+
+const selectObjectives = createMemoSelector(
+  [(s) => s.objectives],
+  (objectives) => objectives,
+);
+
+const makeObjectiveByIndex = createCachedFactorySelector((cardIndex) =>
+  createMemoSelector(
+    [(s) => s.objectives[cardIndex]],
+    (objective) => objective,
+  ),
+);
+
+const makeDateBeforeObjective = createCachedFactorySelector((cardIndex) =>
+  createMemoSelector(
+    [(s) => (cardIndex > 0 ? s.objectives[cardIndex - 1]?.date : -1)],
+    (date) => date,
+  ),
+);
 
 const makePointsForPlayer = createCachedFactorySelector((playerIndex) =>
   createMemoSelector([(s) => s.objectives], (objectives) =>
@@ -7,7 +26,7 @@ const makePointsForPlayer = createCachedFactorySelector((playerIndex) =>
       (accumulator, objective) =>
         accumulator +
         (objective.cardId && objective.points[playerIndex]
-          ? objectivesStatic[objective.cardId].points
+          ? objectivesMeta[objective.cardId].points
           : 0),
       0,
     ),
@@ -15,5 +34,8 @@ const makePointsForPlayer = createCachedFactorySelector((playerIndex) =>
 );
 
 export const objectiveSelectors = {
+  selectObjectives,
+  makeObjectiveByIndex,
+  makeDateBeforeObjective,
   makePointsForPlayer,
 };

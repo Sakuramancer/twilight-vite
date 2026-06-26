@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { PointColumn } from "core/ui";
-import { getSecretCommands } from "entities/secret/ports/";
-import { SecretActions, SecretContent } from "entities/secret/ui";
+import { PointColumn } from "shared/ui";
+import { getSecretCommands } from "entities/secret";
+import { SecretActions, SecretContent } from "features/secret/gameplay";
 import { ActiveSecretsPanel } from "features/secret/activeSecrets";
 import { SelectSecretPanel } from "features/secret/selectSecret";
 

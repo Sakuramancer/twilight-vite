@@ -27,9 +27,3 @@
   --content-base-height: var(--_base-height);
   color: white;
 }
-
-.magnified:hover {
-  transform: scale(var(--magnified-scale))
-    translateY(var(--magnified-translateY));
-  z-index: 200;
-}

@@ -1,0 +1,31 @@
+.hexCheck {
+  cursor: pointer;
+  stroke-width: 6px;
+  stroke: greenyellow;
+  fill: var(--agenda-background-color);
+
+  &:hover {
+    fill: var(--hoverColor);
+  }
+}
+
+.hexCross {
+  cursor: pointer;
+  stroke-width: 6px;
+  stroke: red;
+  fill: var(--agenda-background-color);
+
+  &:hover {
+    fill: var(--hoverColor);
+  }
+}
+
+.check {
+  fill: greenyellow;
+  pointer-events: none;
+}
+
+.cross {
+  fill: red;
+  pointer-events: none;
+}

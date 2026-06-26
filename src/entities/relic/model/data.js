@@ -1,6 +1,6 @@
 import relics from "../data/relics.json";
 
-export const relicsStatic = relics;
+export const relicsMeta = relics;
 
 const labels = {
   pok: "A",

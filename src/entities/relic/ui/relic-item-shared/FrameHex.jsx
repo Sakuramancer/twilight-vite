@@ -1,5 +1,5 @@
 import classNames from "classnames/bind";
-import { HexedCanvas, useHexedCanvasContext } from "core/canvas";
+import { HexedCanvas, useHexedCanvasContext } from "shared/ui";
 import classes from "./FrameHex.module.css";
 
 const cx = classNames.bind(classes);

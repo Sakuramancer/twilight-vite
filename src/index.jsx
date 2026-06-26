@@ -1,8 +1,8 @@
 import { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
-import { StoreProvider } from "app/providers/StoreProvider";
+import App from "app/App";
 import { bootstrap } from "app/bootstrap";
-import App from "./app/App";
+import { StoreProvider } from "app/providers";
 import "./index.css";
 
 bootstrap();

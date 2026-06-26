@@ -1,6 +1,6 @@
-import { useStore } from "core/store";
-import { agendaSelectors } from "entities/agenda/model";
-import { Overlay } from "core/ui";
+import { useStore } from "shared/store";
+import { Overlay } from "shared/ui";
+import { agendaSelectors } from "entities/agenda";
 import ActiveCardItem from "./ActiveCardItem";
 import classes from "./ActiveAgendasPanel.module.css";
 

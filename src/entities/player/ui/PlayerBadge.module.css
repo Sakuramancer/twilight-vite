@@ -1,0 +1,54 @@
+.item {
+  --_item-width: var(--item-width, 120px);
+}
+
+.faction {
+  position: relative;
+}
+
+.portrait {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  filter: drop-shadow(2px 2px 10px hsla(239, 60%, 60%, 0.8));
+}
+
+.icon {
+  position: absolute;
+  bottom: 21px;
+  left: 6px;
+  width: 25%;
+  z-index: 10;
+  filter: drop-shadow(0 0 4px whitesmoke) drop-shadow(0 0 4px black);
+  pointer-events: none;
+}
+
+.canvas {
+  position: absolute;
+  width: calc(0.833 * var(--_item-width));
+  bottom: -8px;
+  left: -6px;
+}
+
+.iconHex,
+.pointsHex {
+  fill: var(--color);
+  stroke: whitesmoke;
+}
+
+.hoverableIconHex {
+  cursor: pointer;
+  &:hover {
+    fill: var(--hoverColor);
+  }
+}
+
+.value {
+  position: absolute;
+  bottom: -7px;
+  right: 50%;
+  font-size: 2rem;
+  letter-spacing: -4px;
+  transform: translateX(calc(50% + 1px));
+  color: var(--textColor);
+}

@@ -1,8 +1,12 @@
-import { FilterSection, Header, SearchField, useOverlayContext } from "core/ui";
-import { useGoalsFilter, useSearch } from "core/hooks";
-import { goalsSearchIndex } from "core/goal/model";
-import { GoalCard } from "entities/goal/ui";
-import { secretSelectors } from "entities/secret/model";
+import { useGoalsFilter, useSearch } from "shared/lib";
+import {
+  FilterSection,
+  Header,
+  SearchField,
+  useOverlayContext,
+} from "shared/ui";
+import { goalsSearchIndex, GoalCard } from "entities/goal";
+import { secretSelectors } from "entities/secret";
 import classes from "./SelectSecretContent.module.css";
 
 const SelectSecretContent = () => {

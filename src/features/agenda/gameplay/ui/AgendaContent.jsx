@@ -1,5 +1,5 @@
-import { useStore } from "core/store";
-import { agendaSelectors } from "entities/agenda/model";
+import { useStore } from "shared/store";
+import { agendaSelectors } from "entities/agenda";
 import GameplayCompactItem from "./GameplayCompactItem";
 import classes from "./AgendaContent.module.css";
 

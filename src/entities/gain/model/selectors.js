@@ -1,4 +1,8 @@
-import { createCachedFactorySelector, createMemoSelector } from "core/utils";
+import { createCachedFactorySelector, createMemoSelector } from "shared/lib";
+
+const makeGain = createCachedFactorySelector((gainId) =>
+  createMemoSelector([(s) => s.gains[gainId]], (gain) => gain),
+);
 
 const makePointsForPlayer = createCachedFactorySelector((playerIndex) =>
   createMemoSelector([(s) => s.gains], (gains) => {
@@ -8,5 +12,6 @@ const makePointsForPlayer = createCachedFactorySelector((playerIndex) =>
 );
 
 export const gainSelectors = {
+  makeGain,
   makePointsForPlayer,
 };

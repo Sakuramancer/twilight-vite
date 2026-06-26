@@ -1,10 +1,7 @@
-import { createCachedFactorySelector, createMemoSelector } from "core/utils";
+import { createCachedFactorySelector, createMemoSelector } from "shared/lib";
 
 const makeMecatolForPlayer = createCachedFactorySelector((playerIndex) =>
-  createMemoSelector(
-    [(s) => s.colors[playerIndex].colorId, (s) => s.mecatol[playerIndex]],
-    (colorId, mecatol) => ({ colorId, mecatol }),
-  ),
+  createMemoSelector([(s) => s.mecatol[playerIndex]], (mecatol) => mecatol),
 );
 
 export const mecatolSelectors = {

@@ -1,4 +1,4 @@
-import { validatePlayerIndex } from "core/player";
+import { validatePlayerIndex } from "shared/config";
 import { RESET_VALUE, createDefaultSupports } from "./defaults";
 
 export const update = (stored, supporterIndex, receiverIndex) => {

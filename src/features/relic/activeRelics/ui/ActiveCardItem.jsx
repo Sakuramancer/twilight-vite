@@ -1,9 +1,12 @@
 import classNames from "classnames/bind";
-import { useTimer } from "core/hooks";
-import { useStore } from "core/store";
-import { getExpansionLabel, relicSelectors } from "entities/relic/model";
-import { getRelicCommands } from "entities/relic/ports";
+import { colorClasses } from "shared/config";
+import { useTimer } from "shared/lib";
+import { useStore } from "shared/store";
+import { playerSelectors } from "entities/player";
 import {
+  getExpansionLabel,
+  relicSelectors,
+  getRelicCommands,
   cardGeometry,
   ColorsHex,
   FrameHex,
@@ -11,22 +14,17 @@ import {
   PointHex,
   RelicView,
   TitleHex,
-} from "entities/relic/ui";
-import colorClasses from "core/data/colors.module.css";
+} from "entities/relic";
 import classes from "./ActiveCardItem.module.css";
 
 const cx = classNames.bind(classes);
 
 const ActiveCardItem = ({ relicId }) => {
-  const {
-    colorId,
-    state: relicState,
-    static: relicStatic,
-  } = useStore(relicSelectors.makeRelic(relicId));
-  const colors = useStore((s) => s.colors);
+  const { colorId, state, meta } = useStore(relicSelectors.makeRelic(relicId));
+  const players = useStore(playerSelectors.selectPlayers);
 
-  const { title, havePoint, description, expansion } = relicStatic;
-  const { purged, playerIndex, pointTaken } = relicState;
+  const { title, havePoint, description, expansion } = meta;
+  const { purged, playerIndex, pointTaken } = state;
   const label = getExpansionLabel(expansion);
 
   const commands = getRelicCommands();
@@ -110,7 +108,7 @@ const ActiveCardItem = ({ relicId }) => {
             ? {
                 ...ColorsHex,
                 props: {
-                  colors,
+                  colors: players,
                   onClick: colorsClickHandler,
                 },
               }

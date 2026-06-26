@@ -1,10 +1,13 @@
 import { useCallback, useState } from "react";
-import { useSearch } from "core/hooks";
-import { PLAYER_COUNT } from "core/player";
-import { useStore } from "core/store";
-import { useOverlayContext } from "core/ui";
-import { agendaSelectors, agendasSearchIndex } from "entities/agenda/model";
-import { getAgendaCommands } from "entities/agenda/ports";
+import { PLAYER_COUNT } from "shared/config";
+import { useSearch } from "shared/lib";
+import { useStore } from "shared/store";
+import { useOverlayContext } from "shared/ui";
+import {
+  agendaSelectors,
+  agendasSearchIndex,
+  getAgendaCommands,
+} from "entities/agenda";
 import AgendaSelectColumn from "./AgendaSelectColumn";
 import AgendaSelectorList from "./AgendaSelectorList";
 import classes from "./AddAgendaContent.module.css";

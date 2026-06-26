@@ -1,4 +1,4 @@
-import { agendasStatic } from "./data";
+import { agendasMeta } from "./data";
 
 export const validateAgenda = (agendaId) =>
-  Object.keys(agendasStatic).includes(agendaId);
+  Object.keys(agendasMeta).includes(agendaId);

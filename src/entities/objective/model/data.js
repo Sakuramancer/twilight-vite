@@ -1,4 +1,4 @@
-import { goalsStatic } from "core/goal/model";
+import { goalsMeta } from "entities/goal/@x/meta";
 
 const stagePoints = {
   stage1: 1,
@@ -6,7 +6,7 @@ const stagePoints = {
   secret: 1
 };
 
-export const objectivesStatic = Object.fromEntries(
-  Object.entries(goalsStatic)
+export const objectivesMeta = Object.fromEntries(
+  Object.entries(goalsMeta)
     .map(([id, value]) => [id, { ...value, points: stagePoints[value.stage] }]),
 );

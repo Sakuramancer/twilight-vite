@@ -1,5 +1,5 @@
 import classNames from "classnames/bind";
-import { HexedCanvas } from "core/canvas";
+import { HexedCanvas } from "shared/ui";
 import { getSecretCommands } from "../../ports/commands.port";
 import classes from "./SecretHex.module.css";
 

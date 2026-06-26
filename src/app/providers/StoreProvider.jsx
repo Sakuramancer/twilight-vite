@@ -1,10 +1,12 @@
-import { StoreContext } from "core/store/StoreContext";
+import { StoreContext } from "shared/store";
 import { useRootStore } from "../store/useRootStore";
 
-export const StoreProvider = ({ children }) => {
+const StoreProvider = ({ children }) => {
   return (
     <StoreContext.Provider value={useRootStore}>
       {children}
     </StoreContext.Provider>
   );
 };
+
+export { StoreProvider };

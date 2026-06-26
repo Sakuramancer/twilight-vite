@@ -1,4 +1,4 @@
-import { PointColumn } from "core/ui";
+import { PointColumn } from "shared/ui";
 import { SupportActions, SupportContent } from "features/support/gameplay";
 
 const SupportManager = () => {

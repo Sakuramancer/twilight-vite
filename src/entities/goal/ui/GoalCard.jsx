@@ -1,8 +1,8 @@
 import classNames from "classnames/bind";
-import { HexedCanvas } from "core/canvas";
-import { goalsStatic } from "core/goal/model";
+import { colorClasses } from "shared/config";
+import { HexedCanvas } from "shared/ui";
+import { goalsMeta } from "../model/data";
 import { GoalCardContent } from "./GoalCardContent";
-import colors from "core/data/colors.module.css";
 import classes from "./GoalCard.module.css";
 
 const cx = classNames.bind(classes);
@@ -10,7 +10,7 @@ const cx = classNames.bind(classes);
 const geometry = { width: 610, height: 530, anchorSize: 300 };
 
 const GoalCard = ({ cardId, onConfirm, colorId }) => {
-  const { stage } = goalsStatic[cardId];
+  const { stage } = goalsMeta[cardId];
 
   const clickHandler = () => {
     onConfirm?.(cardId);
@@ -18,7 +18,7 @@ const GoalCard = ({ cardId, onConfirm, colorId }) => {
 
   const mainClass = cx({
     main: true,
-    [colors[colorId]]: colorId,
+    [colorClasses[colorId]]: colorId,
   });
 
   const hexClass = cx({

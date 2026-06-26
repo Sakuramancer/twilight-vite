@@ -1,5 +1,4 @@
-import { HexedCanvas } from "core/canvas";
-import { ButtonCanvas } from "core/ui";
+import { ButtonCanvas, HexedCanvas } from "shared/ui";
 import classes from "./RelicActions.module.css";
 
 const RelicActions = ({

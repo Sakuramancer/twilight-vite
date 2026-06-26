@@ -1,24 +1,21 @@
-import { persistBySlices } from "core/store/middleware/persist";
-import { createStore } from "core/store/createStore";
-import { agendaSlice } from "entities/agenda/model";
-import { colorSlice } from "entities/color/model";
-import { extraSlice } from "entities/extra/model";
-import { factionSlice } from "entities/faction/model";
-import { gainSlice } from "entities/gain/model";
-import { mecatolSlice } from "entities/mecatol/model";
-import { objectiveSlice } from "entities/objective/model";
-import { relicSlice } from "entities/relic/model";
-import { secretSlice } from "entities/secret/model";
-import { supportSlice } from "entities/support/model";
+import { createStore, persistBySlices } from "shared/store";
+import { agendaSlice } from "entities/agenda";
+import { extraSlice } from "entities/extra";
+import { gainSlice } from "entities/gain";
+import { mecatolSlice } from "entities/mecatol";
+import { objectiveSlice } from "entities/objective";
+import { playerSlice } from "entities/player";
+import { relicSlice } from "entities/relic";
+import { secretSlice } from "entities/secret";
+import { supportSlice } from "entities/support";
 
 const slices = [
   agendaSlice,
-  colorSlice,
   extraSlice,
-  factionSlice,
   gainSlice,
   mecatolSlice,
   objectiveSlice,
+  playerSlice,
   relicSlice,
   secretSlice,
   supportSlice,

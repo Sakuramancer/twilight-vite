@@ -1,5 +1,5 @@
 import classNames from "classnames/bind";
-import { HexedCanvas, useHexedCanvasContext } from "core/canvas";
+import { HexedCanvas, useHexedCanvasContext } from "shared/ui";
 import classes from "./TitleHex.module.css";
 
 const cx = classNames.bind(classes);
@@ -47,5 +47,4 @@ const Content = ({ title, titleVisible, centered, muted }) => {
 };
 
 const TitleHex = { Canvas, Content };
-
 export { TitleHex };

@@ -1,5 +1,5 @@
-import { useStore } from "core/store";
-import { relicSelectors } from "entities/relic/model";
+import { useStore } from "shared/store";
+import { relicSelectors } from "entities/relic";
 import GameplayCompactItem from "./GameplayCompactItem";
 import classes from "./RelicContent.module.css";
 

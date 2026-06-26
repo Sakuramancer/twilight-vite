@@ -1,5 +1,5 @@
-import { HexedCanvas } from "core/canvas";
-import { resolveSlot } from "core/utils";
+import { resolveSlot } from "shared/lib";
+import { HexedCanvas } from "shared/ui";
 
 const RelicView = ({
   geometry,

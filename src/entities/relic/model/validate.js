@@ -1,4 +1,4 @@
-import { relicsStatic } from "./data";
+import { relicsMeta } from "./data";
 
 export const validateRelic = (relicId) =>
-  Object.keys(relicsStatic).includes(relicId);
+  Object.keys(relicsMeta).includes(relicId);

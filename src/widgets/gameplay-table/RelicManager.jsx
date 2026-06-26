@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { PointColumn } from "core/ui";
+import { PointColumn } from "shared/ui";
 import { RelicActions, RelicContent } from "features/relic/gameplay";
 import { ActiveRelicsPanel } from "features/relic/activeRelics";
 import { AddRelicDialog } from "features/relic/addRelic";

@@ -1,16 +1,16 @@
-import { createCachedFactorySelector, createMemoSelector } from "core/utils";
-import { relicsStatic } from "./data";
+import { createCachedFactorySelector, createMemoSelector } from "shared/lib";
+import { relicsMeta } from "./data";
 import { normalizeRelic } from "./normalize";
-import { sortStaticByTitle, sortForGameplay } from "./sort";
+import { sortMetaByTitle, sortForGameplay } from "./sort";
 
 const isActive = (relic) => relic.state.playerIndex > -1;
 
-const isScored = (relic) => relic.static.havePoint && relic.state.pointTaken;
+const isScored = (relic) => relic.meta.havePoint && relic.state.pointTaken;
 
 const allSortedIdsWithFilters = createCachedFactorySelector((filters) =>
-  Object.values(relicsStatic)
+  Object.values(relicsMeta)
     .filter((card) => filters[card.expansion])
-    .sort(sortStaticByTitle)
+    .sort(sortMetaByTitle)
     .map((relic) => relic.id),
 );
 
@@ -19,7 +19,7 @@ const makePointsForPlayer = createCachedFactorySelector((playerIndex) =>
     Object.entries(relics)
       .map(([id, state]) => ({
         id,
-        static: relicsStatic[id],
+        meta: relicsMeta[id],
         state,
       }))
       .reduce(
@@ -35,7 +35,7 @@ const selectIdsForGameplay = createMemoSelector([(s) => s.relics], (relics) =>
   Object.entries(relics)
     .map(([id, state]) => ({
       id,
-      static: relicsStatic[id],
+      meta: relicsMeta[id],
       state,
     }))
     .filter((relic) => isActive(relic))
@@ -44,10 +44,10 @@ const selectIdsForGameplay = createMemoSelector([(s) => s.relics], (relics) =>
 );
 
 const selectIdsInactive = createMemoSelector([(s) => s.relics], (relics) =>
-  Object.entries(relicsStatic)
+  Object.entries(relicsMeta)
     .filter(([id, _]) => !(id in relics))
-    .map(([_, relicStatic]) => relicStatic)
-    .sort(sortStaticByTitle)
+    .map(([_, relicMeta]) => relicMeta)
+    .sort(sortMetaByTitle)
     .map(({ id }) => id),
 );
 
@@ -56,7 +56,7 @@ const makeIdsForPlayer = createCachedFactorySelector((playerIndex) =>
     Object.entries(relics)
       .map(([id, state]) => ({
         id,
-        static: relicsStatic[id],
+        meta: relicsMeta[id],
         state,
       }))
       .filter((relic) => isActive(relic))
@@ -68,16 +68,16 @@ const makeIdsForPlayer = createCachedFactorySelector((playerIndex) =>
 
 const makeRelic = createCachedFactorySelector((relicId) =>
   createMemoSelector(
-    [(s) => s.colors, (s) => s.relics[relicId]],
-    (colors, relic) => {
+    [(s) => s.players, (s) => s.relics[relicId]],
+    (players, relic) => {
       const normalizedRelic = normalizeRelic(relic);
       return {
         relicId,
-        static: relicsStatic[relicId],
+        meta: relicsMeta[relicId],
         state: normalizedRelic,
         colorId:
           normalizedRelic.playerIndex >= 0
-            ? colors[normalizedRelic.playerIndex].colorId
+            ? players[normalizedRelic.playerIndex].colorId
             : "_default",
       };
     },

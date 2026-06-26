@@ -1,17 +1,17 @@
 import { useState } from "react";
 import classNames from "classnames/bind";
-import { useStore } from "core/store";
-import { plusOneVisible } from "core/utils";
-import { getObjectiveCommands } from "entities/objective/ports";
+import { useStore } from "shared/store";
+import { plusOneVisible } from "shared/lib";
+import { getObjectiveCommands, objectiveSelectors } from "entities/objective";
 import { ObjectiveFlower } from "features/objective/gameplay";
 import { SelectObjectivePanel } from "features/objective/selectObjective";
 import classes from "./Objectives.module.css";
 
 const cx = classNames.bind(classes);
 
-const Objectives = ({ className, magnifierActive }) => {
+const Objectives = ({ className }) => {
   const commands = getObjectiveCommands();
-  const objectives = useStore((s) => s.objectives);
+  const objectives = useStore(objectiveSelectors.selectObjectives);
   const data = plusOneVisible(objectives, (objective) => objective.cardId);
 
   const [cardIndex, setCardIndex] = useState(-1);
@@ -41,7 +41,6 @@ const Objectives = ({ className, magnifierActive }) => {
           <ObjectiveFlower
             key={index}
             cardIndex={index}
-            magnifierActive={magnifierActive}
             onSelectCard={(index) => setCardIndex(index)}
           />
         ))}

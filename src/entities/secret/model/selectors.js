@@ -1,8 +1,8 @@
-import { createCachedFactorySelector, createMemoSelector } from "core/utils";
-import { secretsStatic } from "./data";
+import { createCachedFactorySelector, createMemoSelector } from "shared/lib";
+import { secretsMeta } from "./data";
 import { sortByTitle } from "./sort";
 
-const sortedIds = Object.values(secretsStatic)
+const sortedIds = Object.values(secretsMeta)
   .sort(sortByTitle)
   .map((secret) => secret.id);
 
@@ -16,22 +16,22 @@ const makePointsForPlayer = createCachedFactorySelector((playerIndex) =>
   ),
 );
 
-const selectForCurrentScreen = createMemoSelector(
-  [(s) => s.secrets, (s) => s.colors],
-  (secrets, colors) =>
-    secrets.map((playerSecrets, index) => {
-      const colorId = colors[index].colorId;
-      return {
-        colorId,
-        playerSecrets: playerSecrets
-          .filter((secret) => secret.taken && secret.cardId)
-          .map(({ cardId }) => cardId),
-      };
-    }),
+const selectSecrets = createMemoSelector(
+  [(s) => s.secrets],
+  (secrets) => secrets,
+);
+
+const selectActiveSecrets = createMemoSelector([(s) => s.secrets], (secrets) =>
+  secrets.map((playerSecrets) => ({
+    playerSecrets: playerSecrets
+      .filter((secret) => secret.taken && secret.cardId)
+      .map(({ cardId }) => cardId),
+  })),
 );
 
 export const secretSelectors = {
   sortedIds,
   makePointsForPlayer,
-  selectForCurrentScreen,
+  selectSecrets,
+  selectActiveSecrets,
 };

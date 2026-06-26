@@ -1,0 +1,48 @@
+.total {
+  max-width: 500px;
+  margin: 100px auto;
+  padding: 2rem 0.5rem;
+  background: rgba(230, 230, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.main {
+  max-width: 420px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  color: hsl(239, 97%, 45%);
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-shadow:
+    -1px 1px 0 hsl(239, 96%, 90%),
+    1px 1px 0 hsl(239, 96%, 90%),
+    1px -1px 0 hsl(239, 96%, 90%),
+    -1px -1px 0 hsl(239, 96%, 90%);
+}
+
+.subtitle {
+  margin-bottom: 3rem;
+  font-size: 1rem;
+  color: white;
+}
+
+.margin {
+  margin-top: 20px;
+}
+
+.footer {
+  margin-top: 100px;
+}
+
+.warning {
+  padding-top: 10px;
+  font-size: 0.8rem;
+  color: white;
+}

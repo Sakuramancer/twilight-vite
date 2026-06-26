@@ -1,0 +1,81 @@
+.hex {
+  stroke-width: 6px;
+  fill: var(--agenda-background-color);
+}
+
+.hex-interactive {
+  cursor: pointer;
+  pointer-events: fill;
+}
+
+.hex-muted-votedFor {
+  stroke: var(--agenda-muted-votedFor);
+}
+
+.hex-muted-votedAgainst {
+  stroke: var(--agenda-muted-votedAgainst);
+}
+
+.hex-notMuted-votedFor {
+  stroke: var(--agenda-votedFor);
+}
+
+.hex-notMuted-votedAgainst {
+  stroke: var(--agenda-votedAgainst);
+}
+
+.noEvents {
+  pointer-events: none;
+}
+
+.check-muted {
+  fill: var(--agenda-muted-votedFor);
+}
+
+.cross-muted {
+  fill: var(--agenda-muted-votedAgainst);
+}
+
+.check-notMuted {
+  fill: var(--agenda-votedFor);
+}
+
+.cross-notMuted {
+  fill: var(--agenda-votedAgainst);
+}
+
+
+.point {
+  position: absolute;
+  top: 12px;
+  left: 9.4%;
+  transform: translateX(-50%);
+  font-family: var(--secondary-font-family);
+  font-size: 1.3em;
+  letter-spacing: -3px;
+  pointer-events: none;
+}
+
+.point-notVoted-muted {
+  color: var(--agenda-muted-color);
+}
+
+.point-notVoted-notMuted {
+  color: var(--directive-primary-color);
+}
+
+.point-votedFor-muted {
+  color: var(--agenda-muted-votedFor);
+}
+
+.point-votedFor-notMuted {
+  color: var(--agenda-votedFor);
+}
+
+.point-votedAgainst-muted {
+  color: var(--agenda-muted-votedAgainst);
+}
+
+.point-votedAgainst-notMuted {
+  color: var(--agenda-votedAgainst);
+}

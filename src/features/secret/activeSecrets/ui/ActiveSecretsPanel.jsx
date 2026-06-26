@@ -1,11 +1,11 @@
-import { useStore } from "core/store";
-import { Overlay } from "core/ui";
-import { GoalCard } from "entities/goal/ui";
-import { secretSelectors } from "entities/secret/model";
+import { useStore } from "shared/store";
+import { Overlay } from "shared/ui";
+import { GoalCard } from "entities/goal";
+import { selectors } from "../model/selectors";
 import classes from "./ActiveSecretsPanel.module.css";
 
 const ActiveSecretsPanel = ({ onDiscard }) => {
-  const secrets = useStore(secretSelectors.selectForCurrentScreen);
+  const secrets = useStore(selectors.selectSecrets);
 
   return (
     <Overlay

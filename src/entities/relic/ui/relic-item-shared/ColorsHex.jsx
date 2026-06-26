@@ -1,8 +1,5 @@
-import classNames from "classnames/bind";
-import { HexedCanvas, useHexedCanvasContext } from "core/canvas";
+import { HexedCanvas, useHexedCanvasContext } from "shared/ui";
 import classes from "./ColorsHex.module.css";
-
-const cx = classNames.bind(classes);
 
 const Canvas = ({ anchorPoint, anchorSize, colors, onClick }) => {
   const context = useHexedCanvasContext();
@@ -16,14 +13,10 @@ const Canvas = ({ anchorPoint, anchorSize, colors, onClick }) => {
     anchorSize = context.anchorSize;
   }
 
-  const hexClass = cx({
-    hex: true,
-  });
-
   return (
     <>
       <HexedCanvas.ColorLine
-        className={hexClass}
+        className={classes.hex}
         anchorPoint={{ x: anchorSize, y: anchorPoint.y }}
         anchorSize={0.6 * anchorSize}
         colors={colors}

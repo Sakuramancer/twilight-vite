@@ -1,5 +1,5 @@
-import { PointColumn, PointColumnsLayout } from "core/ui";
-import { ExtraActions, ExtraContent } from "entities/extra/ui";
+import { PointColumn, PointColumnsLayout } from "shared/ui";
+import { ExtraActions, ExtraContent } from "features/extra/gameplay";
 import { AgendaManager } from "./AgendaManager";
 import { RelicManager } from "./RelicManager";
 import { SecretManager } from "./SecretManager";

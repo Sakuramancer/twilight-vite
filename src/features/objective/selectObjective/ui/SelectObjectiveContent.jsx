@@ -1,7 +1,12 @@
-import { useGoalsFilter, useSearch } from "core/hooks";
-import { FilterSection, Header, SearchField, useOverlayContext } from "core/ui";
-import { goalSelectors, goalsSearchIndex } from "core/goal/model";
-import { GoalCard } from "entities/goal/ui";
+import { useGoalsFilter, useSearch } from "shared/lib";
+import {
+  FilterSection,
+  Header,
+  SearchField,
+  useOverlayContext,
+} from "shared/ui";
+import { goalSelectors, goalsSearchIndex } from "entities/goal";
+import { GoalCard } from "entities/goal";
 import classes from "./SelectObjectiveContent.module.css";
 
 const SelectObjectiveContent = ({ initialFilters }) => {

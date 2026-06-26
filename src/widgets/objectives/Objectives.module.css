@@ -13,8 +13,6 @@
 
   grid-template-columns: repeat(13, 220px);
   --base-height: 330px;
-  --magnified-scale: 1.2;
-  --magnified-translateY: -14%;
 
   & > div {
     grid-column: span 2;
@@ -23,14 +21,12 @@
 
 .showFive {
   padding-left: 20%;
-  margin-bottom: 140px;
+  margin-bottom: 120px;
   display: grid;
-  grid-template-columns: repeat(11, 175px);
-  grid-template-rows: repeat(2, 304px);
+  grid-template-columns: repeat(11, 150px);
+  grid-template-rows: repeat(2, 260px);
 
-  --base-height: 280px;
-  --magnified-scale: 1.4;
-  --magnified-translateY: -28%;
+  --base-height: 240px;
 
   & > div {
     grid-column: span 2;
@@ -41,16 +37,14 @@
 }
 
 .showAll {
-  width: calc(100% - 50px);
-  margin-inline: 50px;
+  width: calc(100% - 40px);
+  margin-inline: 20px;
   margin-bottom: 120px;
   display: grid;
-  grid-template-columns: repeat(11, 160px);
-  grid-template-rows: repeat(2, 275px);
+  grid-template-columns: repeat(11, 150px);
+  grid-template-rows: repeat(2, 260px);
 
   --base-height: 240px;
-  --magnified-scale: 1.4;
-  --magnified-translateY: -28%;
 
   & > div {
     grid-column: span 2;

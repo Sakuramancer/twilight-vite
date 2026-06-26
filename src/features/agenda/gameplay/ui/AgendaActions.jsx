@@ -1,5 +1,4 @@
-import { HexedCanvas } from "core/canvas";
-import { ButtonCanvas } from "core/ui";
+import { HexedCanvas, ButtonCanvas } from "shared/ui";
 import classes from "./AgendaActions.module.css";
 
 const AgendaActions = ({

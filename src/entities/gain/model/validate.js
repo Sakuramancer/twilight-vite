@@ -1,4 +1,4 @@
-import { gainsStatic } from "./data";
+import { gainsMeta } from "./data";
 
 export const validateGain = (gainId) =>
-  Object.keys(gainsStatic).includes(gainId);
+  Object.keys(gainsMeta).includes(gainId);

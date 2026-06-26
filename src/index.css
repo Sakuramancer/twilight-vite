@@ -6,9 +6,11 @@
 
 html {
   font-family: "Noto Sans JP", sans-serif;
+  background-color: #222;
   /* Firefox */
   scrollbar-color: #222 #888;
 }
+
 /* Chrome, Edge, Safari */
 ::-webkit-scrollbar {
   width: 8px;
@@ -55,4 +57,9 @@ code {
   --directive-primary-color: #c8e1f9;
   --agenda-muted-color: #4d6780;
   --agenda-background-color: #333333;
+
+  --agenda-votedFor: hsl(84, 100%, 59%);
+  --agenda-muted-votedFor: hsl(84, 50%, 45%);
+  --agenda-votedAgainst: hsl(0, 100%, 50%);
+  --agenda-muted-votedAgainst: hsl(0, 50%, 40%);
 }

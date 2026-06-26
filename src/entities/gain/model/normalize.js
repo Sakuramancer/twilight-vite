@@ -1,6 +1,6 @@
-import { validatePlayerIndex } from "core/player";
+import { validatePlayerIndex } from "shared/config";
+import { gainsMeta } from "./data";
 import { createDefaultGains, RESET_VALUE } from "./defaults";
-import { gainsStatic } from "./data";
 
 export const normalizeGain = (value) => {
   return Number.isInteger(value) && validatePlayerIndex(value)
@@ -13,6 +13,6 @@ export const normalizeGains = (persisted) => {
     return createDefaultGains();
   }
   return Object.fromEntries(
-    Object.keys(gainsStatic).map((id) => [id, normalizeGain(persisted[id])]),
+    Object.keys(gainsMeta).map((id) => [id, normalizeGain(persisted[id])]),
   );
 };

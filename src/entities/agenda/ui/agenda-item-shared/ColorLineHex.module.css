@@ -1,0 +1,29 @@
+.mount {
+  stroke: var(--directive-primary-color);
+  stroke-width: 10px;
+}
+
+.colorLine {
+  cursor: pointer;
+}
+
+.colorHex-notVoted {
+  fill: var(--agenda-background-color);
+  stroke: var(--color);
+  stroke-width: 8px;
+  
+  &:hover {
+    stroke: var(--hoverColor);
+  }
+}
+
+.colorHex-voted {
+  fill: var(--color);
+  stroke: var(--color);
+  stroke-width: 4px;
+  
+  &:hover {
+    fill: var(--hoverColor);
+    stroke: var(--hoverColor);
+  }
+}

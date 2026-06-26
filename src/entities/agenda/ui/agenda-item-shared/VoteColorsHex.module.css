@@ -1,0 +1,10 @@
+.hex {
+  cursor: pointer;
+  fill: var(--color);
+  stroke: var(--agenda-primary-color);
+  stroke-width: 5px;
+
+  &:hover {
+    fill: var(--hoverColor);
+  }
+}

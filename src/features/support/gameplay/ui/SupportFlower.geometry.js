@@ -1,12 +1,12 @@
 const anchorSize = 95;
 const supporterCenter = { x: 100, y: 110 };
-const leafCenter = { x: 150, y: 110 };
+const leafCenter = { x: 30, y: 110 };
 
-const centerX = 470;
+const centerX = 350;
 const centerY = 110;
-const delta = 120;
+const delta = 100;
 
-const hexBase = { width: 1070, height: 220, anchorSize };
+const hexBase = { width: 870, height: 220, anchorSize };
 
 export const geometry = {
   anchorSize,

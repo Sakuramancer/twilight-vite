@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Background } from "core/ui";
+import { Background } from "shared/ui";
 import {
   AgendasPage,
   ErrorPage,
@@ -8,7 +8,7 @@ import {
   GoalsPage,
   NewGamePage,
   RelicsPage,
-} from "./pages";
+} from "pages";
 
 export const router = createBrowserRouter([
   {

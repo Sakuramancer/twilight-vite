@@ -1,5 +1,5 @@
 import classNames from "classnames/bind";
-import { HexedCanvas, useHexedCanvasContext } from "core/canvas";
+import { HexedCanvas, useHexedCanvasContext } from "shared/ui";
 import classes from "./PointHex.module.css";
 
 const cx = classNames.bind(classes);
@@ -26,8 +26,8 @@ const Canvas = ({ anchorPoint, anchorSize, colored, onClick }) => {
   return (
     <HexedCanvas.Hex
       className={pointHexClass}
-      anchorPoint={{ x: 8.9 * anchorSize, y: anchorPoint.y }}
-      anchorSize={0.75 * anchorSize}
+      anchorPoint={{ x: 9 * anchorSize, y: anchorPoint.y }}
+      anchorSize={0.6 * anchorSize}
       onClick={onClick}
     />
   );
@@ -44,5 +44,4 @@ const Content = ({ colored }) => {
 };
 
 const PointHex = { Canvas, Content };
-
 export { PointHex };

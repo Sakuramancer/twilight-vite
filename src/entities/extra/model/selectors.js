@@ -1,10 +1,7 @@
-import { createCachedFactorySelector, createMemoSelector } from "core/utils";
+import { createCachedFactorySelector, createMemoSelector } from "shared/lib";
 
 const makeExtraForPlayer = createCachedFactorySelector((playerIndex) =>
-  createMemoSelector(
-    [(s) => s.colors[playerIndex].colorId, (s) => s.extra[playerIndex]],
-    (colorId, extra) => ({ colorId, extra }),
-  ),
+  createMemoSelector([(s) => s.extra[playerIndex]], (extra) => extra),
 );
 
 export const extraSelectors = {

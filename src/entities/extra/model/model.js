@@ -1,4 +1,4 @@
-import { validatePlayerIndex } from "core/player";
+import { validatePlayerIndex } from "shared/config";
 import { createDefaultPoints } from "./defaults";
 
 export const update = (extra, playerIndex, value) => {
@@ -8,6 +8,4 @@ export const update = (extra, playerIndex, value) => {
   return extra.map((points, index) => (index === playerIndex ? value : points));
 };
 
-export const reset = () => {
-  return createDefaultPoints();
-};
+export const reset = () => createDefaultPoints();

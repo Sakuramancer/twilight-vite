@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { PointColumn } from "core/ui";
+import { PointColumn } from "shared/ui";
 import { AgendaActions, AgendaContent } from "features/agenda/gameplay";
 import { ActiveAgendasPanel } from "features/agenda/activeAgendas";
 import { AddAgendaDialog } from "features/agenda/addAgenda";

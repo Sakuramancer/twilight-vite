@@ -1,8 +1,8 @@
 import classNames from "classnames/bind";
-import { HexedCanvas } from "core/canvas";
-import { plusOneVisible } from "core/utils";
+import { colorClasses } from "shared/config";
+import { plusOneVisible } from "shared/lib";
+import { HexedCanvas } from "shared/ui";
 import SecretHex from "./SecretHex";
-import colors from "core/data/colors.module.css";
 import classes from "./SecretFlower.module.css";
 
 const cx = classNames.bind(classes);
@@ -30,7 +30,7 @@ const SecretFlower = ({
 
   const mainClass = cx({
     main: true,
-    [colors[colorId]]: true,
+    [colorClasses[colorId]]: true,
   });
 
   return (
@@ -53,4 +53,4 @@ const SecretFlower = ({
   );
 };
 
-export default SecretFlower;
+export { SecretFlower };

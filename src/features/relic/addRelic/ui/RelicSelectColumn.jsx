@@ -1,12 +1,12 @@
 import classNames from "classnames/bind";
-import { useStore } from "core/store";
-import { plural } from "core/utils";
+import { plural } from "shared/lib";
+import { useStore } from "shared/store";
+import { SearchField, buttons } from "shared/ui";
+import { playerSelectors } from "entities/player";
 import { RelicPreviewItem } from "./RelicPreviewItem";
 import RelicPlayerSelector from "./RelicPlayerSelector";
 import RandomRelicButton from "./RandomRelicButton";
-import buttons from "core/styles/buttons.module.css";
 import classes from "./RelicSelectColumn.module.css";
-import { SearchField } from "core/ui";
 
 const cx = classNames.bind(classes);
 
@@ -24,9 +24,7 @@ const RelicSelectColumn = ({
   searchValue,
   setSearchValue,
 }) => {
-  const colorId = useStore(
-    (s) => s.colors[playerSelected]?.colorId ?? "_default",
-  );
+  const colorId = useStore(playerSelectors.makeColorIdByPlayer(playerSelected));
   const clearSearchHandler = () => setSearchValue("");
 
   const buttonClass = cx({
