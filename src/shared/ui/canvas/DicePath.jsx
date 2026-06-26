@@ -24,33 +24,37 @@ const mult = 0.045;
 
 const DicePath = ({ className, anchorPoint, anchorSize, ...props }) => {
   const context = useHexedCanvasContext();
-  if (!anchorPoint) {
-    anchorPoint = { x: 0.5 * context.width, y: 0.5 * context.height };
-  }
-  if (!anchorSize) {
-    anchorSize = context.anchorSize;
-  }
+  const resolvedAnchorPoint = anchorPoint ?? {
+    x: 0.5 * context.width,
+    y: 0.5 * context.height,
+  };
+  const resolvedAnchorSize = anchorSize ?? context.anchorSize;
+
   const circles = circlesDataPoints.map(([cx, cy, r]) => [
-    anchorPoint.x + mult * anchorSize * cx,
-    anchorPoint.y + mult * anchorSize * cy,
-    mult * anchorSize * r,
+    resolvedAnchorPoint.x + mult * resolvedAnchorSize * cx,
+    resolvedAnchorPoint.y + mult * resolvedAnchorSize * cy,
+    mult * resolvedAnchorSize * r,
   ]);
-  const origin = `${anchorPoint.x + mult * anchorSize * originData[0]},${
-    anchorPoint.y + mult * anchorSize * originData[1]
-  }`;
+  const origin = `${
+    resolvedAnchorPoint.x + mult * resolvedAnchorSize * originData[0]
+  },${resolvedAnchorPoint.y + mult * resolvedAnchorSize * originData[1]}`;
   const outerPath = outerDataPoints
     .map(
       ([arx, ary, adx, ady, lx, ly]) =>
-        `a ${mult * anchorSize * arx},${mult * anchorSize * ary} 0 0 0  ${
-          mult * anchorSize * adx
-        },${mult * anchorSize * ady} l ${mult * anchorSize * lx},${mult * anchorSize * ly}`,
+        `a ${mult * resolvedAnchorSize * arx},${
+          mult * resolvedAnchorSize * ary
+        } 0 0 0  ${mult * resolvedAnchorSize * adx},${
+          mult * resolvedAnchorSize * ady
+        } l ${mult * resolvedAnchorSize * lx},${
+          mult * resolvedAnchorSize * ly
+        }`,
     )
     .join(" ");
 
   const innerPath = innerDataPoints
     .map(
-      ([x, y]) => `${anchorPoint.x + mult * anchorSize * x},
-      ${anchorPoint.y + mult * anchorSize * y}`,
+      ([x, y]) => `${resolvedAnchorPoint.x + mult * resolvedAnchorSize * x},
+      ${resolvedAnchorPoint.y + mult * resolvedAnchorSize * y}`,
     )
     .join(" ");
 

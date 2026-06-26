@@ -10,24 +10,25 @@ const mult = 0.04;
 
 const BurgerPath = ({ className, anchorPoint, anchorSize }) => {
   const context = useHexedCanvasContext();
-  if (!anchorPoint) {
-    anchorPoint = { x: 0.5 * context.width, y: 0.5 * context.height };
-  }
-  if (!anchorSize) {
-    anchorSize = context.anchorSize;
-  }
+  const resolvedAnchorPoint = anchorPoint ?? {
+    x: 0.5 * context.width,
+    y: 0.5 * context.height,
+  };
+  const resolvedAnchorSize = anchorSize ?? context.anchorSize;
 
   const path = data
     .map(
       ([x, y, h]) =>
-        `M ${anchorPoint.x + mult * anchorSize * x},
-      ${anchorPoint.y + mult * anchorSize * y} h ${mult * anchorSize * h}`,
+        `M ${resolvedAnchorPoint.x + mult * resolvedAnchorSize * x},
+      ${
+        resolvedAnchorPoint.y + mult * resolvedAnchorSize * y
+      } h ${mult * resolvedAnchorSize * h}`,
     )
     .join(" ");
   return (
     <path
       className={className}
-      strokeWidth={mult * anchorSize * strokeWidth}
+      strokeWidth={mult * resolvedAnchorSize * strokeWidth}
       strokeLinecap="round"
       d={path}
     />

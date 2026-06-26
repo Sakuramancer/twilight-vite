@@ -66,38 +66,59 @@ export default defineConfig([
         { argsIgnorePattern: "^_", varsIgnorePattern: "^[A-Z_]" },
       ],
       "boundaries/no-unknown": "error",
-      "boundaries/element-types": [
+      "boundaries/dependencies": [
         "error",
         {
           default: "disallow",
           rules: [
-            { from: "shared", allow: [] },
-            { from: "entities-x", allow: ["shared", "entities"] },
-            { from: "entities", allow: ["shared", "entities-x"] },
-            { from: "features", allow: ["shared", "entities-x", "entities"] },
+            { from: { type: "shared" }, allow: [] },
             {
-              from: "widgets",
-              allow: ["shared", "entities-x", "entities", "features"],
+              from: { type: "entities-x" },
+              allow: [{ to: { type: "shared" } }, { to: { type: "entities" } }],
             },
             {
-              from: "pages",
+              from: { type: "entities" },
               allow: [
-                "shared",
-                "entities-x",
-                "entities",
-                "features",
-                "widgets",
+                { to: { type: "shared" } },
+                { to: { type: "entities-x" } },
               ],
             },
             {
-              from: "app",
+              from: { type: "features" },
               allow: [
-                "shared",
-                "entities-x",
-                "entities",
-                "features",
-                "widgets",
-                "pages",
+                { to: { type: "shared" } },
+                { to: { type: "entities-x" } },
+                { to: { type: "entities" } },
+              ],
+            },
+            {
+              from: { type: "widgets" },
+              allow: [
+                { to: { type: "shared" } },
+                { to: { type: "entities-x" } },
+                { to: { type: "entities" } },
+                { to: { type: "features" } },
+              ],
+            },
+            {
+              from: { type: "pages" },
+              allow: [
+                { to: { type: "shared" } },
+                { to: { type: "entities-x" } },
+                { to: { type: "entities" } },
+                { to: { type: "features" } },
+                { to: { type: "widgets" } },
+              ],
+            },
+            {
+              from: { type: "app" },
+              allow: [
+                { to: { type: "shared" } },
+                { to: { type: "entities-x" } },
+                { to: { type: "entities" } },
+                { to: { type: "features" } },
+                { to: { type: "widgets" } },
+                { to: { type: "pages" } },
               ],
             },
           ],

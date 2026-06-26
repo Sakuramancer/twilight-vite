@@ -11,21 +11,23 @@ const RelicPath = ({
   ...props
 }) => {
   const context = useHexedCanvasContext();
-  if (!anchorPoint) {
-    anchorPoint = { x: 0.5 * context.width, y: 0.25 * context.height };
-  }
-  if (!anchorSize) {
-    anchorSize = context.anchorSize;
-  }
+  const resolvedAnchorPoint = anchorPoint ?? {
+    x: 0.5 * context.width,
+    y: 0.5 * context.height,
+  };
+  const resolvedAnchorSize = anchorSize ?? context.anchorSize;
 
   const onEdgeAngle = sitOnEdge ? 0 : Math.PI / verticies;
   const path = [...Array(verticies).keys()]
     .map(
       (x) =>
-        `${anchorPoint.x + anchorSize * Math.cos(angleMultiplier * x + onEdgeAngle)},
+        `${
+          resolvedAnchorPoint.x +
+          resolvedAnchorSize * Math.cos(angleMultiplier * x + onEdgeAngle)
+        },
           ${
-            2 * anchorPoint.y +
-            2 * anchorSize * Math.sin(angleMultiplier * x + onEdgeAngle)
+            2 * resolvedAnchorPoint.y +
+            2 * resolvedAnchorSize * Math.sin(angleMultiplier * x + onEdgeAngle)
           }`,
     )
     .join(" ");

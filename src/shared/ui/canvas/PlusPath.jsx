@@ -18,17 +18,17 @@ const mult = 0.035;
 
 const PlusPath = ({ className, anchorPoint, anchorSize, ...props }) => {
   const context = useHexedCanvasContext();
-  if (!anchorPoint) {
-    anchorPoint = { x: 0.5 * context.width, y: 0.5 * context.height };
-  }
-  if (!anchorSize) {
-    anchorSize = context.anchorSize;
-  }
+  const resolvedAnchorPoint = anchorPoint ?? {
+    x: 0.5 * context.width,
+    y: 0.5 * context.height,
+  };
+  const resolvedAnchorSize = anchorSize ?? context.anchorSize;
+
   const path = dataPoints
     .map(
       ([x, y]) =>
-        `${anchorPoint.x + mult * anchorSize * x},
-      ${anchorPoint.y + mult * anchorSize * y}`,
+        `${resolvedAnchorPoint.x + mult * resolvedAnchorSize * x},
+      ${resolvedAnchorPoint.y + mult * resolvedAnchorSize * y}`,
     )
     .join(" ");
   return <path className={className} d={`M${path}z`} {...props} />;

@@ -13,31 +13,32 @@ const LeafPath = ({
   ...props
 }) => {
   const context = useHexedCanvasContext();
-  if (!anchorPoint) {
-    anchorPoint = { x: 0.5 * context.width, y: 0.5 * context.height };
-  }
-  if (!anchorSize) {
-    anchorSize = context.anchorSize;
-  }
+  const resolvedAnchorPoint = anchorPoint ?? {
+    x: 0.5 * context.width,
+    y: 0.5 * context.height,
+  };
+  const resolvedAnchorSize = anchorSize ?? context.anchorSize;
+
   const buttonProps = useButtonContext();
 
   if (!["forward", "backward"].includes(leafType)) {
     leafType = "forward";
   }
   const directionMult = leafType === "forward" ? 1 : -1;
-  const innerDelta = innerMult * anchorSize;
-  const outerDelta = outerMult * anchorSize;
+  const innerDelta = innerMult * resolvedAnchorSize;
+  const outerDelta = outerMult * resolvedAnchorSize;
 
   const innerPoints = dataAngles.map((angle) => [
-    anchorPoint.x + directionMult * (anchorSize * Math.cos(angle) + innerDelta),
-    anchorPoint.y + anchorSize * Math.sin(angle),
+    resolvedAnchorPoint.x +
+      directionMult * (resolvedAnchorSize * Math.cos(angle) + innerDelta),
+    resolvedAnchorPoint.y + resolvedAnchorSize * Math.sin(angle),
   ]);
 
   const outerPoints = dataAngles
     .map((angle) => [
-      anchorPoint.x +
-        directionMult * (anchorSize * Math.cos(angle) + outerDelta),
-      anchorPoint.y + anchorSize * Math.sin(angle),
+      resolvedAnchorPoint.x +
+        directionMult * (resolvedAnchorSize * Math.cos(angle) + outerDelta),
+      resolvedAnchorPoint.y + resolvedAnchorSize * Math.sin(angle),
     ])
     .reverse();
 

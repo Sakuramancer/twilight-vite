@@ -26,12 +26,11 @@ const ColorLine = ({
   ...props
 }) => {
   const context = useHexedCanvasContext();
-  if (!anchorPoint) {
-    anchorPoint = { x: 0.5 * context.width, y: 0.5 * context.height };
-  }
-  if (!anchorSize) {
-    anchorSize = context.anchorSize;
-  }
+  const resolvedAnchorPoint = anchorPoint ?? {
+    x: 0.5 * context.width,
+    y: 0.5 * context.height,
+  };
+  const resolvedAnchorSize = anchorSize ?? context.anchorSize;
 
   const anchorShift = leftAnchor ? 1 : 0;
   const getPetalClass = colors
@@ -51,10 +50,12 @@ const ColorLine = ({
               className={getPetalClass(index)}
               {...props}
               anchorPoint={{
-                x: anchorPoint.x + anchorSize * coef * (index + anchorShift),
-                y: anchorPoint.y,
+                x:
+                  resolvedAnchorPoint.x +
+                  resolvedAnchorSize * coef * (index + anchorShift),
+                y: resolvedAnchorPoint.y,
               }}
-              anchorSize={sizeCoef * anchorSize}
+              anchorSize={sizeCoef * resolvedAnchorSize}
               onClick={() => onClick(index)}
             />
           </g>
