@@ -62,15 +62,18 @@ const RelicPreviewItem = ({ relicId, playerIndex, colorId }) => {
             redpainted: false,
           },
         }}
-        PlayerSlot={{
-          ...PlayerHex,
-          props: {
-            colorId,
-            striped: false,
-            content: "?",
-            contentVisible: playerIndex === -1,
-          },
-        }}
+        PlayerSlot={
+          playerIndex > -1
+            ? {
+                ...PlayerHex,
+                props: {
+                  colorId,
+                  striped: false,
+                  contentVisible: false,
+                },
+              }
+            : {}
+        }
         PointSlot={
           havePoint
             ? {
