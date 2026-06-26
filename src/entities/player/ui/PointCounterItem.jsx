@@ -13,7 +13,7 @@ const PointCounterItem = ({ position }) => {
 
   const isSwitchable = factionsMeta[factionId].switchTo;
   const switchHandler = isSwitchable
-    ? () => commands.switchFaction(position)
+    ? () => commands.toggleFaction(position)
     : undefined;
 
   return (
