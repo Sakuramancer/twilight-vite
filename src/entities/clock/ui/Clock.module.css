@@ -1,0 +1,28 @@
+.main {
+  position: relative;
+}
+
+.clock {
+  position: absolute;
+  top: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  color: whitesmoke;
+  pointer-events: none;
+}
+
+.canvas {
+  height: 100%;
+}
+
+.frame {
+  stroke: whitesmoke;
+  stroke-width: 6px;
+  cursor: pointer;
+
+  fill: var(--ui-blue);
+  &:hover {
+    fill: var(--ui-blue-hover);
+  }
+}

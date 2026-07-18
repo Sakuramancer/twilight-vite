@@ -10,7 +10,7 @@ const PointCounter = ({ className }) => {
         {Array.from({ length: PLAYER_COUNT }, (_, index) => (
           <PointCounterItem key={index} position={index} />
         ))}
-        <Clock className={classes.clock} />
+        {/* <Clock className={classes.clock} /> */}
       </HexLayout>
     </div>
   );

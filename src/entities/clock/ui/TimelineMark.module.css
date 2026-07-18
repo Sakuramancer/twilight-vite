@@ -1,0 +1,16 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  padding-inline: 5px;
+  color: whitesmoke;
+}
+
+.timestamp {
+  align-self: flex-end;
+  transform: translateX(-10px);
+}
+
+.offset {
+  align-self: flex-end;
+  transform: translateX(-10px);
+}

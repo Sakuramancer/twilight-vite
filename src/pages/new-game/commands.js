@@ -1,4 +1,5 @@
 import { getAgendaCommands } from "entities/agenda";
+import { getClockCommands } from "entities/clock";
 import { getExtraCommands } from "entities/extra";
 import { getGainCommands } from "entities/gain";
 import { getMecatolCommands } from "entities/mecatol";
@@ -16,4 +17,5 @@ export const resetGameState = () => {
   getRelicCommands().resetRelics();
   getSecretCommands().resetSecrets();
   getSupportCommands().resetSupports();
+  getClockCommands().resetClocks();
 };

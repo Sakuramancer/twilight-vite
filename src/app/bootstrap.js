@@ -1,4 +1,5 @@
 import { createAgendaCommands, setAgendaCommands } from "entities/agenda";
+import { createClockCommands, setClockCommands } from "entities/clock";
 import { createExtraCommands, setExtraCommands } from "entities/extra";
 import { createGainCommands, setGainCommands } from "entities/gain";
 import { createMecatolCommands, setMecatolCommands } from "entities/mecatol";
@@ -15,6 +16,9 @@ import { rootStore } from "./store";
 export const bootstrap = () => {
   const agendaCommands = createAgendaCommands(rootStore);
   setAgendaCommands(agendaCommands);
+
+  const clockCommands = createClockCommands(rootStore);
+  setClockCommands(clockCommands);
 
   const extraCommands = createExtraCommands(rootStore);
   setExtraCommands(extraCommands);

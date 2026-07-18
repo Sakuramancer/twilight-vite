@@ -1,5 +1,6 @@
 import { createStore, persistBySlices } from "shared/store";
 import { agendaSlice } from "entities/agenda";
+import { clockSlice } from "entities/clock";
 import { extraSlice } from "entities/extra";
 import { gainSlice } from "entities/gain";
 import { mecatolSlice } from "entities/mecatol";
@@ -11,6 +12,7 @@ import { supportSlice } from "entities/support";
 
 const slices = [
   agendaSlice,
+  clockSlice,
   extraSlice,
   gainSlice,
   mecatolSlice,

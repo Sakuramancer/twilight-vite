@@ -1,0 +1,21 @@
+.canvas {
+  height: 100%;
+}
+
+.hex {
+  stroke: whitesmoke;
+  stroke-width: 5px;
+  cursor: pointer;
+  pointer-events: fill;
+  fill: var(--ui-blue);
+  &:hover {
+    fill: var(--ui-blue-hover);
+  }
+}
+
+.plusIcon {
+  fill: whitesmoke;
+  stroke: whitesmoke;
+  stroke-width: 6px;
+  pointer-events: none;
+}

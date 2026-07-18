@@ -53,6 +53,12 @@
   gap: 40px;
 }
 
+.clock {
+  position: absolute;
+  top: 380px;
+  left: 0;
+}
+
 .objectives {
   position: absolute;
   bottom: 10px;

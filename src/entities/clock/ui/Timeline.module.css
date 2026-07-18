@@ -1,0 +1,34 @@
+.main {
+  display: flex;
+  gap: 10px;
+  height: 100%;
+  max-width: 1500px;
+  padding-inline: 1px;
+  overflow-x: auto;
+  white-space: nowrap;
+
+  /* Firefox */
+  scrollbar-width: none;
+  /* IE и старый Edge */
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.block {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 100%;
+}
+
+.canvas {
+  height: 40%;
+}
+
+.hex {
+  stroke: whitesmoke;
+  stroke-width: 10px;
+  fill: var(--ui-blue);
+}
