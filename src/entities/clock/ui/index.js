@@ -1,1 +1,1 @@
-export { ClockTimelineWidget } from "./ClockTimeLineWidget";
+export { ClockTimelineWidget } from "./ClockTimelineWidget";
