@@ -28,6 +28,7 @@ const SelectSecretContent = () => {
         <FilterSection filters={filters} handler={handler} data={data} />
         <SearchField
           aria-label="Поиск секретов"
+          autoFocus
           value={inputValue}
           onChange={setInputValue}
           onClear={clearHandler}

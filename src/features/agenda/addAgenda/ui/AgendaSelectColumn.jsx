@@ -32,6 +32,7 @@ const AgendaSelectColumn = ({
     <div className={className}>
       <SearchField
         aria-label="Поиск политик"
+        autoFocus
         value={searchValue}
         onChange={setSearchValue}
         onClear={clearSearchHandler}

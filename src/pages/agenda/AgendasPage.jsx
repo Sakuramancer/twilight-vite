@@ -29,6 +29,7 @@ const AgendasPage = () => {
         <FilterSection filters={filters} handler={handler} data={data} />
         <SearchField
           aria-label="Поиск политик"
+          autoFocus
           value={inputValue}
           onChange={setInputValue}
           onClear={clearHandler}

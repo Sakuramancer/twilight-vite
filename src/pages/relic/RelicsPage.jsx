@@ -29,6 +29,7 @@ const RelicsPage = () => {
         <FilterSection filters={filters} handler={handler} data={data} />
         <SearchField
           aria-label="Поиск реликвий"
+          autoFocus
           value={inputValue}
           onChange={setInputValue}
           onClear={clearHandler}

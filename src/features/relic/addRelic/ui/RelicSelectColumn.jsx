@@ -38,6 +38,7 @@ const RelicSelectColumn = ({
     <div className={className}>
       <SearchField
         aria-label="Поиск реликвий"
+        autoFocus
         value={searchValue}
         onChange={setSearchValue}
         onClear={clearSearchHandler}

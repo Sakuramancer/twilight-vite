@@ -26,6 +26,7 @@ const SelectObjectiveContent = ({ initialFilters }) => {
         <FilterSection filters={filters} handler={handler} data={data} />
         <SearchField
           aria-label="Поиск целей"
+          autoFocus
           value={inputValue}
           onChange={setInputValue}
           onClear={clearHandler}

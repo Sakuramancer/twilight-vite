@@ -6,10 +6,15 @@ import classes from "./SearchField.module.css";
 
 const SearchField = (props) => {
   const state = useSearchFieldState(props);
-  const ref = useRef(null);
-  const { inputProps, clearButtonProps } = useSearchField(props, state, ref);
-  const { buttonProps } = useButton(clearButtonProps, ref);
-  const focusHandler = () => ref.current?.focus();
+  const inputRef = useRef(null);
+  const clearButtonRef = useRef(null);
+  const { inputProps, clearButtonProps } = useSearchField(
+    props,
+    state,
+    inputRef,
+  );
+  const { buttonProps } = useButton(clearButtonProps, clearButtonRef);
+  const focusHandler = () => inputRef.current?.focus();
 
   const geometry = { width: 225, height: 260, anchorSize: 150 };
 
@@ -21,7 +26,7 @@ const SearchField = (props) => {
       <input
         {...inputProps}
         className={classes.input}
-        ref={ref}
+        ref={inputRef}
         placeholder="Поиск..."
       />
       {state.value !== "" && (
@@ -29,6 +34,7 @@ const SearchField = (props) => {
           {...buttonProps}
           className={classes.clearButton}
           aria-label="Очистить"
+          ref={clearButtonRef}
         >
           <span className={classes.clearIcon} />
         </button>
