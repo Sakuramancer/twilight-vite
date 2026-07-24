@@ -5,8 +5,11 @@ import { ScrollContainer } from "./ScrollContainer";
 import { TimelineMark } from "./TimelineMark";
 import classes from "./Timeline.module.css";
 
-const Timeline = ({ showOffset }) => {
+const Timeline = ({ showOffset, focusTrigger, setFocusTrigger }) => {
   const timeline = useStore(clockSelectors.selectClocks);
+
+  const getFocusTrigger = (index) =>
+    index === timeline.length - 1 ? focusTrigger : undefined;
 
   return (
     <ScrollContainer className={classes.main} trigger={timeline.length}>
@@ -24,6 +27,8 @@ const Timeline = ({ showOffset }) => {
               mark={mark}
               markBefore={markBefore}
               showOffset={showOffset}
+              focusTrigger={getFocusTrigger(index)}
+              setFocusTrigger={setFocusTrigger}
             />
           </div>
         );

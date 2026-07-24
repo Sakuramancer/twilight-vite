@@ -1,30 +1,50 @@
+import classNames from "classnames/bind";
+import { MarkField } from "./MarkField";
+import { formatOffset, formatTime } from "./formatTimeline";
+import { useRemoveClock } from "./useRemoveClock";
+import { useTimelineMarkLabel } from "./useTimelineMarkLabel";
 import classes from "./TimelineMark.module.css";
 
-const defaultMark = { date: 0 };
-const addLeadingZeros = (value) => ("00" + value).slice(-2);
+const cx = classNames.bind(classes);
 
-const formatTime = (timeArray) =>
-  timeArray.map((value) => addLeadingZeros(value)).join(":");
-
-const TimelineMark = ({ index, mark, markBefore, showOffset }) => {
-  const { date } = mark;
-  const dateObj = new Date(date);
-  const dateStr = formatTime([dateObj.getHours(), dateObj.getMinutes()]);
-
-  const { date: dateBefore } = markBefore ?? defaultMark;
-  const offset = date - dateBefore;
-  const totalSeconds = Math.floor(offset / 1000);
-  const hours = Math.floor(totalSeconds / 3600);
-  const minutes = Math.floor((totalSeconds % 3600) / 60);
-  const offsetStr = `+${formatTime([hours, minutes])}`;
+const TimelineMark = ({
+  index,
+  mark,
+  markBefore,
+  showOffset,
+  focusTrigger,
+  setFocusTrigger,
+}) => {
+  const { value, setValue } = useTimelineMarkLabel(index, mark.label);
+  const { redpainted, handleClick } = useRemoveClock(index);
 
   const showTimestamp = index === 0 || !showOffset;
+  const labelText = showTimestamp
+    ? formatTime(mark.date)
+    : formatOffset(mark.date - (markBefore?.date ?? 0));
+
+  const mainClass = cx({
+    main: true,
+    "main-redpainted": redpainted,
+  });
+
+  const labelClass = cx({
+    timestamp: showTimestamp,
+    offset: !showTimestamp,
+  });
 
   return (
-    <div className={classes.main}>
-      <div className={classes.label}>{`Метка ${index + 1}`}</div>
-      {showTimestamp && <div className={classes.timestamp}>{dateStr}</div>}
-      {!showTimestamp && <div className={classes.offset}>{offsetStr}</div>}
+    <div className={mainClass}>
+      <MarkField
+        aria-label={`Метка ${index + 1}`}
+        value={value}
+        onChange={setValue}
+        focusTrigger={focusTrigger}
+        setFocusTrigger={setFocusTrigger}
+      />
+      <div className={labelClass} onClick={handleClick}>
+        {labelText}
+      </div>
     </div>
   );
 };

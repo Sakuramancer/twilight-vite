@@ -9,6 +9,7 @@ const cx = classNames.bind(classes);
 
 const ClockTimelineWidget = ({ className }) => {
   const [showOffset, setShowOffset] = useState(false);
+  const [focusTrigger, setFocusTrigger] = useState(false);
 
   const onClick = () => {
     setShowOffset((val) => !val);
@@ -22,8 +23,12 @@ const ClockTimelineWidget = ({ className }) => {
   return (
     <div className={mainClass}>
       <Clock onClick={onClick} />
-      <Timeline showOffset={showOffset} />
-      <AddMarkButton />
+      <Timeline
+        showOffset={showOffset}
+        focusTrigger={focusTrigger}
+        setFocusTrigger={setFocusTrigger}
+      />
+      <AddMarkButton setFocusTrigger={setFocusTrigger} />
     </div>
   );
 };

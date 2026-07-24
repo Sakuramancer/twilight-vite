@@ -1,0 +1,32 @@
+.main {
+  width: 100px;
+  padding-bottom: 1px;
+
+  & input {
+    text-align: center;
+  }
+
+  &:focus-within {
+    border-bottom: 1px solid whitesmoke;
+    padding-bottom: 0px;
+  }
+
+  &:focus-within input {
+    text-align: left;
+  }
+}
+
+.input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+
+  font-family: var(--font-family);
+  font-size: 1rem;
+  color: whitesmoke;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

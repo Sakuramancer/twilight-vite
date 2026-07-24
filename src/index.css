@@ -4,6 +4,35 @@
   box-sizing: border-box;
 }
 
+:root {
+  --ui-blue: hsl(240, 33%, 38%);
+  --ui-blue-hover: hsl(240, 33%, 48%);
+
+  --modal-background: hsla(222, 20%, 12%, 0.85);
+  --modal-scroller-background: hsl(240, 33%, 38%);
+
+  --redpainted-color: #a04040;
+  --font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  --secondary-font-family: "Roboto Condensed", sans-serif;
+
+  --relic-primary-color: #f7f2c8;
+  --relic-muted-color: #807a4d;
+  --relic-background-color: #333333;
+
+  --agenda-primary-color: #8cc1f2;
+  --law-primary-color: #8cc1f2;
+  --directive-primary-color: #c8e1f9;
+  --agenda-muted-color: #4d6780;
+  --agenda-background-color: #333333;
+
+  --agenda-votedFor: hsl(84, 100%, 59%);
+  --agenda-muted-votedFor: hsl(84, 50%, 45%);
+  --agenda-votedAgainst: hsl(0, 100%, 50%);
+  --agenda-muted-votedAgainst: hsl(0, 50%, 40%);
+}
+
 html {
   font-family: "Noto Sans JP", sans-serif;
   background-color: #222;
@@ -26,9 +55,7 @@ html {
 
 body {
   margin: 0;
-  font-family:
-    -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
-    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: var(--font-family);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -36,30 +63,4 @@ body {
 code {
   font-family:
     source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
-}
-
-:root {
-  --ui-blue: hsl(240, 33%, 38%);
-  --ui-blue-hover: hsl(240, 33%, 48%);
-
-  --modal-background: hsla(222, 20%, 12%, 0.85);
-  --modal-scroller-background: hsl(240, 33%, 38%);
-
-  --redpainted-color: #a04040;
-  --secondary-font-family: "Roboto Condensed", sans-serif;
-
-  --relic-primary-color: #f7f2c8;
-  --relic-muted-color: #807a4d;
-  --relic-background-color: #333333;
-
-  --agenda-primary-color: #8cc1f2;
-  --law-primary-color: #8cc1f2;
-  --directive-primary-color: #c8e1f9;
-  --agenda-muted-color: #4d6780;
-  --agenda-background-color: #333333;
-
-  --agenda-votedFor: hsl(84, 100%, 59%);
-  --agenda-muted-votedFor: hsl(84, 50%, 45%);
-  --agenda-votedAgainst: hsl(0, 100%, 50%);
-  --agenda-muted-votedAgainst: hsl(0, 50%, 40%);
 }
