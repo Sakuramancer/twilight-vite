@@ -1,11 +1,11 @@
 import { validatePlayerIndex } from "shared/config";
 import { gainsMeta } from "./data";
-import { createDefaultGains, RESET_VALUE } from "./defaults";
+import { createDefaultGains, INACTIVE_VALUE } from "./defaults";
 
 export const normalizeGain = (value) => {
   return Number.isInteger(value) && validatePlayerIndex(value)
     ? value
-    : RESET_VALUE;
+    : INACTIVE_VALUE;
 };
 
 export const normalizeGains = (persisted) => {

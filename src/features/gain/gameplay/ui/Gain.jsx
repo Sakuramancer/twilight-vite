@@ -2,13 +2,15 @@ import { useState } from "react";
 import classNames from "classnames/bind";
 import { colorClasses } from "shared/config";
 import { useStore } from "shared/store";
-import { ColorSelection, playerSelectors } from "entities/player";
 import {
   gainsAssets,
   gainSelectors,
   gainsMeta,
   getGainCommands,
+  ACTIVE_VALUE,
+  INACTIVE_VALUE,
 } from "entities/gain";
+import { ColorSelection, playerSelectors } from "entities/player";
 import StaticPetals from "./StaticPetals";
 import classes from "./Gain.module.css";
 
@@ -18,15 +20,22 @@ const Gain = ({ className, gainId }) => {
   const commands = getGainCommands();
   const stateIndex = useStore(gainSelectors.makeGain(gainId));
   const players = useStore(playerSelectors.selectPlayers);
-  const colorId = stateIndex > -1 ? players[stateIndex].colorId : "";
+  const isMuted = stateIndex === INACTIVE_VALUE;
+  const isPlayerSelected = stateIndex > ACTIVE_VALUE;
+  const colorId = isPlayerSelected ? players[stateIndex].colorId : "";
 
   const { title } = gainsMeta[gainId];
   const { src, alt } = gainsAssets[gainId];
   const [showColorSelection, setShowColorSelection] = useState(false);
 
   const clickHandler = (_) => {
+    if (isMuted)
+    {
+      commands.activateGain(gainId);
+      return;
+    }
     if (showColorSelection) {
-      commands.resetGain(gainId);
+      commands.deactivateGain(gainId);
     }
     setShowColorSelection((value) => !value);
   };
@@ -37,12 +46,12 @@ const Gain = ({ className, gainId }) => {
   const groupClass = cx({
     group: true,
     idleGroup: !showColorSelection,
-    [colorClasses[colorId]]: stateIndex > -1,
+    [colorClasses[colorId]]: isPlayerSelected,
   });
 
   const imageClass = cx({
     image: true,
-    coloredImage: !showColorSelection && stateIndex > -1,
+    ["image-muted"]: isMuted,
   });
 
   return (
@@ -54,13 +63,13 @@ const Gain = ({ className, gainId }) => {
           alt={alt}
           onClick={clickHandler}
         />
-        {!showColorSelection && stateIndex > -1 && (
+        {!showColorSelection && isPlayerSelected && (
           <StaticPetals
             className={classes.staticPetals}
             onClick={clickHandler}
           />
         )}
-        {!showColorSelection && (
+        {!showColorSelection && !isMuted && (
           <div className={classes.label} onClick={clickHandler}>
             {title.value}
           </div>

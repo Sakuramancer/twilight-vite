@@ -1,5 +1,5 @@
 import { validatePlayerIndex } from "shared/config";
-import { createDefaultGains, RESET_VALUE } from "./defaults";
+import { createDefaultGains, ACTIVE_VALUE, INACTIVE_VALUE } from "./defaults";
 import { validateGain } from "./validate";
 
 export const assignToPlayer = (gains, gainId, playerIndex) => {
@@ -12,11 +12,18 @@ export const assignToPlayer = (gains, gainId, playerIndex) => {
   return { ...gains, [gainId]: playerIndex };
 };
 
-export const resetOne = (gains, gainId) => {
+export const activateOne = (gains, gainId) => {
   if (!validateGain(gainId)) {
     throw new Error("Incorrect gain id");
   }
-  return { ...gains, [gainId]: RESET_VALUE };
+  return { ...gains, [gainId]: ACTIVE_VALUE };
+};
+
+export const deactivateOne = (gains, gainId) => {
+  if (!validateGain(gainId)) {
+    throw new Error("Incorrect gain id");
+  }
+  return { ...gains, [gainId]: INACTIVE_VALUE };
 };
 
 export const resetAll = () => createDefaultGains();

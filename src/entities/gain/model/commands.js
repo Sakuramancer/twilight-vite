@@ -1,4 +1,4 @@
-import { assignToPlayer, resetAll, resetOne } from "./model";
+import { assignToPlayer, activateOne, deactivateOne, resetAll } from "./model";
 
 export const createGainCommands = (store) => ({
   setGain: (gainId, playerIndex) => {
@@ -6,9 +6,14 @@ export const createGainCommands = (store) => ({
     store.set({ gains: assignToPlayer(gains, gainId, playerIndex) });
   },
 
-  resetGain: (gainId) => {
+  activateGain: (gainId) => {
     const { gains } = store.get();
-    store.set({ gains: resetOne(gains, gainId) });
+    store.set({ gains: activateOne(gains, gainId) });
+  },
+
+  deactivateGain: (gainId) => {
+    const { gains } = store.get();
+    store.set({ gains: deactivateOne(gains, gainId) });
   },
 
   resetGains: () => {
