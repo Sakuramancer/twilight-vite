@@ -6,14 +6,14 @@ export const createClockCommands = (store) => ({
     store.set({ clocks: add(clocks, label) });
   },
 
-  removeClock: (clockIndex) => {
+  removeClock: (clockId) => {
     const { clocks } = store.get();
-    store.set({ clocks: remove(clocks, clockIndex) });
+    store.set({ clocks: remove(clocks, clockId) });
   },
 
-  updateClockLabel: (clockIndex, label) => {
+  updateClockLabel: (clockId, label) => {
     const { clocks } = store.get();
-    store.set({ clocks: updateLabel(clocks, clockIndex, label) });
+    store.set({ clocks: updateLabel(clocks, clockId, label) });
   },
 
   resetClocks: () => {

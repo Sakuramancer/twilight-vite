@@ -16,7 +16,7 @@ const Timeline = ({ showOffset, focusTrigger, setFocusTrigger }) => {
       {timeline.map((mark, index, marks) => {
         const markBefore = index > 0 ? marks[index - 1] : undefined;
         return (
-          <div className={classes.block} key={index}>
+          <div className={classes.block} key={mark.id}>
             {index !== 0 && (
               <HexedCanvas className={classes.canvas} geometry={buttonGeometry}>
                 <HexedCanvas.Hex className={classes.hex} sitOnEdge={true} />

@@ -15,13 +15,14 @@ const TimelineMark = ({
   focusTrigger,
   setFocusTrigger,
 }) => {
-  const { value, setValue } = useTimelineMarkLabel(index, mark.label);
-  const { redpainted, handleClick } = useRemoveClock(index);
+  const { id, date, label } = mark;
+  const { value, setValue } = useTimelineMarkLabel(id, label);
+  const { redpainted, handleClick } = useRemoveClock(id);
 
   const showTimestamp = index === 0 || !showOffset;
   const labelText = showTimestamp
-    ? formatTime(mark.date)
-    : formatOffset(mark.date - (markBefore?.date ?? 0));
+    ? formatTime(date)
+    : formatOffset(date - (markBefore?.date ?? 0));
 
   const mainClass = cx({
     main: true,
