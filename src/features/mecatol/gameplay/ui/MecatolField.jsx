@@ -16,6 +16,7 @@ const MecatolField = ({ className, playerIndex }) => {
       colorId={colorId}
       value={mecatol}
       onChange={onChange}
+      compact={true}
       defaultValue={0}
       aria-label="mecatol points"
     />

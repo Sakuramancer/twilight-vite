@@ -16,6 +16,7 @@ const ExtraField = ({ className, playerIndex }) => {
       colorId={colorId}
       value={extra}
       onChange={onChange}
+      compact={true}
       defaultValue={0}
       aria-label="extra points"
     />

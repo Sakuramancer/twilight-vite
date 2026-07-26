@@ -16,6 +16,7 @@ const PlayerNumberField = ({
   colorId,
   value,
   onChange,
+  compact,
   ...props
 }) => {
   const { locale } = useLocale();
@@ -26,6 +27,7 @@ const PlayerNumberField = ({
 
   const containerClass = cx({
     container: true,
+    ["container-compact"]: compact,
     [colorClasses[colorId]]: true,
   });
 

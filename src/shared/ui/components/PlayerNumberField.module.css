@@ -34,6 +34,9 @@
   fill: var(--color);
   stroke: whitesmoke;
   stroke-width: 2px;
+  opacity: 1;
+  transition: opacity 0.2s;
+
   &:hover {
     fill: var(--hoverColor);
     stroke: whitesmoke;
@@ -45,4 +48,40 @@
   stroke: #aaaaaa;
   stroke-width: 2px;
   filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.3));
+}
+
+.container-compact {
+  .button {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .input {
+    color: var(--textColor);
+    cursor: pointer;
+  }
+
+  .hex {
+    fill: var(--color);
+    stroke: whitesmoke;
+    stroke-width: 4px;
+  }
+
+  &:focus-within {
+    .button {
+      opacity: 1;
+      pointer-events: fill;
+    }
+
+    .input {
+      color: whitesmoke;
+      cursor: auto;
+    }
+
+    .hex {
+      fill: #555555;
+      stroke: #aaaaaa;
+      stroke-width: 2px;
+    }
+  }
 }
