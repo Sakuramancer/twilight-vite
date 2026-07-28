@@ -1,5 +1,5 @@
 import { PLAYER_COUNT } from "shared/config";
-import { Clock, HexLayout } from "shared/ui";
+import { HexLayout } from "shared/ui";
 import { PointCounterItem } from "./PointCounterItem";
 import classes from "./PointCounter.module.css";
 
@@ -10,7 +10,6 @@ const PointCounter = ({ className }) => {
         {Array.from({ length: PLAYER_COUNT }, (_, index) => (
           <PointCounterItem key={index} position={index} />
         ))}
-        {/* <Clock className={classes.clock} /> */}
       </HexLayout>
     </div>
   );

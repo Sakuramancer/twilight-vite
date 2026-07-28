@@ -1,15 +1,15 @@
 import { useStore } from "shared/store";
 import { buttonGeometry, HexedCanvas } from "shared/ui";
-import { clockSelectors, newRoundLabel } from "../model";
-import { getClockCommands } from "../ports";
+import { timelineSelectors, newRoundLabel } from "../model";
+import { getTimelineCommands } from "../ports";
 import classes from "./AddMarkButton.module.css";
 
 const AddMarkButton = ({ setFocusTrigger }) => {
-  const commands = getClockCommands();
-  const newRound = useStore(clockSelectors.selectNewRound);
+  const commands = getTimelineCommands();
+  const newRound = useStore(timelineSelectors.selectNewRound);
 
   const addMarkHandler = () => {
-    commands.addClock(newRoundLabel(newRound));
+    commands.addMark(newRoundLabel(newRound));
     setFocusTrigger(true);
   };
 

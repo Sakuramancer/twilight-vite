@@ -1,7 +1,7 @@
 import classNames from "classnames/bind";
 import { MarkField } from "./MarkField";
 import { formatOffset, formatTime } from "./formatTimeline";
-import { useRemoveClock } from "./useRemoveClock";
+import { useRemoveMark } from "./useRemoveMark";
 import { useTimelineMarkLabel } from "./useTimelineMarkLabel";
 import classes from "./TimelineMark.module.css";
 
@@ -17,7 +17,7 @@ const TimelineMark = ({
 }) => {
   const { id, date, label } = mark;
   const { value, setValue } = useTimelineMarkLabel(id, label);
-  const { redpainted, handleClick } = useRemoveClock(id);
+  const { redpainted, handleClick } = useRemoveMark(id);
 
   const showTimestamp = index === 0 || !showOffset;
   const labelText = showTimestamp

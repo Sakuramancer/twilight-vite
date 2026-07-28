@@ -1,12 +1,12 @@
 import { useStore } from "shared/store";
 import { buttonGeometry, HexedCanvas } from "shared/ui";
-import { clockSelectors } from "../model";
+import { timelineSelectors } from "../model";
 import { ScrollContainer } from "./ScrollContainer";
 import { TimelineMark } from "./TimelineMark";
 import classes from "./Timeline.module.css";
 
 const Timeline = ({ showOffset, focusTrigger, setFocusTrigger }) => {
-  const timeline = useStore(clockSelectors.selectClocks);
+  const timeline = useStore(timelineSelectors.selectTimeline);
 
   const getFocusTrigger = (index) =>
     index === timeline.length - 1 ? focusTrigger : undefined;

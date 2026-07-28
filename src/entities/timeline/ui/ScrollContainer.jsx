@@ -7,7 +7,6 @@ const ScrollContainer = ({ className, children, trigger }) => {
     const el = ref.current;
 
     const handleWheel = (e) => {
-      // Если колесо вращают по вертикали
       if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
         e.preventDefault();
         el.scrollLeft += e.deltaY;

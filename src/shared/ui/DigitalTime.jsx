@@ -1,6 +1,6 @@
 import { useTime } from "react-timer-hook";
 
-const Clock = ({ className }) => {
+const DigitalTime = ({ className }) => {
   const { minutes, hours } = useTime();
 
   return (
@@ -10,4 +10,4 @@ const Clock = ({ className }) => {
   );
 };
 
-export { Clock };
+export { DigitalTime };

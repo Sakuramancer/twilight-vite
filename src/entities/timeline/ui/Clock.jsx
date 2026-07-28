@@ -1,4 +1,4 @@
-import { HexedCanvas, Clock as ClockUi } from "shared/ui";
+import { DigitalTime, HexedCanvas } from "shared/ui";
 import classes from "./Clock.module.css";
 
 const anchorSize = 95;
@@ -17,7 +17,7 @@ const Clock = ({ onClick }) => {
       <HexedCanvas className={classes.canvas} geometry={geometry}>
         <HexedCanvas.ExtendedHex className={classes.frame} />
       </HexedCanvas>
-      <ClockUi className={classes.clock} />
+      <DigitalTime className={classes.time} />
     </div>
   );
 };

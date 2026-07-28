@@ -1,5 +1,4 @@
 import { createAgendaCommands, setAgendaCommands } from "entities/agenda";
-import { createClockCommands, setClockCommands } from "entities/clock";
 import { createExtraCommands, setExtraCommands } from "entities/extra";
 import { createMecatolCommands, setMecatolCommands } from "entities/mecatol";
 import {
@@ -11,14 +10,12 @@ import { createRelicCommands, setRelicCommands } from "entities/relic";
 import { createSecretCommands, setSecretCommands } from "entities/secret";
 import { createStyxCommands, setStyxCommands } from "entities/styx";
 import { createSupportCommands, setSupportCommands } from "entities/support";
+import { createTimelineCommands, setTimelineCommands } from "entities/timeline";
 import { rootStore } from "./store";
 
 export const bootstrap = () => {
   const agendaCommands = createAgendaCommands(rootStore);
   setAgendaCommands(agendaCommands);
-
-  const clockCommands = createClockCommands(rootStore);
-  setClockCommands(clockCommands);
 
   const extraCommands = createExtraCommands(rootStore);
   setExtraCommands(extraCommands);
@@ -43,4 +40,7 @@ export const bootstrap = () => {
 
   const supportCommands = createSupportCommands(rootStore);
   setSupportCommands(supportCommands);
+
+  const timelineCommands = createTimelineCommands(rootStore);
+  setTimelineCommands(timelineCommands);
 };

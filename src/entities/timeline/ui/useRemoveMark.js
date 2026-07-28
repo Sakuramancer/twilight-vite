@@ -1,8 +1,8 @@
 import { useTimer } from "shared/lib";
-import { getClockCommands } from "../ports";
+import { getTimelineCommands } from "../ports";
 
-export const useRemoveClock = (id) => {
-  const commands = getClockCommands();
+export const useRemoveMark = (id) => {
+  const commands = getTimelineCommands();
 
   const {
     isActive: redpainted,
@@ -16,7 +16,7 @@ export const useRemoveClock = (id) => {
       return;
     }
     hideRedpainted();
-    commands.removeClock(id);
+    commands.removeMark(id);
   };
 
   return { redpainted, handleClick };

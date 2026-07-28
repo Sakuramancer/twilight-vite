@@ -1,6 +1,6 @@
 import { useDocumentTitle } from "shared/lib";
 import { GameMenu } from "shared/ui";
-import { ClockTimelineWidget } from "entities/clock";
+import { ClockTimelineWidget } from "entities/timeline";
 import { LeaderBackground, PointCounter } from "entities/player";
 import { Gains } from "widgets/gains";
 import { PointTable } from "widgets/gameplay-table";
@@ -17,7 +17,7 @@ const GamePage = () => {
       <PointCounter className={classes.pointCounter} />
       <PointTable className={classes.pointTable} />
       <Gains className={classes.gains} />
-      <ClockTimelineWidget className={classes.clock} />
+      <ClockTimelineWidget className={classes.clockTimeline} />
       <Objectives className={classes.objectives} />
     </div>
   );
