@@ -1,7 +1,6 @@
 import { createAgendaCommands, setAgendaCommands } from "entities/agenda";
 import { createClockCommands, setClockCommands } from "entities/clock";
 import { createExtraCommands, setExtraCommands } from "entities/extra";
-import { createGainCommands, setGainCommands } from "entities/gain";
 import { createMecatolCommands, setMecatolCommands } from "entities/mecatol";
 import {
   createObjectiveCommands,
@@ -10,6 +9,7 @@ import {
 import { createPlayerCommands, setPlayerCommands } from "entities/player";
 import { createRelicCommands, setRelicCommands } from "entities/relic";
 import { createSecretCommands, setSecretCommands } from "entities/secret";
+import { createStyxCommands, setStyxCommands } from "entities/styx";
 import { createSupportCommands, setSupportCommands } from "entities/support";
 import { rootStore } from "./store";
 
@@ -22,9 +22,6 @@ export const bootstrap = () => {
 
   const extraCommands = createExtraCommands(rootStore);
   setExtraCommands(extraCommands);
-
-  const gainCommands = createGainCommands(rootStore);
-  setGainCommands(gainCommands);
 
   const mecatolCommands = createMecatolCommands(rootStore);
   setMecatolCommands(mecatolCommands);
@@ -40,6 +37,9 @@ export const bootstrap = () => {
 
   const secretCommands = createSecretCommands(rootStore);
   setSecretCommands(secretCommands);
+
+  const styxCommands = createStyxCommands(rootStore);
+  setStyxCommands(styxCommands);
 
   const supportCommands = createSupportCommands(rootStore);
   setSupportCommands(supportCommands);

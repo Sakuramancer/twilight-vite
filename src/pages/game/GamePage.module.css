@@ -29,19 +29,10 @@
   left: 340px;
 }
 
-.mecatol {
-  position: absolute;
-  top: 0;
-  right: 50px;
-}
-
 .gains {
   position: absolute;
-  top: 220px;
+  top: 0;
   right: 25px;
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
 }
 
 .relicsEye {

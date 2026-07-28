@@ -2,11 +2,11 @@ import { createCachedFactorySelector, createMemoSelector } from "shared/lib";
 import { PLAYER_COUNT } from "shared/config";
 import { makeAgendaScore } from "entities/agenda/@x/player-score";
 import { makeExtraScore } from "entities/extra/@x/player-score";
-import { makeGainsScore } from "entities/gain/@x/player-score";
 import { makeMecatolScore } from "entities/mecatol/@x/player-score";
 import { makeObjectivesScore } from "entities/objective/@x/player-score";
 import { makeRelicScore } from "entities/relic/@x/player-score";
 import { makeSecretScore } from "entities/secret/@x/player-score";
+import { makeStyxScore } from "entities/styx/@x/player-score";
 import { makeSupportScore } from "entities/support/@x/player-score";
 import { factionsMeta } from "./data";
 import { sortFactionByExpansionAndName } from "./sort";
@@ -37,12 +37,12 @@ const makeScoreForPlayer = createCachedFactorySelector((playerIndex) =>
     [
       (s) => s.players[playerIndex],
       makeAgendaScore(playerIndex),
-      makeGainsScore(playerIndex),
       makeExtraScore(playerIndex),
       makeMecatolScore(playerIndex),
       makeObjectivesScore(playerIndex),
       makeRelicScore(playerIndex),
       makeSecretScore(playerIndex),
+      makeStyxScore(playerIndex),
       makeSupportScore(playerIndex),
     ],
     (player, ...scores) => ({

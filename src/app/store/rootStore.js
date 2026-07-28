@@ -2,24 +2,24 @@ import { createStore, persistBySlices } from "shared/store";
 import { agendaSlice } from "entities/agenda";
 import { clockSlice } from "entities/clock";
 import { extraSlice } from "entities/extra";
-import { gainSlice } from "entities/gain";
 import { mecatolSlice } from "entities/mecatol";
 import { objectiveSlice } from "entities/objective";
 import { playerSlice } from "entities/player";
 import { relicSlice } from "entities/relic";
 import { secretSlice } from "entities/secret";
+import { styxSlice } from "entities/styx";
 import { supportSlice } from "entities/support";
 
 const slices = [
   agendaSlice,
   clockSlice,
   extraSlice,
-  gainSlice,
   mecatolSlice,
   objectiveSlice,
   playerSlice,
   relicSlice,
   secretSlice,
+  styxSlice,
   supportSlice,
 ];
 

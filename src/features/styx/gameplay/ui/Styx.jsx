@@ -3,46 +3,43 @@ import classNames from "classnames/bind";
 import { colorClasses } from "shared/config";
 import { useStore } from "shared/store";
 import {
-  gainsAssets,
-  gainSelectors,
-  gainsMeta,
-  getGainCommands,
-  ACTIVE_VALUE,
-  INACTIVE_VALUE,
-} from "entities/gain";
+  getStyxCommands,
+  RESET_VALUE,
+  styxImage,
+  styxSelectors,
+} from "entities/styx";
 import { ColorSelection, playerSelectors } from "entities/player";
 import StaticPetals from "./StaticPetals";
-import classes from "./Gain.module.css";
+import classes from "./Styx.module.css";
 
 const cx = classNames.bind(classes);
 
-const Gain = ({ className, gainId }) => {
-  const commands = getGainCommands();
-  const stateIndex = useStore(gainSelectors.makeGain(gainId));
+const Styx = ({ className }) => {
+  const commands = getStyxCommands();
+  const { isActive, owner } = useStore(styxSelectors.selectStyx);
   const players = useStore(playerSelectors.selectPlayers);
-  const isMuted = stateIndex === INACTIVE_VALUE;
-  const isPlayerSelected = stateIndex > ACTIVE_VALUE;
-  const colorId = isPlayerSelected ? players[stateIndex].colorId : "";
+  const isPlayerSelected = isActive && owner > RESET_VALUE;
+  const colorId = isPlayerSelected ? players[owner].colorId : "";
 
-  const { title } = gainsMeta[gainId];
-  const { src, alt } = gainsAssets[gainId];
   const [showColorSelection, setShowColorSelection] = useState(false);
 
   const clickHandler = (_) => {
-    if (isMuted)
-    {
-      commands.activateGain(gainId);
+    if (!isActive) {
+      commands.activateStyx();
       return;
     }
     if (showColorSelection) {
-      commands.deactivateGain(gainId);
+      commands.resetStyx();
     }
     setShowColorSelection((value) => !value);
   };
-  const onSelection = (playerIndex) => commands.setGain(gainId, playerIndex);
+  const onSelection = (playerIndex) => commands.setStyxOwner(playerIndex);
 
   const confirmHandler = () => setShowColorSelection(false);
 
+  const mainClass = cx(className, {
+    main: true,
+  });
   const groupClass = cx({
     group: true,
     idleGroup: !showColorSelection,
@@ -51,16 +48,16 @@ const Gain = ({ className, gainId }) => {
 
   const imageClass = cx({
     image: true,
-    ["image-muted"]: isMuted,
+    ["image-muted"]: !isActive,
   });
 
   return (
-    <div className={className}>
+    <div className={mainClass}>
       <div className={groupClass}>
         <img
           className={imageClass}
-          src={src}
-          alt={alt}
+          src={styxImage}
+          alt="Styx"
           onClick={clickHandler}
         />
         {!showColorSelection && isPlayerSelected && (
@@ -69,9 +66,9 @@ const Gain = ({ className, gainId }) => {
             onClick={clickHandler}
           />
         )}
-        {!showColorSelection && !isMuted && (
+        {!showColorSelection && isActive && (
           <div className={classes.label} onClick={clickHandler}>
-            {title.value}
+            Стикс
           </div>
         )}
       </div>
@@ -86,4 +83,4 @@ const Gain = ({ className, gainId }) => {
   );
 };
 
-export default Gain;
+export { Styx };
