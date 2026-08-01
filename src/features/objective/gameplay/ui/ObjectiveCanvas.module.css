@@ -83,16 +83,3 @@
 .plus-stage2 {
   fill: #6060f0;
 }
-
-.content {
-  position: absolute;
-  top: calc(var(--_base-height) / 221 * 80);
-  left: 10%;
-  margin: 0;
-  padding: calc(var(--_base-height) / 221 * 4)
-    calc(var(--_base-height) / 221 * 8);
-  width: 80%;
-  pointer-events: none;
-  --content-base-height: var(--_base-height);
-  color: white;
-}

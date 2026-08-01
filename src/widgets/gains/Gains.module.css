@@ -9,3 +9,15 @@
   top: 220px;
   right: 0;
 }
+
+.flex {
+  position: absolute;
+  top: 0;
+  right: 220px;
+  display: flex;
+  flex-direction: column;
+}
+
+.item:not(:first-child) {
+  margin-top: -30px;
+}

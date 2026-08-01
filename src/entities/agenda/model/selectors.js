@@ -98,7 +98,7 @@ const makeAgenda = createCachedFactorySelector((agendaId) =>
       voted,
       binaryVoted,
       playerVoted,
-      needToBeVoted
+      needToBeVoted,
     };
 
     return {
@@ -110,10 +110,17 @@ const makeAgenda = createCachedFactorySelector((agendaId) =>
   }),
 );
 
+const makeIncludesId = createCachedFactorySelector((agendaId) =>
+  createMemoSelector([(s) => s.agendas], (agendas) =>
+    Object.keys(agendas).includes(agendaId),
+  ),
+);
+
 export const agendaSelectors = {
   allSortedIdsWithFilters,
   selectIdsForGameplay,
   selectIdsInactive,
   makeAgenda,
   makePointsForPlayer,
+  makeIncludesId,
 };

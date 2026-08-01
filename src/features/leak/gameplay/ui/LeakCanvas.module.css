@@ -1,0 +1,65 @@
+.main {
+  position: relative;
+  display: inline-block;
+  margin: 0 -25px;
+  width: calc(var(--base-height) / 325 * 500);
+  vertical-align: top;
+  text-align: center;
+  box-sizing: border-box;
+  --_base-height: var(--base-height, 325px);
+}
+
+.canvas {
+  position: relative;
+}
+
+.hex {
+  stroke-width: 1px;
+  cursor: pointer;
+  pointer-events: fill;
+}
+
+.hex-active {
+  fill: hsl(0, 60%, 20%);
+  stroke: hsl(0, 80%, 40%);
+}
+
+.hex-inactive {
+  fill: rgba(64, 64, 80, 0.7);
+
+  &:hover {
+    fill: rgba(128, 64, 64, 0.7);
+  }
+}
+
+.hex-redpainted {
+  fill: rgb(160, 64, 64);
+}
+
+.flower {
+  cursor: pointer;
+  stroke: #aaaaaa;
+  stroke-width: 3px;
+  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.8));
+  pointer-events: fill;
+}
+
+.activePetal {
+  &:hover {
+    fill: var(--hoverColor);
+  }
+}
+
+.checkedPetal {
+  fill: var(--color);
+  filter: drop-shadow(0 0 15px color-mix(in srgb, var(--color) 80%, white));
+}
+
+.uncheckedPetal {
+  fill: color-mix(in srgb, var(--color) 10%, transparent);
+}
+
+.plus {
+  fill: hsl(0, 80%, 40%);
+  pointer-events: none;
+}

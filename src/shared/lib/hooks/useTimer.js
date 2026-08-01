@@ -13,8 +13,8 @@ export const useTimer = (delay = 1000) => {
 
   const startTimer = useCallback(
     (onFinish = null) => {
-      setActive(true);
       clearTimer();
+      setActive(true);
 
       timeoutRef.current = setTimeout(() => {
         setActive(false);

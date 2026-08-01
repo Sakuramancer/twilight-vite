@@ -1,5 +1,7 @@
 import { getAgendaCommands } from "entities/agenda";
 import { getExtraCommands } from "entities/extra";
+import { getIncentiveCommands } from "entities/incentive";
+import { getLeakCommands } from "entities/leak";
 import { getMecatolCommands } from "entities/mecatol";
 import { getObjectiveCommands } from "entities/objective";
 import { getRelicCommands } from "entities/relic";
@@ -11,6 +13,8 @@ import { getTimelineCommands } from "entities/timeline";
 export const resetGameState = () => {
   getAgendaCommands().resetAgendas();
   getExtraCommands().resetExtra();
+  getIncentiveCommands().resetIncentive();
+  getLeakCommands().resetLeak();
   getMecatolCommands().resetMecatol();
   getObjectiveCommands().resetObjectives();
   getRelicCommands().resetRelics();

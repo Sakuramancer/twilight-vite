@@ -22,10 +22,12 @@ const selectSecrets = createMemoSelector(
 );
 
 const selectActiveSecrets = createMemoSelector([(s) => s.secrets], (secrets) =>
-  secrets.map((playerSecrets) => ({
+  secrets.map((playerSecrets, playerIndex) => ({
+    playerIndex,
     playerSecrets: playerSecrets
+      .map((secret, secretIndex) => ({ ...secret, secretIndex }))
       .filter((secret) => secret.taken && secret.cardId)
-      .map(({ cardId }) => cardId),
+      .map(({ cardId, secretIndex }) => ({ cardId, secretIndex })),
   })),
 );
 

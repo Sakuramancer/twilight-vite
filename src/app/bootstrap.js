@@ -1,5 +1,7 @@
 import { createAgendaCommands, setAgendaCommands } from "entities/agenda";
 import { createExtraCommands, setExtraCommands } from "entities/extra";
+import { createIncentiveCommands, setIncentiveCommands } from "entities/incentive";
+import { createLeakCommands, setLeakCommands } from "entities/leak";
 import { createMecatolCommands, setMecatolCommands } from "entities/mecatol";
 import {
   createObjectiveCommands,
@@ -19,6 +21,12 @@ export const bootstrap = () => {
 
   const extraCommands = createExtraCommands(rootStore);
   setExtraCommands(extraCommands);
+
+  const incentiveCommands = createIncentiveCommands(rootStore);
+  setIncentiveCommands(incentiveCommands);
+
+  const leakCommands = createLeakCommands(rootStore);
+  setLeakCommands(leakCommands);
 
   const mecatolCommands = createMecatolCommands(rootStore);
   setMecatolCommands(mecatolCommands);

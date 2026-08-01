@@ -1,10 +1,10 @@
 import classNames from "classnames/bind";
 import { useStore } from "shared/store";
 import { HexLayout } from "shared/ui";
+import { petals } from "entities/goal";
 import { objectiveSelectors } from "entities/objective";
 import { factionsAssets, playerSelectors } from "entities/player";
 import classes from "./ObjectiveIcons.module.css";
-import petals from "./petals.module.css";
 
 const cx = classNames.bind(classes);
 

@@ -1,6 +1,8 @@
 import { createStore, persistBySlices } from "shared/store";
 import { agendaSlice } from "entities/agenda";
 import { extraSlice } from "entities/extra";
+import { incentiveSlice } from "entities/incentive";
+import { leakSlice } from "entities/leak";
 import { mecatolSlice } from "entities/mecatol";
 import { objectiveSlice } from "entities/objective";
 import { playerSlice } from "entities/player";
@@ -13,6 +15,8 @@ import { timelineSlice } from "entities/timeline";
 const slices = [
   agendaSlice,
   extraSlice,
+  incentiveSlice,
+  leakSlice,
   mecatolSlice,
   objectiveSlice,
   playerSlice,

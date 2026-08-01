@@ -19,11 +19,11 @@ const ActiveSecretsPanel = ({ onDiscard }) => {
       <div className={classes.main}>
         <div className={classes.header}>Секреты</div>
         <div className={classes.table}>
-          {secrets.map(({ colorId, playerSecrets }, pIndex) => (
-            <div key={pIndex} className={classes.column}>
-              {playerSecrets.map((cardId, sIndex) => (
+          {secrets.map(({ colorId, playerSecrets, playerIndex }) => (
+            <div key={playerIndex} className={classes.column}>
+              {playerSecrets.map(({ cardId, secretIndex }) => (
                 <GoalCard
-                  key={sIndex}
+                  key={secretIndex}
                   variant="secret"
                   cardId={cardId}
                   colorId={colorId}

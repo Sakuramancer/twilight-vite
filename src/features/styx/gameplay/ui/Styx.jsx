@@ -48,7 +48,7 @@ const Styx = ({ className }) => {
 
   const imageClass = cx({
     image: true,
-    ["image-muted"]: !isActive,
+    "image-muted": !isActive,
   });
 
   return (

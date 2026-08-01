@@ -2,6 +2,8 @@ import { createCachedFactorySelector, createMemoSelector } from "shared/lib";
 import { PLAYER_COUNT } from "shared/config";
 import { makeAgendaScore } from "entities/agenda/@x/player-score";
 import { makeExtraScore } from "entities/extra/@x/player-score";
+import { makeIncentiveScore } from "entities/incentive/@x/player-score";
+import { makeLeakScore } from "entities/leak/@x/player-score";
 import { makeMecatolScore } from "entities/mecatol/@x/player-score";
 import { makeObjectivesScore } from "entities/objective/@x/player-score";
 import { makeRelicScore } from "entities/relic/@x/player-score";
@@ -38,6 +40,8 @@ const makeScoreForPlayer = createCachedFactorySelector((playerIndex) =>
       (s) => s.players[playerIndex],
       makeAgendaScore(playerIndex),
       makeExtraScore(playerIndex),
+      makeIncentiveScore(playerIndex),
+      makeLeakScore(playerIndex),
       makeMecatolScore(playerIndex),
       makeObjectivesScore(playerIndex),
       makeRelicScore(playerIndex),

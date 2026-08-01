@@ -27,7 +27,7 @@ const PlayerNumberField = ({
 
   const containerClass = cx({
     container: true,
-    ["container-compact"]: compact,
+    "container-compact": compact,
     [colorClasses[colorId]]: true,
   });
 

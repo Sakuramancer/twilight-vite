@@ -1,0 +1,19 @@
+.content {
+  --_content-base-height: var(--content-base-height, 221px);
+  position: relative;
+  width: calc(2 * sqrt(3) / 3 * var(--_content-base-height));
+  height: var(--_content-base-height);
+  font-size: calc(var(--_content-base-height) / 221 * 16);
+}
+
+.title {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-inline: 0.7em;
+  font-family: var(--secondary-font-family);
+  font-size: 1.6em;
+  line-height: 1;
+  letter-spacing: -0.8px;
+  text-transform: uppercase;
+}

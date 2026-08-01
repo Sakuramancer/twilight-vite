@@ -3,13 +3,13 @@ import { colorClasses } from "shared/config";
 import { useTimer } from "shared/lib";
 import { useStore } from "shared/store";
 import { HexedCanvas, hexWithPetals } from "shared/ui";
+import { petals } from "entities/goal";
 import {
   getObjectiveCommands,
   objectiveSelectors,
   objectivesMeta,
 } from "entities/objective";
 import { playerSelectors } from "entities/player";
-import petals from "./petals.module.css";
 import classes from "./ObjectiveCanvas.module.css";
 
 const cx = classNames.bind(classes);
